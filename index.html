@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>권혁상 | AI Engineer</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 64px 20px;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      color: var(--accent);
+    }
+
+    .hero {
+      padding-top: 120px;
+    }
+
+    .hero p {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: var(--card);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 0.9rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .toggle-btn {
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .toggle-btn:hover {
+      opacity: 0.85;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>안녕하세요, 권혁상입니다.</h1>
+    <p>데이터와 모델로 문제를 해결하는 AI 엔지니어를 준비하고 있습니다.</p>
+  </section>
+
+  <section>
+    <h2>About</h2>
+    <p>
+      LLM 파인튜닝, RAG, 모델 경량화부터 웹 서비스 배포까지
+      모델을 실제 서비스로 연결하는 과정에 관심이 많습니다.
+    </p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <button id="skills-btn" class="toggle-btn" aria-expanded="false" aria-controls="skills-list">
+      기술 스택 보기
+    </button>
+    <div id="skills-list" class="tags hidden">
+      <span class="tag">Python</span>
+      <span class="tag">PyTorch</span>
+      <span class="tag">Hugging Face</span>
+      <span class="tag">LoRA / PEFT</span>
+      <span class="tag">RAG</span>
+      <span class="tag">FastAPI</span>
+      <span class="tag">Streamlit</span>
+      <span class="tag">Docker</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>RFP RAG 시스템</h3>
+        <p>정부/기업 제안요청서 문서를 대상으로 한 검색 증강 생성 시스템</p>
+      </div>
+      <div class="card">
+        <h3>LoRA 챗봇</h3>
+        <p>사전학습 LLM을 LoRA로 파인튜닝한 카페 정보 챗봇</p>
+      </div>
+      <div class="card">
+        <h3>YOLOv8 양자화</h3>
+        <p>ONNX Runtime 기반 모델 변환 및 정적 양자화</p>
+      </div>
+      <div class="card">
+        <h3>영화 리뷰 감성분석 웹앱</h3>
+        <p>Streamlit 프론트와 FastAPI 백엔드로 구성한 서비스</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="mailto:your@email.com">your@email.com</a><br>
+      GitHub: <a href="https://github.com/your-id">github.com/your-id</a>
+    </p>
+  </section>
+
+  <footer>&copy; 2026 권혁상</footer>
+
+  <script>
+    const skillsBtn = document.getElementById("skills-btn");
+    const skillsList = document.getElementById("skills-list");
+
+    skillsBtn.addEventListener("click", () => {
+      const isHidden = skillsList.classList.toggle("hidden");
+      skillsBtn.textContent = isHidden ? "기술 스택 보기" : "기술 스택 닫기";
+      skillsBtn.setAttribute("aria-expanded", String(!isHidden));
+    });
+  </script>
+</body>
+</html>

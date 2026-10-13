@@ -23,6 +23,10 @@ interface MetaOptions {
   noindex?: boolean;
 }
 
+// 링크를 메신저·SNS에 붙였을 때 보이는 미리보기 이미지(public/og-image.png, 1200×630).
+// 모든 페이지가 같은 이미지를 쓴다. 개인 답변은 이미지나 메타 태그에 들어가지 않는다.
+const shareImage = { url: "/og-image.png", width: 1200, height: 630, alt: `${site.name} - 우리 사이는 지금 몇 도일까요?` };
+
 export function pageMeta(title: string, description: string, path: string, options: MetaOptions = {}): Metadata {
   const fullTitle = options.absoluteTitle ? title : `${title} | ${site.name}`;
   return {
@@ -37,6 +41,8 @@ export function pageMeta(title: string, description: string, path: string, optio
       siteName: site.name,
       locale: "ko_KR",
       type: "website",
+      images: [shareImage],
     },
+    twitter: { card: "summary_large_image", title: fullTitle, description, images: [shareImage] },
   };
 }

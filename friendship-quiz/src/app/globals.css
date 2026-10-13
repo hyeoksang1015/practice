@@ -1,0 +1,129 @@
+﻿@import "tailwindcss";
+
+@theme {
+  --color-cream: #fffaf4;
+  --color-ink: #2a2440;
+  --color-muted: #5d5873;
+  --color-brand: #c2410c;
+  --color-brand-dark: #9a3412;
+  --color-peach: #ffe9da;
+  --color-line: #e7dfd4;
+  --font-sans: var(--font-body), "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+}
+
+/* 제목·버튼·큰 숫자는 둥근 제목용 글꼴(Jua). 굵기가 하나뿐이라 가짜 굵게가 겹치지 않도록 400으로 고정한다. */
+h1,
+h2,
+h3,
+h4,
+.btn,
+.font-display {
+  font-family: var(--font-display), var(--font-sans);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+/* 화면 전환 때 코드로 포커스를 옮기는 제목에는 테두리를 그리지 않는다. */
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 결과 화면의 온도 테마: low는 서늘하게, middle은 미지근하게, high는 따뜻하게.
+   색만 바뀌고 글자색(ink)은 그대로라 세 테마 모두 본문 대비가 유지된다. */
+[data-temp="low"] {
+  --temp-from: #e3eefa;
+  --temp-to: #c3d9f1;
+  --temp-accent: #1b5697;
+  --temp-line: #a9c5e4;
+}
+[data-temp="middle"] {
+  --temp-from: #f6f2e9;
+  --temp-to: #e6dfcf;
+  --temp-accent: #6b5c3a;
+  --temp-line: #d6cbb3;
+}
+[data-temp="high"] {
+  --temp-from: #ffe9dc;
+  --temp-to: #ffc4a8;
+  --temp-accent: #b42b12;
+  --temp-line: #f2ad93;
+}
+body:has([data-temp="low"]) {
+  background: #eaf2fb;
+}
+body:has([data-temp="middle"]) {
+  background: #f4f1ea;
+}
+body:has([data-temp="high"]) {
+  background: #fff0e6;
+}
+[data-temp] .card {
+  border-color: var(--temp-line);
+}
+.temp-hero {
+  background: linear-gradient(165deg, var(--temp-from), var(--temp-to));
+}
+.temp-accent {
+  color: var(--temp-accent);
+}
+.temp-fill {
+  background: var(--temp-accent);
+}
+.temp-chip {
+  background: var(--temp-accent);
+  color: #fff;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-12 cursor-pointer items-center justify-center rounded-full px-6 text-center font-semibold transition-colors;
+  }
+  .btn-primary {
+    @apply bg-brand text-white hover:bg-brand-dark;
+  }
+  .btn-ghost {
+    @apply border border-line bg-white text-ink hover:bg-peach;
+  }
+  .card {
+    @apply rounded-3xl border border-line bg-white p-6 sm:p-8;
+  }
+  .text-link {
+    @apply font-semibold text-brand underline underline-offset-4 hover:text-brand-dark;
+  }
+  .bullets {
+    @apply list-disc space-y-2 pl-5 leading-7;
+  }
+  .prose-page h2 {
+    @apply mt-10 text-xl font-bold;
+  }
+  .prose-page p,
+  .prose-page li {
+    @apply mt-3 leading-7 text-muted;
+  }
+  .prose-page ul {
+    @apply list-disc pl-5;
+  }
+}

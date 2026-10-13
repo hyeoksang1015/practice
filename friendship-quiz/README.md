@@ -43,34 +43,19 @@ npm run build    # out/ 폴더에 정적 사이트 생성
 
 ## 배포 (Cloudflare)
 
-`npm run build`가 만드는 `out/` 폴더가 사이트 전체입니다. `wrangler.jsonc`에 Cloudflare 설정이 들어 있습니다.
+Cloudflare Pages에 GitHub 저장소를 연결해 배포합니다(현재 주소: https://relationship-dbz.pages.dev). `main` 브랜치에 푸시할 때마다 자동으로 다시 배포됩니다.
 
-### GitHub 저장소를 연결해 자동 배포하기
-
-Cloudflare 대시보드 → Workers & Pages → Create → GitHub 저장소 가져오기에서 이 저장소를 고르고 아래처럼 입력합니다.
-
-| 항목 | 값 |
+| Pages 빌드 설정 | 값 |
 | --- | --- |
 | Root directory (루트 디렉터리) | `friendship-quiz` |
 | Build command | `npm run build` |
-| Deploy command | `npx wrangler deploy` |
-| 환경 변수(빌드) `NEXT_PUBLIC_SITE_URL` | 배포된 주소 (예: `https://relationship-temperature.계정이름.workers.dev` 또는 연결한 도메인) |
+| Build output directory | `out` (`wrangler.toml`의 `pages_build_output_dir`가 지정) |
 
-이후 `main` 브랜치에 푸시할 때마다 자동으로 다시 배포됩니다.
-
-Pages 프로젝트로 만들 경우에는 Root directory `friendship-quiz`, Build command `npm run build`, Build output directory `out`으로 설정합니다.
-
-### 내 컴퓨터에서 바로 배포하기
-
-```bash
-npx wrangler login          # 처음 한 번, 브라우저에서 Cloudflare 로그인
-npm run build
-npx wrangler deploy
-```
+`npm run build`가 만드는 `out/` 폴더가 사이트 전체입니다. 출력 디렉터리가 `out`이 아니면 소스 폴더가 그대로 올라가서 첫 화면이 404가 됩니다.
 
 ### 주의
 
-- `NEXT_PUBLIC_SITE_URL`을 넣지 않으면 canonical·sitemap·robots에 `localhost` 주소가 들어갑니다. 첫 배포로 주소를 확인한 뒤 값을 넣고 다시 배포하세요.
+- 서비스 주소는 `src/config/site.ts`의 `url`에 들어 있습니다. 도메인을 연결하면 그 값을 바꾸거나 빌드 환경 변수 `NEXT_PUBLIC_SITE_URL`을 설정하세요(canonical·sitemap·robots에 쓰입니다).
 - 도메인 최상위(`/`)에 배포하는 것을 전제로 합니다. 하위 경로에 올리려면 `next.config.ts`에 `basePath`를 추가해야 합니다.
 - 글꼴(Jua, Gowun Dodum)은 빌드할 때 Google Fonts에서 내려받아 사이트에 포함합니다. 빌드 환경에 인터넷 연결이 필요합니다.
 

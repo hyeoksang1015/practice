@@ -6,8 +6,9 @@ export const site = {
   logoMark: "🌡️",
   description:
     "연인, 친구, 가족과 같은 질문에 각자 답하고 두 사람의 답을 비교해 '관계의 온도'를 확인해 보세요. 내가 먼저 답하고 링크를 보내면 상대가 이어서 답하는, 가입 없는 무료 오락용 테스트입니다.",
-  // 배포할 때 NEXT_PUBLIC_SITE_URL 환경 변수에 실제 도메인을 넣는다.
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, ""),
+  // canonical·sitemap·robots에 쓰는 실제 서비스 주소. 도메인을 바꾸면 여기를 고치거나
+  // 빌드 환경 변수 NEXT_PUBLIC_SITE_URL로 덮어쓴다.
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://relationship-dbz.pages.dev").replace(/\/$/, ""),
   // 운영자가 채운다. 비워 두면 문의 페이지가 "준비 중"으로 안내한다(가짜 연락처를 넣지 않는다).
   contactEmail: "",
 };

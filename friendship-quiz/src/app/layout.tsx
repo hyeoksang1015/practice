@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import { site } from "@/config/site";
 import "./globals.css";
 
-// 둥글고 친근한 한글 글꼴. 빌드할 때 내려받아 사이트와 함께 제공하므로 방문자의 브라우저가 외부 서버에 요청하지 않는다.
+// 둥글고 친근한 한글 글꼴. 빌드할 때 내려받아 사이트와 함께 제공하므로 글꼴 때문에 외부 서버에 요청하지 않는다.
 const bodyFont = Gowun_Dodum({ weight: "400", subsets: ["latin"], variable: "--font-body", display: "swap" });
 const displayFont = Jua({ weight: "400", subsets: ["latin"], variable: "--font-display", display: "swap" });
 

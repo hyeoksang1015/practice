@@ -59,6 +59,13 @@ Cloudflare Pages에 GitHub 저장소를 연결해 배포합니다(현재 주소:
 - 도메인 최상위(`/`)에 배포하는 것을 전제로 합니다. 하위 경로에 올리려면 `next.config.ts`에 `basePath`를 추가해야 합니다.
 - 글꼴(Jua, Gowun Dodum)은 빌드할 때 Google Fonts에서 내려받아 사이트에 포함합니다. 빌드 환경에 인터넷 연결이 필요합니다.
 
+## 광고 (Google AdSense)
+
+- AdSense 코드는 `src/app/(content)/layout.tsx` 한 곳에서 넣으며, `(content)` 폴더 안의 페이지(홈, 테스트 소개, 소개·개인정보·문의)에만 들어갑니다. 게시자 ID는 `src/config/site.ts`와 `public/ads.txt`에 있습니다.
+- **초대(`/invite/`)·결과(`/result/`)·404 화면에는 넣지 않습니다.** 초대·결과 주소의 `#` 뒤에는 답변이 있어서, 광고 스크립트가 그 주소를 읽지 못하게 분리했습니다. 이 화면들을 `(content)` 폴더로 옮기면 개인정보 처리방침의 설명과 어긋납니다.
+- 같은 이유로 헤더·푸터·결과 화면의 링크는 `next/link` 대신 `PageLink`(문서를 새로 불러오는 링크)를 씁니다.
+- 광고를 실제로 배치할 때는 선택지·다음 버튼과 붙지 않게 하고, 광고·추적 방식이 바뀌면 `src/app/(content)/privacy/page.tsx`도 함께 고칩니다.
+
 ## 자주 고치는 곳
 
 | 바꾸고 싶은 것 | 파일 |

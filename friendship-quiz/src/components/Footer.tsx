@@ -1,10 +1,10 @@
-import Link from "next/link";
 import { site } from "@/config/site";
+import PageLink from "./PageLink";
 
 const links = [
-  { href: "/about", label: "소개" },
-  { href: "/privacy", label: "개인정보 안내" },
-  { href: "/contact", label: "문의" },
+  { href: "/about/", label: "소개" },
+  { href: "/privacy/", label: "개인정보 안내" },
+  { href: "/contact/", label: "문의" },
 ];
 
 export default function Footer() {
@@ -13,9 +13,9 @@ export default function Footer() {
       <div className="mx-auto max-w-3xl px-5 py-6 text-sm text-muted">
         <nav aria-label="사이트 정보" className="flex flex-wrap gap-x-2">
           {links.map((l) => (
-            <Link key={l.href} href={l.href} className="flex min-h-12 items-center px-2 font-semibold hover:underline">
+            <PageLink key={l.href} href={l.href} className="flex min-h-12 items-center px-2 font-semibold hover:underline">
               {l.label}
-            </Link>
+            </PageLink>
           ))}
         </nav>
         <p className="mt-2 px-2">

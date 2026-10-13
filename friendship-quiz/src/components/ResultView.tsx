@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { ROLE_A, ROLE_B, site } from "@/config/site";
 import { BAND_LABEL, TEMP_BASE, TEMP_MAX, TEMP_MIN, type Analysis, type Insight } from "@/lib/analysis";
 import type { Band, Category } from "@/lib/types";
+import PageLink from "./PageLink";
 import ShareButtons from "./ShareButtons";
 
 const BAND_ICON: Record<Band, string> = { low: "❄️", middle: "🌤️", high: "🔥" };
@@ -179,15 +179,15 @@ export default function ResultView({ category, analysis, url }: { category: Cate
       </section>
 
       <div className="flex flex-col gap-3 sm:flex-row">
-        <Link href={`/tests/${category.slug}`} className="btn btn-primary">
+        <PageLink href={`/tests/${category.slug}/`} className="btn btn-primary">
           {category.name} 테스트 새로 시작하기
-        </Link>
-        <Link href="/tests" className="btn btn-ghost">
+        </PageLink>
+        <PageLink href="/tests/" className="btn btn-ghost">
           다른 관계 테스트 보기
-        </Link>
-        <Link href="/" className="btn btn-ghost">
+        </PageLink>
+        <PageLink href="/" className="btn btn-ghost">
           홈으로
-        </Link>
+        </PageLink>
       </div>
     </div>
   );

@@ -20,7 +20,35 @@ export default function PrivacyPage() {
       <ul>
         <li>회원 가입과 로그인 기능이 없습니다. 이름, 이메일, 전화번호를 묻지 않습니다.</li>
         <li>테스트 답변을 서버나 데이터베이스에 저장하지 않습니다. 결과 계산은 모두 사용자의 브라우저 안에서 이루어집니다.</li>
-        <li>이 사이트는 자체적으로 쿠키를 만들지 않으며, 방문 분석 도구나 광고 스크립트를 사용하지 않습니다.</li>
+        <li>이 사이트가 직접 만드는 쿠키는 없으며, 방문 분석 도구를 사용하지 않습니다. 광고는 아래 &lsquo;광고(Google AdSense)&rsquo;를 확인해 주세요.</li>
+      </ul>
+
+      <h2>광고(Google AdSense)</h2>
+      <ul>
+        <li>
+          이 사이트는 Google AdSense 광고 코드를 사용합니다. 홈, 테스트 소개, 소개·개인정보·문의 페이지를 열면 브라우저가 Google의
+          광고 서버에서 스크립트를 불러오며, 이 과정에서 IP 주소, 브라우저 정보, 보고 있는 페이지 주소 등이 Google에 전달될 수
+          있습니다.
+        </li>
+        <li>
+          Google을 포함한 제3자 광고 사업자는 쿠키를 사용해 사용자가 이 사이트나 다른 사이트를 방문한 기록을 바탕으로 광고를
+          보여 줄 수 있습니다.
+        </li>
+        <li>
+          맞춤 광고를 원하지 않으면{" "}
+          <a href="https://adssettings.google.com" className="text-link" rel="noopener noreferrer" target="_blank">
+            Google 광고 설정
+          </a>
+          에서 끌 수 있습니다. Google이 정보를 사용하는 방식은{" "}
+          <a href="https://policies.google.com/technologies/partner-sites" className="text-link" rel="noopener noreferrer" target="_blank">
+            Google의 안내 페이지
+          </a>
+          에서 확인할 수 있습니다.
+        </li>
+        <li>
+          <strong>초대 화면과 결과 화면에는 광고 코드를 넣지 않았습니다.</strong> 이 두 화면의 주소에는 답변이 들어 있기 때문에,
+          광고 스크립트가 그 주소를 읽을 수 없도록 분리했습니다. 테스트 답변은 광고에 사용되지 않습니다.
+        </li>
       </ul>
 
       <h2>초대 링크와 결과 링크에 담기는 내용</h2>
@@ -65,9 +93,8 @@ export default function PrivacyPage() {
 
       <h2>앞으로 바뀔 수 있는 부분</h2>
       <p>
-        나중에 방문 통계 도구나 광고(예: Google AdSense)를 도입하면 쿠키 등이 사용될 수 있습니다. 또 결과 저장이나 기록 조회 같은
-        기능을 추가하면 서버에 정보를 저장하게 됩니다. 그런 변경이 생기면 도입 전에 이 문서에 사용하는 기술과 목적, 선택 방법을
-        먼저 적겠습니다.
+        나중에 방문 통계 도구를 도입하면 쿠키 등이 추가로 사용될 수 있습니다. 또 결과 저장이나 기록 조회 같은 기능을 추가하면
+        서버에 정보를 저장하게 됩니다. 그런 변경이 생기면 도입 전에 이 문서에 사용하는 기술과 목적, 선택 방법을 먼저 적겠습니다.
       </p>
 
       <h2>문의</h2>

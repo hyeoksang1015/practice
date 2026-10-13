@@ -9,6 +9,8 @@ export const site = {
   // canonical·sitemap·robots에 쓰는 실제 서비스 주소. 도메인을 바꾸면 여기를 고치거나
   // 빌드 환경 변수 NEXT_PUBLIC_SITE_URL로 덮어쓴다.
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://relationship-dbz.pages.dev").replace(/\/$/, ""),
+  // Google AdSense 게시자 ID(공개 값). public/ads.txt 에도 같은 번호가 들어 있다.
+  adsenseClient: "ca-pub-4035979084834637",
   // 운영자가 채운다. 비워 두면 문의 페이지가 "준비 중"으로 안내한다(가짜 연락처를 넣지 않는다).
   contactEmail: "",
 };

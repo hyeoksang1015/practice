@@ -1,5 +1,5 @@
-import Link from "next/link";
 import type { LinkErrorReason } from "@/lib/payload";
+import PageLink from "./PageLink";
 
 type Reason = LinkErrorReason | "incomplete";
 
@@ -39,16 +39,16 @@ export default function LinkError({ reason, inviteHref }: { reason: Reason; invi
       <p className="mt-3 leading-7 text-muted">{body}</p>
       <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
         {inviteHref && (
-          <a href={inviteHref} className="btn btn-primary">
+          <PageLink href={inviteHref} className="btn btn-primary">
             초대받은 테스트 답하기
-          </a>
+          </PageLink>
         )}
-        <Link href="/tests" className={`btn ${inviteHref ? "btn-ghost" : "btn-primary"}`}>
+        <PageLink href="/tests/" className={`btn ${inviteHref ? "btn-ghost" : "btn-primary"}`}>
           테스트 새로 시작하기
-        </Link>
-        <Link href="/" className="btn btn-ghost">
+        </PageLink>
+        <PageLink href="/" className="btn btn-ghost">
           홈으로 가기
-        </Link>
+        </PageLink>
       </div>
     </div>
   );

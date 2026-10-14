@@ -46,7 +46,8 @@ export default function QuizRunner({ category, progress, onChange }: Props) {
   }
 
   return (
-    <form className="card" onSubmit={next} noValidate>
+    // action="#": 비워 두면 form 전송 주소가 현재 주소(# 뒤 답변 포함)가 되어 GA 양식 이벤트(form_destination)로 새어 나간다.
+    <form className="card" onSubmit={next} action="#" noValidate>
       <ProgressBar current={index + 1} total={total} />
       <div className="mt-6">
         <QuestionCard question={question} selected={answers[index]} onSelect={select} headingRef={headingRef} />

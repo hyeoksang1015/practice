@@ -20,7 +20,30 @@ export default function PrivacyPage() {
       <ul>
         <li>회원 가입과 로그인 기능이 없습니다. 이름, 이메일, 전화번호를 묻지 않습니다.</li>
         <li>테스트 답변을 서버나 데이터베이스에 저장하지 않습니다. 결과 계산은 모두 사용자의 브라우저 안에서 이루어집니다.</li>
-        <li>이 사이트가 직접 만드는 쿠키는 없으며, 방문 분석 도구를 사용하지 않습니다. 광고는 아래 &lsquo;광고(Google AdSense)&rsquo;를 확인해 주세요.</li>
+        <li>
+          이 사이트가 직접 만드는 쿠키는 없습니다. 방문 통계와 광고는 아래 &lsquo;방문 통계(Google Analytics)&rsquo;와 &lsquo;광고(Google
+          AdSense)&rsquo;를 확인해 주세요.
+        </li>
+      </ul>
+
+      <h2>방문 통계(Google Analytics)</h2>
+      <ul>
+        <li>
+          사이트 이용 현황을 파악하기 위해 모든 페이지에서 Google Analytics를 사용합니다. 방문한 페이지, 머문 시간, 버튼·양식
+          이용 여부, 대략적인 지역, 기기·브라우저 정보 등이 Google에 전달되며, 이를 위해 Google Analytics 쿠키(_ga 등)가 저장될
+          수 있습니다.
+        </li>
+        <li>
+          <strong>초대·결과 화면에서도 답변은 전달하지 않습니다.</strong> Google Analytics에 보내는 페이지 주소에서 답변이 들어
+          있는 # 뒷부분을 빼고 보내도록 설정했습니다.
+        </li>
+        <li>
+          수집을 원하지 않으면{" "}
+          <a href="https://tools.google.com/dlpage/gaoptout" className="text-link" rel="noopener noreferrer" target="_blank">
+            Google 애널리틱스 차단 브라우저 부가기능
+          </a>
+          을 쓰거나 브라우저에서 쿠키를 차단할 수 있습니다.
+        </li>
       </ul>
 
       <h2>광고(Google AdSense)</h2>
@@ -93,8 +116,8 @@ export default function PrivacyPage() {
 
       <h2>앞으로 바뀔 수 있는 부분</h2>
       <p>
-        나중에 방문 통계 도구를 도입하면 쿠키 등이 추가로 사용될 수 있습니다. 또 결과 저장이나 기록 조회 같은 기능을 추가하면
-        서버에 정보를 저장하게 됩니다. 그런 변경이 생기면 도입 전에 이 문서에 사용하는 기술과 목적, 선택 방법을 먼저 적겠습니다.
+        결과 저장이나 기록 조회 같은 기능을 추가하면 서버에 정보를 저장하게 됩니다. 이처럼 정보를 다루는 방식이 바뀌면 도입 전에
+        이 문서에 사용하는 기술과 목적, 선택 방법을 먼저 적겠습니다.
       </p>
 
       <h2>문의</h2>

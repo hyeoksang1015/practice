@@ -59,6 +59,11 @@ Cloudflare Pages에 GitHub 저장소를 연결해 배포합니다(현재 주소:
 - 도메인 최상위(`/`)에 배포하는 것을 전제로 합니다. 하위 경로에 올리려면 `next.config.ts`에 `basePath`를 추가해야 합니다.
 - 글꼴(Jua, Gowun Dodum)은 빌드할 때 Google Fonts에서 내려받아 사이트에 포함합니다. 빌드 환경에 인터넷 연결이 필요합니다.
 
+## 방문 통계 (Google Analytics)
+
+- GA 태그(`G-EQ3K3HCXPW`)는 `src/app/layout.tsx`의 `<head>`에 있어 모든 페이지에 들어갑니다.
+- 초대·결과 주소의 `#` 뒤 답변이 GA로 가지 않도록 두 가지를 지킵니다. `page_location`에서 `#` 뒤를 잘라 보내고, 질문 `<form>`에 `action="#"`을 둡니다(없으면 GA 양식 이벤트의 `form_destination`에 현재 주소 전체가 실립니다). 이 둘을 지우면 답변이 GA로 전송됩니다.
+
 ## 광고 (Google AdSense)
 
 - AdSense 코드는 `src/app/(content)/layout.tsx` 한 곳에서 넣으며, `(content)` 폴더 안의 페이지(홈, 테스트 소개, 소개·개인정보·문의)에만 들어갑니다. 게시자 ID는 `src/config/site.ts`와 `public/ads.txt`에 있습니다.

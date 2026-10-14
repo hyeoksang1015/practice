@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ClarityTag from "@/components/ClarityTag";
 
 export const metadata: Metadata = { title: "페이지를 찾을 수 없어요" };
 
 export default function NotFound() {
   return (
     <div className="card text-center">
+      <ClarityTag />
       <p className="text-sm font-bold text-brand">404</p>
       <h1 className="mt-2 text-2xl font-bold">페이지를 찾을 수 없어요</h1>
       <p className="mt-3 leading-7 text-muted">

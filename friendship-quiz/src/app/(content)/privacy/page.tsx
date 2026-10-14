@@ -21,8 +21,7 @@ export default function PrivacyPage() {
         <li>회원 가입과 로그인 기능이 없습니다. 이름, 이메일, 전화번호를 묻지 않습니다.</li>
         <li>테스트 답변을 서버나 데이터베이스에 저장하지 않습니다. 결과 계산은 모두 사용자의 브라우저 안에서 이루어집니다.</li>
         <li>
-          이 사이트가 직접 만드는 쿠키는 없습니다. 방문 통계와 광고는 아래 &lsquo;방문 통계(Google Analytics)&rsquo;와 &lsquo;광고(Google
-          AdSense)&rsquo;를 확인해 주세요.
+          이 사이트가 직접 만드는 쿠키는 없습니다. 방문 통계, 이용 행태 분석, 광고는 아래 해당 항목을 확인해 주세요.
         </li>
       </ul>
 
@@ -43,6 +42,26 @@ export default function PrivacyPage() {
             Google 애널리틱스 차단 브라우저 부가기능
           </a>
           을 쓰거나 브라우저에서 쿠키를 차단할 수 있습니다.
+        </li>
+      </ul>
+
+      <h2>이용 행태 분석(Microsoft Clarity)</h2>
+      <ul>
+        <li>
+          사이트를 더 쓰기 편하게 고치기 위해 Microsoft Clarity를 사용합니다. 홈, 테스트 소개, 소개·개인정보·문의 페이지와 404
+          화면에서 클릭·스크롤·마우스 움직임과 화면 모습이 기록되어 Microsoft에 전달되며, 이를 위해 Clarity 쿠키가 저장될 수
+          있습니다.
+        </li>
+        <li>
+          <strong>질문에 답하는 화면과 초대 링크 칸은 기록에서 가려지며, 초대·결과 화면에는 Clarity를 넣지 않았습니다.</strong>{" "}
+          Clarity는 페이지 주소 전체를 그대로 보내기 때문에, 답변이 주소에 들어 있는 두 화면에서는 아예 동작하지 않게 했습니다.
+        </li>
+        <li>
+          Microsoft가 정보를 다루는 방식은{" "}
+          <a href="https://privacy.microsoft.com/privacystatement" className="text-link" rel="noopener noreferrer" target="_blank">
+            Microsoft 개인정보처리방침
+          </a>
+          에서 확인할 수 있습니다. 브라우저에서 쿠키를 차단하면 기록되지 않습니다.
         </li>
       </ul>
 

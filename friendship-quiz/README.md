@@ -64,6 +64,12 @@ Cloudflare Pages에 GitHub 저장소를 연결해 배포합니다(현재 주소:
 - GA 태그(`G-EQ3K3HCXPW`)는 `src/app/layout.tsx`의 `<head>`에 있어 모든 페이지에 들어갑니다.
 - 초대·결과 주소의 `#` 뒤 답변이 GA로 가지 않도록 두 가지를 지킵니다. `page_location`에서 `#` 뒤를 잘라 보내고, 질문 `<form>`에 `action="#"`을 둡니다(없으면 GA 양식 이벤트의 `form_destination`에 현재 주소 전체가 실립니다). 이 둘을 지우면 답변이 GA로 전송됩니다.
 
+## 이용 행태 분석 (Microsoft Clarity)
+
+- Clarity 태그(`yxey4l844i`)는 `src/components/ClarityTag.tsx`에 있고, `(content)` 그룹 페이지와 404 화면에만 들어갑니다.
+- **초대·결과 화면에는 넣지 않습니다.** Clarity는 `#` 뒤까지 포함한 주소 전체와 화면 글자를 기록해 보내며, GA처럼 보내는 주소를 바꾸는 설정이 없습니다(측정으로 확인).
+- A가 답하는 질문 화면(`QuizRunner`)과 링크 칸(`ShareButtons`)은 `data-clarity-mask="true"`로 녹화에서 가립니다.
+
 ## 광고 (Google AdSense)
 
 - AdSense 코드는 `src/app/(content)/layout.tsx` 한 곳에서 넣으며, `(content)` 폴더 안의 페이지(홈, 테스트 소개, 소개·개인정보·문의)에만 들어갑니다. 게시자 ID는 `src/config/site.ts`와 `public/ads.txt`에 있습니다.

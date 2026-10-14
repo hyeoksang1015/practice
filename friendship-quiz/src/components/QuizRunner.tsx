@@ -46,8 +46,9 @@ export default function QuizRunner({ category, progress, onChange }: Props) {
   }
 
   return (
+    // data-clarity-mask: Clarity 화면 녹화에서 고른 답을 가린다.
     // action="#": 비워 두면 form 전송 주소가 현재 주소(# 뒤 답변 포함)가 되어 GA 양식 이벤트(form_destination)로 새어 나간다.
-    <form className="card" onSubmit={next} action="#" noValidate>
+    <form className="card" onSubmit={next} action="#" noValidate data-clarity-mask="true">
       <ProgressBar current={index + 1} total={total} />
       <div className="mt-6">
         <QuestionCard question={question} selected={answers[index]} onSelect={select} headingRef={headingRef} />

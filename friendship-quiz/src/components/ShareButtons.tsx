@@ -29,8 +29,9 @@ export default function ShareButtons({ url, text, fieldLabel }: Props) {
     );
   }
 
+  // data-clarity-mask: 링크(# 뒤 답변 포함)를 Clarity 화면 녹화에서 가린다.
   return (
-    <div>
+    <div data-clarity-mask="true">
       <label className="block text-sm font-semibold">
         {fieldLabel}
         <input

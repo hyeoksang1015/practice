@@ -31,6 +31,27 @@ body {
   overflow-wrap: anywhere;
 }
 
+/* 일본어·중국어: keep-all 이면 띄어쓰기 없는 문장이 줄바꿈되지 않아 화면 밖으로 넘친다. */
+body:lang(ja),
+body:lang(zh) {
+  word-break: normal;
+}
+/* 일본어는 둥근 Zen Maru Gothic, 중국어는 기기 기본 간체 글꼴(Jua·Gowun Dodum에는 가나·한자가 없다). */
+body:lang(ja) {
+  font-family: var(--font-ja), "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+}
+body:lang(zh) {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+}
+:lang(ja) :is(h1, h2, h3, h4, .btn, .font-display) {
+  font-family: var(--font-ja), "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+  font-weight: 700;
+}
+:lang(zh) :is(h1, h2, h3, h4, .btn, .font-display) {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  font-weight: 700;
+}
+
 :focus-visible {
   outline: 3px solid var(--color-brand);
   outline-offset: 2px;

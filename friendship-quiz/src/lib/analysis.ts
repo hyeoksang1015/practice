@@ -10,8 +10,6 @@ export const HIGH_FROM = 36;
 
 const MAX_GAP = 3;
 
-export const BAND_LABEL: Record<Band, string> = { low: "서늘함", middle: "미지근함", high: "따뜻함" };
-
 export function bandOf(temperature: number): Band {
   if (temperature < LOW_BELOW) return "low";
   if (temperature < HIGH_FROM) return "middle";

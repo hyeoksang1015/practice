@@ -1,0 +1,245 @@
+import type { Category } from "../../../lib/types";
+
+export const family: Category = {
+  slug: "family",
+  name: "Family",
+  emoji: "🏠",
+  version: 1,
+  title: "How warm is our family?",
+  description:
+    "You each answer questions on things family members living close together often clash over, like showing concern, personal time, sharing chores and daily habits. You can take it as parent and child, siblings, spouses or any other family pair.",
+  minutes: 3,
+  topics: [
+    { id: "care", name: "Showing care & concern", talk: "When I'm worried about you, how could I show it without it feeling like pressure?" },
+    { id: "space", name: "Personal time & independence", talk: "When you want time alone at home, how should you let me know?" },
+    { id: "chores", name: "Chores & responsibilities", talk: "Which chore would you really rather not do, and which one is fine by you?" },
+    { id: "clash", name: "Disagreements", talk: "When we disagree, is there anything I say that's hard to hear?" },
+    { id: "help", name: "Asking for & giving help", talk: "Was there a time recently when you needed help but didn't say so?" },
+    { id: "habits", name: "Daily habits", talk: "What's one daily habit you'd like us to adjust for each other?" },
+  ],
+  questions: [
+    {
+      id: "m1",
+      topic: "care",
+      rule: "match",
+      text: "A family member is coming home later than usual. What do you do?",
+      options: [
+        "Trust they'll be fine and don't get in touch",
+        "Leave a single message",
+        "Call to check where they are",
+        "Wait up and get in touch several times",
+      ],
+      same: "You show concern to a similar degree, so a call or no call is easily accepted either way.",
+      different: "You show worry in different ways. Not calling comes from trust; calling several times comes from caring.",
+      scenario:
+        "A worried call can feel like 'Don't you trust me?' to the one receiving it, while no call at all can feel like 'Don't you care?' to the one waiting.",
+      tip: "Agree that on late nights you'll send 'I'll be home around…' before anyone has to ask.",
+    },
+    {
+      id: "m2",
+      topic: "care",
+      rule: "match",
+      text: "When you're curious about how a family member's day went, what do you do?",
+      options: [
+        "Don't ask until they tell me",
+        "Ask lightly, like 'Have you eaten?'",
+        "Ask about all sorts of things that happened today",
+        "Want to know the details, even their worries and plans",
+      ],
+      same: "You ask about each other's day to a similar degree, a distance where questions feel neither intrusive nor indifferent.",
+      different: "You show interest at different depths. Asking a lot comes from wanting to share in each other's lives; not asking comes from respecting the other's space.",
+      scenario: "Lots of questions may feel like care to one of you but like homework on a tiring day to the other.",
+      tip: "Make a rule that on days you don't feel like talking, it's okay to say 'Let me rest today, we'll talk tomorrow.'",
+    },
+    {
+      id: "m3",
+      topic: "space",
+      rule: "match",
+      text: "Everyone's home on a day off. What feels most comfortable?",
+      options: [
+        "Each in our own room, doing our own thing",
+        "Eat together, then each do our own thing",
+        "At least watch TV together in the living room",
+        "Go out or do something together",
+      ],
+      same: "You have a similar sense of family time versus personal time at home, so closing a door or asking to hang out both come easily.",
+      different:
+        "You define 'being together' differently. One feels together just by being in the same house; the other needs to actually do something together.",
+      scenario: "Going to your room to rest is ordinary downtime for one, but can look like avoiding the family to the other.",
+      tip: "Set a short 'together time' on days off. Something low-key like one shared meal is enough.",
+    },
+    {
+      id: "m4",
+      topic: "space",
+      rule: "match",
+      text: "When a big decision like moving or a career change comes up, how involved is your family?",
+      options: [
+        "I decide on my own, then tell them",
+        "I mostly decide, then ask for their opinion",
+        "I talk it over with them while I'm still thinking",
+        "I want to decide together with my family",
+      ],
+      same: "You share big decisions with family to a similar degree, so there's little hurt over when you were told.",
+      different:
+        "You involve family in decisions to different degrees. Deciding alone shows taking responsibility; deciding together comes from wanting to support each other.",
+      scenario: "The one who told the family after deciding didn't want to worry anyone, but the other may feel left out: 'Why didn't you tell me sooner?'",
+      tip: "When you bring something up, say first whether you're asking for opinions or just letting them know.",
+    },
+    {
+      id: "m5",
+      topic: "chores",
+      rule: "match",
+      text: "How should household chores be shared?",
+      options: [
+        "Whoever notices it does it",
+        "Each naturally takes the jobs they're good at",
+        "Roughly decide who handles what",
+        "Clearly set days and duties and stick to them",
+      ],
+      same: "You think about sharing chores in similar ways, so you're unlikely to end up keeping score of who does more.",
+      different: "You prefer different ways of sharing. The do-it-as-it-comes one values flexibility; the set-it-in-advance one values fairness.",
+      scenario: "When 'whoever sees it does it' meets 'I expected set duties', the work can pile up on whoever always notices first.",
+      tip: "Don't try to split everything. Just assign the one chore you clash over most often.",
+    },
+    {
+      id: "m6",
+      topic: "chores",
+      rule: "match",
+      text: "When do you usually do chores like washing up or laundry?",
+      options: ["Let them pile up, then do it all at once", "Any time before the day ends", "Here and there before it piles up", "Right away, as soon as it comes up"],
+      same: "You handle chores at a similar pace, so you know what the other means by 'later' and nobody has to nag.",
+      different: "Your 'I'll do it soon' lasts different lengths of time. One isn't procrastinating, just batching; the other isn't rushing, just doing it right away.",
+      scenario:
+        "If one leaves a chore to do later and the other can't wait and does it first, one may feel wronged and the other may feel ignored.",
+      tip: "Agree out loud on when it'll be done, like 'before dinner'. Then both the one waiting and the one doing it can relax.",
+    },
+    {
+      id: "m7",
+      topic: "clash",
+      rule: "match",
+      text: "You and a family member clash over something. What do you do?",
+      options: [
+        "Back down before the mood turns sour",
+        "Leave the room for now and talk later",
+        "Bring it up again once we've both calmed down",
+        "Keep talking right there until we reach a conclusion",
+      ],
+      same: "You handle clashes in a similar way, and your timing on whether to keep talking or stop lines up.",
+      different:
+        "You handle clashes differently. Backing down protects the peace at home; talking it through makes sure nothing is left unresolved.",
+      scenario:
+        "When one walks away, the other feels ignored and gets louder, and the louder it gets, the quieter the one walking away becomes.",
+      tip: "Agree on both a way to pause and when to resume, like 'Let's stop for now and talk again after dinner.'",
+      sameCaution: {
+        0: "You both tend to back down first, so the things that really need saying may never get said.",
+        3: "You both want to settle things on the spot, so conversations can drag on while emotions run high.",
+      },
+    },
+    {
+      id: "m8",
+      topic: "clash",
+      rule: "match",
+      text: "A family member is about to make a choice that worries you. What do you do?",
+      options: [
+        "Say nothing unless they ask",
+        "Mention it lightly, just once",
+        "Explain why I'm worried and suggest an alternative",
+        "Keep bringing it up until they change their mind",
+      ],
+      same: "You give advice to a similar degree, so you both know how much weight to give each other's words.",
+      different: "You give different amounts of advice. Holding back shows respect for their choice; repeating it shows how worried you are.",
+      scenario: "Words repeated out of worry can sound like nagging to the listener, while words held back out of respect can look like indifference.",
+      tip: "Before giving advice, ask 'Can I tell you what I think?', and once you've said it, leave the decision to them.",
+    },
+    {
+      id: "m9",
+      topic: "help",
+      rule: "match",
+      text: "Something is too much to handle alone. What do you do?",
+      options: [
+        "Try to handle it all by myself",
+        "Ask only when it's really urgent",
+        "Ask for help with just the parts I need",
+        "Ask my family for help right away",
+      ],
+      same: "You have a similar threshold for asking for help, so asking and being asked both feel natural.",
+      different:
+        "You have different thresholds for asking. Trying alone comes from not wanting to be a burden; asking right away comes from trusting your family.",
+      scenario: "When the one who struggled alone finally says it was hard, the other may be upset: 'Why didn't you tell me?'",
+      tip: "Instead of 'Do you need help?', offer something specific like 'I'll take care of this part.' It's easier to accept for someone who finds asking hard.",
+    },
+    {
+      id: "m10",
+      topic: "help",
+      rule: "complement",
+      text: "A family member seems worn out. What do you do?",
+      options: [
+        "Quietly get them what they need",
+        "Make or bring home their favourite food",
+        "Ask what happened",
+        "Look for a way to solve it together",
+      ],
+      same: "You help a tired family member in similar ways, so you recognise each other's care right away.",
+      different:
+        "You comfort each other in different ways. Someone who quietly takes care of things and someone who listens can support the family in different ways.",
+      tip: "Even if the other's way of caring isn't yours, recognise it as their way of comforting you.",
+    },
+    {
+      id: "m11",
+      topic: "habits",
+      rule: "complement",
+      text: "On a day off, when does your day start?",
+      options: [
+        "Sleep in until nearly lunchtime",
+        "Get up a little later than usual",
+        "Get up around the usual time",
+        "Get up early and make the most of the day",
+      ],
+      same: "Your daily rhythms are similar, so meal times and noise around the house rarely cause friction.",
+      different: "Your daily rhythms differ. Being awake at different times also gives each of you some quiet time to yourself.",
+      tip: "The night owl and the early riser can each pick a time of day when the other will keep things quiet.",
+    },
+    {
+      id: "m12",
+      topic: "habits",
+      rule: "match",
+      text: "What about things in shared spaces like the living room or kitchen?",
+      options: [
+        "Wherever is handy is fine",
+        "Roughly gathered in one spot is enough",
+        "Put back in their place after use",
+        "Always neatly in their set place",
+      ],
+      same: "You have similar standards for tidiness, so shared spaces rarely get on each other's nerves.",
+      different: "Your idea of 'tidy' differs. Leaving things out isn't lazy, and wanting things in their place isn't fussy.",
+      scenario: "One can't find something the other tidied away, or keeps finding their things put away, and both end up frustrated.",
+      tip: "Pick just one shared spot to 'always keep clear', and be relaxed about the rest.",
+    },
+  ],
+  summaries: {
+    high: {
+      title: "Toasty warm, in step without saying a word",
+      summary:
+        "On topics where expectations need to match when living together, like showing concern, chores and household standards, your answers were close. You're used to each other's ways, so daily life rarely causes friction. Check below in case familiarity has let something go unsaid.",
+    },
+    middle: {
+      title: "A lukewarm blend of familiar and different",
+      summary:
+        "Some of your household standards match and some differ. It's a common result in families. Living together for a long time doesn't make standards the same; one small agreement is enough to adjust where you differ.",
+    },
+    low: {
+      title: "A chilly temperature from different daily standards",
+      summary:
+        "Your standards for showing concern, chores and personal time are quite different. That doesn't mean you care about family differently; it means you show it and run daily life differently. Once you know each other's standards, the same actions start to look different.",
+    },
+  },
+  defaultTips: [
+    "Pick one chore or kind gesture you've come to take for granted, and say 'Thanks for always doing this.'",
+    "Pick a question where you gave the same answer and talk about when that became the way your family does things.",
+  ],
+  defaultTalks: [
+    "Is there a family rule you'd like to keep, and one you'd like to change?",
+    "Was there something hard for you lately that I didn't notice?",
+    "If we picked one thing to do together on our next day off, what would it be?",
+  ],
+};

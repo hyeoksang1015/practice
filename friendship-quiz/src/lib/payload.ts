@@ -1,4 +1,5 @@
 import { getCategory } from "../data/categories";
+import type { Locale } from "../i18n/config";
 import { validAnswers } from "./analysis";
 import type { Category } from "./types";
 
@@ -20,7 +21,8 @@ export function encodePayload(category: Category, a: number[], b?: number[]): st
   return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 }
 
-export function decodePayload(hash: string): Decoded {
+// lang: 복원한 카테고리를 어느 언어 문구로 돌려줄지(구조는 언어와 무관하다).
+export function decodePayload(hash: string, lang: Locale = "ko"): Decoded {
   const raw = hash.replace(/^#/, "");
   if (!raw) return { ok: false, reason: "missing" };
   if (raw.length > MAX_LENGTH || !/^[A-Za-z0-9_-]+$/.test(raw)) return { ok: false, reason: "malformed" };
@@ -37,7 +39,7 @@ export function decodePayload(hash: string): Decoded {
 
   const { v, c, t, a, b } = data as Record<string, unknown>;
   if (v !== PAYLOAD_VERSION) return { ok: false, reason: "version" };
-  const category = typeof c === "string" ? getCategory(c) : undefined;
+  const category = typeof c === "string" ? getCategory(c, lang) : undefined;
   if (!category) return { ok: false, reason: "unknown-category" };
   if (t !== category.version) return { ok: false, reason: "version" };
   if (!validAnswers(category, a) || (b !== undefined && !validAnswers(category, b))) return { ok: false, reason: "answers" };

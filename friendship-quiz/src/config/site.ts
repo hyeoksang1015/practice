@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
+import { HTML_LANG, LOCALES, OG_LOCALE, href, type Locale } from "@/i18n/config";
+import { getDict } from "@/i18n/ui";
 
-// 서비스명·로고·주소·문의처는 여기서만 바꾸면 사이트 전체에 반영된다.
+// 로고·주소·광고 ID·문의처는 여기서만 바꾸면 사이트 전체에 반영된다. 사이트 이름·설명은 언어별 사전(src/i18n/ui)에 있다.
 export const site = {
-  name: "관계의 온도",
   logoMark: "🌡️",
-  description:
-    "연인, 친구, 가족과 같은 질문에 각자 답하고 두 사람의 답을 비교해 '관계의 온도'를 확인해 보세요. 내가 먼저 답하고 링크를 보내면 상대가 이어서 답하는, 가입 없는 무료 오락용 테스트입니다.",
   // canonical·sitemap·robots에 쓰는 실제 서비스 주소. 도메인을 바꾸면 여기를 고치거나
   // 빌드 환경 변수 NEXT_PUBLIC_SITE_URL로 덮어쓴다.
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://relationship-dbz.pages.dev").replace(/\/$/, ""),
@@ -15,9 +14,20 @@ export const site = {
   contactEmail: "",
 };
 
-// 결과 화면에서 두 사람을 부르는 이름. 링크에 이름을 담지 않으므로 역할로만 구분한다.
-export const ROLE_A = "초대한 사람";
-export const ROLE_B = "초대받은 사람";
+// 링크를 메신저·SNS에 붙였을 때 보이는 미리보기 이미지(1200×630). 언어마다 글자만 다른 이미지를 쓴다.
+// 모든 페이지가 같은 이미지를 쓰며, 개인 답변은 이미지나 메타 태그에 들어가지 않는다.
+const SHARE_IMAGE: Record<Locale, string> = {
+  ko: "/og-image.png",
+  en: "/og-image-en.png",
+  ja: "/og-image-ja.png",
+  zh: "/og-image-zh.png",
+};
+
+// 루트 레이아웃 공통 메타데이터(제목 기본값·설명).
+export function rootMeta(lang: Locale): Metadata {
+  const t = getDict(lang).site;
+  return { metadataBase: new URL(site.url), title: t.name, description: t.description };
+}
 
 interface MetaOptions {
   absoluteTitle?: boolean;
@@ -25,26 +35,29 @@ interface MetaOptions {
   noindex?: boolean;
 }
 
-// 링크를 메신저·SNS에 붙였을 때 보이는 미리보기 이미지(public/og-image.png, 1200×630).
-// 모든 페이지가 같은 이미지를 쓴다. 개인 답변은 이미지나 메타 태그에 들어가지 않는다.
-const shareImage = { url: "/og-image.png", width: 1200, height: 630, alt: `${site.name} - 우리 사이는 지금 몇 도일까요?` };
-
-export function pageMeta(title: string, description: string, path: string, options: MetaOptions = {}): Metadata {
-  const fullTitle = options.absoluteTitle ? title : `${title} | ${site.name}`;
+// path는 한국어 기준 경로("/tests/")다. 언어별 주소와 hreflang(검색엔진용 언어별 주소)을 함께 만든다.
+export function pageMeta(lang: Locale, title: string, description: string, path: string, options: MetaOptions = {}): Metadata {
+  const t = getDict(lang).site;
+  const fullTitle = options.absoluteTitle ? title : `${title} | ${t.name}`;
+  const url = href(lang, path);
+  const image = { url: SHARE_IMAGE[lang], width: 1200, height: 630, alt: t.shareImageAlt };
   return {
-    title: options.absoluteTitle ? { absolute: title } : title,
+    title: { absolute: fullTitle },
     description,
-    alternates: { canonical: path },
+    alternates: {
+      canonical: url,
+      languages: { ...Object.fromEntries(LOCALES.map((l) => [HTML_LANG[l], href(l, path)])), "x-default": path },
+    },
     ...(options.noindex ? { robots: { index: false, follow: false } } : {}),
     openGraph: {
       title: fullTitle,
       description,
-      url: path,
-      siteName: site.name,
-      locale: "ko_KR",
+      url,
+      siteName: t.name,
+      locale: OG_LOCALE[lang],
       type: "website",
-      images: [shareImage],
+      images: [image],
     },
-    twitter: { card: "summary_large_image", title: fullTitle, description, images: [shareImage] },
+    twitter: { card: "summary_large_image", title: fullTitle, description, images: [image] },
   };
 }

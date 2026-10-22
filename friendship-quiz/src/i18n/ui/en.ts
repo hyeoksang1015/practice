@@ -187,6 +187,8 @@ const en: Dict = {
       "When they open the link and answer the same questions, you'll get your temperature and what it means.",
       "When they send you the result link, you can see the same result too.",
     ],
+    sampleTitle: "Sample questions",
+    sampleNote: (n: number) => `A few of the ${n} questions. There are no right answers; pick whatever feels comfortable to you.`,
     othersTitle: "Other relationship tests",
     aboutLink: "Learn how the temperature is calculated",
     limitsTitle: "Good to know before you look at the result",

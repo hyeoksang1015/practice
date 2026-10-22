@@ -21,6 +21,8 @@ export default function CategoryPage({ lang, slug }: { lang: Locale; slug: strin
   if (!category) notFound();
   const t = getDict(lang).categoryPage;
   const total = category.questions.length;
+  // 앞 세 주제에서 첫 질문 하나씩: 어떤 질문을 하는 테스트인지 시작 전에 보여 준다.
+  const samples = category.topics.slice(0, 3).flatMap((tp) => category.questions.find((q) => q.topic === tp.id) ?? []);
 
   return (
     <div className="space-y-8">
@@ -46,6 +48,18 @@ export default function CategoryPage({ lang, slug }: { lang: Locale; slug: strin
             </li>
           ))}
         </ul>
+      </section>
+
+      <section aria-labelledby="sample-heading">
+        <h2 id="sample-heading" className="text-xl font-bold">
+          {t.sampleTitle}
+        </h2>
+        <ul className="bullets mt-3 text-muted">
+          {samples.map((q) => (
+            <li key={q.id}>{q.text}</li>
+          ))}
+        </ul>
+        <p className="mt-2 text-sm text-muted">{t.sampleNote(total)}</p>
       </section>
 
       <section aria-labelledby="how-heading">

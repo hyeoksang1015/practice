@@ -1,6 +1,6 @@
 import Link from "next/link";
 import CategoryCard from "@/components/CategoryCard";
-import { pageMeta } from "@/config/site";
+import { pageMeta, site } from "@/config/site";
 import { categoriesFor } from "@/data/categories";
 import { href, type Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/ui";
@@ -348,6 +348,21 @@ export default function HomePage({ lang }: { lang: Locale }) {
       </section>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      {/* Google 사이트 이름용 WebSite 데이터. 사이트 이름은 호스트마다 하나라 한국어 홈(/)에만 넣고, 다른 언어 이름은 alternateName으로 둔다. */}
+      {lang === "ko" && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: getDict("ko").site.name,
+              alternateName: [getDict("en").site.name, getDict("ja").site.name, getDict("zh").site.name],
+              url: `${site.url}/`,
+            }),
+          }}
+        />
+      )}
     </div>
   );
 }

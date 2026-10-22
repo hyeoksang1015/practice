@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import StartFlow from "@/components/StartFlow";
 import { pageMeta } from "@/config/site";
-import { categories, getCategory } from "@/data/categories";
-import type { Locale } from "@/i18n/config";
+import { categories, categoriesFor, getCategory } from "@/data/categories";
+import { href, type Locale } from "@/i18n/config";
 import { getDict } from "@/i18n/ui";
 
 export const categoryParams = () => categories.map((c) => ({ slug: c.slug }));
@@ -66,6 +67,26 @@ export default function CategoryPage({ lang, slug }: { lang: Locale; slug: strin
           {t.limits.map((s) => (
             <li key={s}>{s}</li>
           ))}
+        </ul>
+        <Link href={href(lang, "/about/")} className="text-link mt-3 inline-flex min-h-12 items-center">
+          {t.aboutLink}
+        </Link>
+      </section>
+
+      <section aria-labelledby="others-heading">
+        <h2 id="others-heading" className="text-xl font-bold">
+          {t.othersTitle}
+        </h2>
+        <ul className="mt-3 flex flex-wrap gap-2">
+          {categoriesFor(lang)
+            .filter((c) => c.slug !== category.slug)
+            .map((c) => (
+              <li key={c.slug}>
+                <Link href={href(lang, `/tests/${c.slug}/`)} className="btn btn-ghost">
+                  <span aria-hidden="true">{c.emoji}</span> {t.badge(c.name)}
+                </Link>
+              </li>
+            ))}
         </ul>
       </section>
     </div>

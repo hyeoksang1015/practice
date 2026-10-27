@@ -5,3 +5,4 @@ CapCut Drafts/
 node_modules/
 .env*
 !.env.example
+homepage/lowwave/coffee/

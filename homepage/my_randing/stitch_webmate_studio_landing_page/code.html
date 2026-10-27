@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-primary": "#ffffff",
+            "on-background": "#111111",
+            "on-secondary-container": "#52525b",
+            "secondary-container": "#f4f4f5",
+            "surface-container-low": "#fafafa",
+            "primary": "#111111",
+            "surface-variant": "#f4f4f5",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#ebebeb",
+            "outline-variant": "#e4e4e7",
+            "surface-bright": "#ffffff",
+            "surface": "#ffffff",
+            "surface-container": "#f8f8f9",
+            "surface-container-highest": "#e4e4e7",
+            "on-surface-variant": "#71717a",
+            "on-surface": "#111111",
+            "secondary": "#52525b",
+            "outline": "#d4d4d8",
+            "background": "#ffffff"
+          },
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-sans text-on-surface antialiased selection:bg-neutral-900 selection:text-white">
+<!-- HEADER -->
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-outline-variant">
+<div class="h-20 w-full max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<img alt="Webmate Brand Logo" class="h-7 w-auto object-contain grayscale" src="https://lh3.googleusercontent.com/aida/AEtjO1XmXszPdkZbLZU4vkUaWi2w2YhpTZwHgzwdjw6XOhCrIqwniqkNkGI6WKHL0_8Uag-mbNR_JhKFUWbIYkRMkcLIEvhDtZMXnbF4oTE2p9QT-UXS_u-wNdE8XF13GFGdxXHeVfql4WJWwVUZgT8ypsnjyeA7HOu0GNSq_Mt-D3Mf80RAQTGGKh5LjtRaIdFw1Xr4738yl9Qy7hNc-fFsxd_Rlpddd3BI6IDu42nvfcCLnQbfkpY_apu8W2k"/>
+<a class="flex items-center gap-2" href="#">
+<span class="text-lg font-semibold tracking-tight text-neutral-900">Webmate</span>
+<span class="text-[11px] font-mono tracking-wider uppercase text-neutral-500 border border-neutral-300 px-1.5 py-0.5 rounded-sm">Studio</span>
+</a>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors" href="#capabilities">핵심 역량</a>
+<a class="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors" href="#services">서비스</a>
+<a class="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors" href="#portfolio">포트폴리오</a>
+<a class="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors" href="#tech-stack">기술 스택</a>
+<a class="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors" href="#process">제작 과정</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="inline-flex items-center justify-center px-4 py-2 bg-neutral-900 text-white text-xs font-medium tracking-wide rounded hover:bg-neutral-800 transition-colors" href="#contact">
+<span>프로젝트 문의</span>
+<span class="material-symbols-outlined text-sm ml-1">arrow_outward</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-20">
+<!-- HERO SECTION -->
+<section class="relative w-full bg-white py-20 lg:py-28 border-b border-outline-variant">
+<div class="max-w-7xl mx-auto px-6 sm:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Hero Left -->
+<div class="lg:col-span-7 flex flex-col space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-neutral-100 border border-neutral-200 rounded text-xs font-mono text-neutral-700 w-max">
+<span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+<span>Webmate — Digital Experience Partner</span>
+</div>
+<div class="space-y-4">
+<h1 class="text-3xl sm:text-4xl lg:text-[44px] font-bold text-neutral-900 tracking-tight leading-[1.25]">
+                기획부터 개발까지,<br/>
+<span class="text-neutral-800 font-semibold">당신의 웹</span>을 완성합니다.
+              </h1>
+<p class="text-base sm:text-lg text-neutral-600 leading-relaxed max-w-2xl">
+                브랜드 홈페이지부터 반응형 랜딩페이지, 맞춤형 웹 서비스까지. 기획과 디자인, 개발을 하나의 유기적인 흐름으로 결합하여 완성도 높은 디지털 결과물을 제공합니다.
+              </p>
+</div>
+<!-- Tags -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-700 text-xs font-mono">STRATEGY</span>
+<span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-700 text-xs font-mono">UI/UX DESIGN</span>
+<span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-700 text-xs font-mono">PUBLISHING</span>
+<span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-700 text-xs font-mono">FULL-STACK</span>
+</div>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<a class="px-6 py-3.5 bg-neutral-900 text-white text-xs font-mono tracking-wider font-semibold hover:bg-neutral-800 transition-colors flex items-center gap-2 rounded-sm" href="#portfolio">
+<span>포트폴리오 보기</span>
+<span class="material-symbols-outlined text-[16px]">arrow_downward</span>
+</a>
+<a class="px-6 py-3.5 bg-white border border-neutral-300 text-neutral-800 text-xs font-mono tracking-wider font-semibold hover:bg-neutral-50 hover:border-neutral-400 transition-colors flex items-center gap-2 rounded-sm" href="#contact">
+<span>프로젝트 문의하기</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+<!-- Metrics -->
+<div class="grid grid-cols-3 gap-6 pt-6 border-t border-neutral-200">
+<div>
+<div class="text-2xl font-bold text-neutral-900 leading-none">100%</div>
+<div class="text-xs font-mono text-neutral-500 mt-2">코드 정밀도 / SEO</div>
+</div>
+<div>
+<div class="text-2xl font-bold text-neutral-900 leading-none">0.8s</div>
+<div class="text-xs font-mono text-neutral-500 mt-2">첫 화면 평균 로딩</div>
+</div>
+<div>
+<div class="text-2xl font-bold text-neutral-900 leading-none">1:1</div>
+<div class="text-xs font-mono text-neutral-500 mt-2">전담 다이렉트 소통</div>
+</div>
+</div>
+</div>
+<!-- Hero Right Mockup (Clean Monochrome Architecture) -->
+<div class="lg:col-span-5">
+<div class="bg-white border border-neutral-200 rounded-lg shadow-sm overflow-hidden">
+<!-- Window Bar -->
+<div class="h-10 bg-neutral-50 px-4 flex items-center justify-between border-b border-neutral-200">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-neutral-300"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-neutral-300"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-neutral-300"></span>
+</div>
+<span class="text-xs font-mono text-neutral-500">webmate.kr/preview/architecture</span>
+<div class="w-4"></div>
+</div>
+<!-- Window Content -->
+<div class="p-6 space-y-5 bg-neutral-50/50">
+<div class="flex items-center justify-between border-b border-neutral-200 pb-3">
+<div class="flex items-center gap-2">
+<span class="font-mono text-xs font-semibold text-neutral-900 uppercase">WM_CORE</span>
+<span class="text-[11px] font-mono text-neutral-400">v2.4.0</span>
+</div>
+<span class="text-[11px] font-mono text-neutral-500 flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span> ACTIVE
+                  </span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white p-4 border border-neutral-200 rounded">
+<span class="text-[10px] font-mono text-neutral-400 uppercase tracking-wider block">PERFORMANCE</span>
+<div class="text-lg font-bold text-neutral-900 mt-1">99.8%</div>
+<p class="text-xs text-neutral-500 mt-1">Web Vitals 최적화</p>
+</div>
+<div class="bg-white p-4 border border-neutral-200 rounded">
+<span class="text-[10px] font-mono text-neutral-400 uppercase tracking-wider block">LATENCY</span>
+<div class="text-lg font-bold text-neutral-900 mt-1">14ms</div>
+<p class="text-xs text-neutral-500 mt-1">초고속 비동기 응답</p>
+</div>
+</div>
+<div class="bg-neutral-900 text-neutral-200 p-4 rounded text-xs font-mono space-y-1.5 leading-relaxed">
+<div class="text-neutral-500 pb-1 border-b border-neutral-800 text-[11px] flex justify-between">
+<span>AppRouter.tsx</span>
+<span>TypeScript</span>
+</div>
+<p class="pt-1"><span class="text-neutral-400">export default async function</span> Page() {</p>
+<p class="pl-4 text-neutral-300">const site = await webmate.build();</p>
+<p class="pl-4 text-neutral-300">return &lt;<span class="text-white font-semibold">MinimalWeb</span> ready={true} /&gt;;</p>
+<p>}</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- KEY CAPABILITIES -->
+<section class="w-full bg-neutral-50/60 py-20 lg:py-24 border-b border-outline-variant" id="capabilities">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 space-y-14">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-neutral-200 pb-8">
+<div class="space-y-2">
+<span class="text-xs font-mono uppercase tracking-widest text-neutral-500">[ CAPABILITIES MATRIX ]</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 tracking-tight">웹사이트 제작의 모든 과정을 하나로.</h2>
+</div>
+<p class="text-sm text-neutral-600 max-w-md leading-relaxed">
+            아이디어를 구체화하는 기획부터 사용자 경험을 설계하는 디자인, 실제 구현과 안정적인 배포까지 프로젝트의 전 과정을 빈틈없이 직결합니다.
+          </p>
+</div>
+<!-- 4 Grid Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- 01 -->
+<div class="bg-white p-7 border border-neutral-200 rounded-sm flex flex-col justify-between hover:border-neutral-400 transition-colors">
+<div class="space-y-4">
+<div class="flex items-center justify-between border-b border-neutral-100 pb-3">
+<span class="font-mono text-xs font-semibold text-neutral-900">01 / ARCHITECTURE</span>
+<span class="material-symbols-outlined text-neutral-400 text-lg">account_tree</span>
+</div>
+<h3 class="text-lg font-bold text-neutral-900">기획 및 구조 설계</h3>
+<p class="text-sm text-neutral-600 leading-relaxed">
+                비즈니스 목적을 분석하고 방문자가 길을 잃지 않는 명확한 정보 구조를 수립합니다.
+              </p>
+</div>
+<ul class="space-y-2 pt-6 border-t border-neutral-100 text-xs text-neutral-600">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-900 rounded-full"></span>서비스 목적 및 타겟 고객 분석</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-900 rounded-full"></span>정보 구조(IA) 및 페이지 계층화</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-900 rounded-full"></span>전환 중심 사용자 동선 설계</li>
+</ul>
+</div>
+<!-- 02 -->
+<div class="bg-white p-7 border border-neutral-200 rounded-sm flex flex-col justify-between hover:border-neutral-400 transition-colors">
+<div class="space-y-4">
+<div class="flex items-center justify-between border-b border-neutral-100 pb-3">
+<span class="font-mono text-xs font-semibold text-neutral-900">02 / UI/UX DESIGN</span>
+<span class="material-symbols-outlined text-neutral-400 text-lg">palette</span>
+</div>
+<h3 class="text-lg font-bold text-neutral-900">UI/UX 디자인</h3>
+<p class="text-sm text-neutral-600 leading-relaxed">
+                과도한 장식 대신 브랜드의 신뢰도를 높여주는 정교한 타이포그래피와 현대적 그리드를 설계합니다.
+              </p>
+</div>
+<ul class="space-y-2 pt-6 border-t border-neutral-100 text-xs text-neutral-600">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-900 rounded-full"></span>사용자 중심 직관적 인터페이스</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-900 rounded-full"></span>토큰 기반 체계적 디자인 시스템</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-900 rounded-full"></span>시각적 위계와 브랜드 가치 극대화</li>
+</ul>
+</div>
+<!-- 03 -->
+<div class="bg-white p-7 border border-neutral-200 rounded-sm flex flex-col justify-between hover:border-neutral-400 transition-colors">
+<div class="space-y-4">
+<div class="flex items-center justify-between border-b border-neutral-100 pb-3">
+<span class="font-mono text-xs font-semibold text-neutral-900">03 / FRONTEND</span>
+<span class="material-symbols-outlined text-neutral-400 text-lg">code</span>
+</div>
+<h3 class="text-lg font-bold text-neutral-900">웹 퍼블리싱 &amp; 프론트</h3>
+<p class="text-sm text-neutral-600 leading-relaxed">
+                어떤 디바이스에서도 깨지지 않는 반응형 웹과 최신 웹 표준의 시맨틱 코드를 작성합니다.
+              </p>
+</div>
+<ul class="space-y-2 pt-6 border-t border-neutral-100 text-xs text-neutral-600">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-900 rounded-full"></span>모바일·태블릿·PC 무결점 반응형</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-900 rounded-full"></span>Next.js &amp; Tailwind CSS 개발</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-900 rounded-full"></span>정교한 인터랙션과 마이크로 모션</li>
+</ul>
+</div>
+<!-- 04 -->
+<div class="bg-white p-7 border border-neutral-200 rounded-sm flex flex-col justify-between hover:border-neutral-400 transition-colors">
+<div class="space-y-4">
+<div class="flex items-center justify-between border-b border-neutral-100 pb-3">
+<span class="font-mono text-xs font-semibold text-neutral-900">04 / FULL-STACK</span>
+<span class="material-symbols-outlined text-neutral-400 text-lg">dns</span>
+</div>
+<h3 class="text-lg font-bold text-neutral-900">백엔드 및 풀스택 개발</h3>
+<p class="text-sm text-neutral-600 leading-relaxed">
+                단순 페이지를 넘어 데이터베이스 연동, 문의 자동화, 관리자 콘솔 등 실제 기능을 완성합니다.
+              </p>
+</div>
+<ul class="space-y-2 pt-6 border-t border-neutral-100 text-xs text-neutral-600">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-900 rounded-full"></span>FastAPI 및 RESTful API 구축</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-900 rounded-full"></span>데이터베이스 및 폼 접수 자동화</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-neutral-900 rounded-full"></span>맞춤형 관리자 제어 패널 제작</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- SERVICES SECTION -->
+<section class="w-full bg-white py-20 lg:py-24 border-b border-outline-variant" id="services">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 space-y-14">
+<!-- Section Header -->
+<div class="space-y-2 border-b border-neutral-200 pb-8">
+<span class="text-xs font-mono uppercase tracking-widest text-neutral-500">[ TAILORED SERVICES ]</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 tracking-tight">필요한 웹 프로젝트를, 목적에 맞게.</h2>
+<p class="text-sm text-neutral-600 max-w-2xl leading-relaxed">
+            기업의 공식 얼굴이 될 브랜드 사이트부터 마케팅 성과를 내는 랜딩페이지, 맞춤형 웹 애플리케이션까지 꼭 맞는 형태로 제안합니다.
+          </p>
+</div>
+<!-- 2x2 Clean Services Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Service A -->
+<div class="bg-neutral-50/50 p-8 border border-neutral-200 rounded-sm flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono text-neutral-500 uppercase tracking-wider">SERVICE 01</span>
+<span class="px-2 py-0.5 bg-neutral-200 text-[11px] font-mono text-neutral-700 rounded-sm">BRANDING</span>
+</div>
+<h3 class="text-xl font-bold text-neutral-900">브랜드 공식 홈페이지 제작</h3>
+<p class="text-sm text-neutral-600 leading-relaxed">
+                기업, 스타트업, 크리에이티브 스튜디오의 신뢰도를 전달하는 공식 웹사이트입니다. 브랜드 고유의 아이덴티티와 최적화된 정보 구조를 결합합니다.
+              </p>
+</div>
+<div class="pt-6 border-t border-neutral-200/80 mt-6 flex items-center justify-between text-xs">
+<span class="text-neutral-500 font-mono">추천: 기업 공식 사이트, 에이전시, 전문직 쇼케이스</span>
+<a class="font-medium text-neutral-900 hover:underline flex items-center gap-1" href="#contact">문의하기 →</a>
+</div>
+</div>
+<!-- Service B -->
+<div class="bg-neutral-50/50 p-8 border border-neutral-200 rounded-sm flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono text-neutral-500 uppercase tracking-wider">SERVICE 02</span>
+<span class="px-2 py-0.5 bg-neutral-200 text-[11px] font-mono text-neutral-700 rounded-sm">CONVERSION</span>
+</div>
+<h3 class="text-xl font-bold text-neutral-900">반응형 원페이지 랜딩페이지</h3>
+<p class="text-sm text-neutral-600 leading-relaxed">
+                신규 서비스 런칭, 프로모션, 사전 예약 및 잠재 고객 리드 수집에 최적화된 고효율 랜딩페이지를 신속하고 정교하게 완성합니다.
+              </p>
+</div>
+<div class="pt-6 border-t border-neutral-200/80 mt-6 flex items-center justify-between text-xs">
+<span class="text-neutral-500 font-mono">추천: 사전 예약, 마케팅 캠페인, SaaS 홍보</span>
+<a class="font-medium text-neutral-900 hover:underline flex items-center gap-1" href="#contact">문의하기 →</a>
+</div>
+</div>
+<!-- Service C -->
+<div class="bg-neutral-50/50 p-8 border border-neutral-200 rounded-sm flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono text-neutral-500 uppercase tracking-wider">SERVICE 03</span>
+<span class="px-2 py-0.5 bg-neutral-200 text-[11px] font-mono text-neutral-700 rounded-sm">DEVELOPMENT</span>
+</div>
+<h3 class="text-xl font-bold text-neutral-900">웹 퍼블리싱 및 UI/UX 리뉴얼</h3>
+<p class="text-sm text-neutral-600 leading-relaxed">
+                Figma 등 기존 디자인 시안을 오차 없이 웹 표준 코드로 구현하거나 노후된 웹사이트의 반응형 레이아웃과 가독성을 고도화합니다.
+              </p>
+</div>
+<div class="pt-6 border-t border-neutral-200/80 mt-6 flex items-center justify-between text-xs">
+<span class="text-neutral-500 font-mono">추천: 시안 보유 고객, 노후 웹 개편</span>
+<a class="font-medium text-neutral-900 hover:underline flex items-center gap-1" href="#contact">문의하기 →</a>
+</div>
+</div>
+<!-- Service D -->
+<div class="bg-neutral-50/50 p-8 border border-neutral-200 rounded-sm flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs font-mono text-neutral-500 uppercase tracking-wider">SERVICE 04</span>
+<span class="px-2 py-0.5 bg-neutral-200 text-[11px] font-mono text-neutral-700 rounded-sm">FULL-STACK</span>
+</div>
+<h3 class="text-xl font-bold text-neutral-900">풀스택 맞춤형 웹 서비스 개발</h3>
+<p class="text-sm text-neutral-600 leading-relaxed">
+                정적 페이지를 넘어 사용자 인증, 데이터베이스 조회, 관리자 콘솔, 외부 API 연동 등 실제 비즈니스를 구동시키는 웹 시스템을 개발합니다.
+              </p>
+</div>
+<div class="pt-6 border-t border-neutral-200/80 mt-6 flex items-center justify-between text-xs">
+<span class="text-neutral-500 font-mono">추천: 사내 업무 도구, 데이터 뷰어, MVP 프로토타입</span>
+<a class="font-medium text-neutral-900 hover:underline flex items-center gap-1" href="#contact">문의하기 →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PORTFOLIO SECTION -->
+<section class="w-full bg-neutral-50/60 py-20 lg:py-24 border-b border-outline-variant" id="portfolio">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 space-y-14">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-neutral-200 pb-8">
+<div class="space-y-2">
+<span class="text-xs font-mono uppercase tracking-widest text-neutral-500">[ CONCEPT ARCHIVE ]</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 tracking-tight">만드는 것보다 중요한 건, 어떻게 완성하느냐.</h2>
+</div>
+<p class="text-sm text-neutral-600 max-w-md leading-relaxed">
+            다양한 비즈니스 목적과 요구사항에 맞춰 설계한 웹 프로젝트 쇼케이스입니다. (스튜디오 자체 디자인 프로토타입 콘셉트)
+          </p>
+</div>
+<!-- 4 Clean Mockup Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 01 -->
+<div class="bg-white border border-neutral-200 rounded overflow-hidden flex flex-col hover:border-neutral-400 transition-colors">
+<div class="h-9 bg-neutral-100 px-4 flex items-center justify-between border-b border-neutral-200">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-neutral-300"></span>
+<span class="w-2 h-2 rounded-full bg-neutral-300"></span>
+<span class="w-2 h-2 rounded-full bg-neutral-300"></span>
+<span class="ml-2 font-mono text-[11px] text-neutral-500">orbit-kinetic.preview</span>
+</div>
+<span class="px-2 py-0.5 bg-neutral-200 text-neutral-700 font-mono text-[10px] font-semibold rounded-sm">CONCEPT</span>
+</div>
+<div class="relative w-full h-64 bg-neutral-100 overflow-hidden border-b border-neutral-200">
+<img class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-300" data-alt="Dark mode modern SaaS analytics web application dashboard UI with real-time financial charts, glowing lime line graphs, dark charcoal cards, sleek modern typography, and clean minimalist data widgets." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCn19-xrTMjKZK4OxNqUBXEoqQkXxZglk5fPBbXgbaFL3c52Ma4MuzRle6VviE5SUGZEabdv_nZWTXIR_0MVCB_zlZaYV6NP2T0QsLr8d-d0eG5kK37BwHARI33I9WT_-ww8L54Je7fB478c5bvK3DZPvUy4Wi75RQ8j10Vagzu-zTzvsujkhn_DVIsv1-HixAny1KlzVRpvxaO9nSfQyE_FFkqNAVvHrv5KeCqwMGfhKtidBqmjXu7g"/>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between text-xs font-mono text-neutral-400">
+<span>01 / WEB APPLICATION</span>
+<span>2025</span>
+</div>
+<h3 class="text-lg font-bold text-neutral-900">ORBIT KINETIC — AI 데이터 분석 플랫폼</h3>
+<p class="text-xs text-neutral-600 leading-relaxed">
+                  대규모 실시간 데이터 스트림과 직관적인 차트 인터페이스를 결합한 SaaS 대시보드. 엄격한 정보 위계로 가독성을 극대화했습니다.
+                </p>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 pt-3 border-t border-neutral-100">
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">Next.js</span>
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">TypeScript</span>
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">FastAPI</span>
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">Tailwind</span>
+</div>
+</div>
+</div>
+<!-- Project 02 -->
+<div class="bg-white border border-neutral-200 rounded overflow-hidden flex flex-col hover:border-neutral-400 transition-colors">
+<div class="h-9 bg-neutral-100 px-4 flex items-center justify-between border-b border-neutral-200">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-neutral-300"></span>
+<span class="w-2 h-2 rounded-full bg-neutral-300"></span>
+<span class="w-2 h-2 rounded-full bg-neutral-300"></span>
+<span class="ml-2 font-mono text-[11px] text-neutral-500">maison-delart.preview</span>
+</div>
+<span class="px-2 py-0.5 bg-neutral-200 text-neutral-700 font-mono text-[10px] font-semibold rounded-sm">CONCEPT</span>
+</div>
+<div class="relative w-full h-64 bg-neutral-100 overflow-hidden border-b border-neutral-200">
+<img class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-300" data-alt="High-end editorial web design for architectural furniture studio, showcasing clean neutral gallery spaces, brutalist sans-serif typography, asymmetric product grid, and luxury lighting details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgTrB0-0_7MXfz48ocpqlJtGkTilO2Qa4KBLNJJ0D1zNQGu93NxDusAdDzMloNIbSE1HkeNxbUp-vHZ_nI1Ev0Qx3F1XhPyycvEPoyMWxg8bQbSIThNkBRyHGeHpJJVY_mdzBBMRviOmGBJCSeoZfj6sqLSwK_ZlxaKH4SqqpvEwkRqYSfYKfv11zZ40IjzmPpIuCV0Va32s4O9EuESRdcl5eyNCz0_5R8k2iUaWa-QOYNfWV6qM6rHw"/>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between text-xs font-mono text-neutral-400">
+<span>02 / BRAND FLAGSHIP</span>
+<span>2025</span>
+</div>
+<h3 class="text-lg font-bold text-neutral-900">MAISON DE L'ART — 미니멀 퍼니처 공식 웹사이트</h3>
+<p class="text-xs text-neutral-600 leading-relaxed">
+                  건축적 그리드 기반의 브랜드 쇼케이스. 감성적인 이미지 배치와 정밀한 타이포그래피로 브랜드 가치를 전달합니다.
+                </p>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 pt-3 border-t border-neutral-100">
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">React</span>
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">Next.js</span>
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">Typography</span>
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">CSS Grid</span>
+</div>
+</div>
+</div>
+<!-- Project 03 -->
+<div class="bg-white border border-neutral-200 rounded overflow-hidden flex flex-col hover:border-neutral-400 transition-colors">
+<div class="h-9 bg-neutral-100 px-4 flex items-center justify-between border-b border-neutral-200">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-neutral-300"></span>
+<span class="w-2 h-2 rounded-full bg-neutral-300"></span>
+<span class="w-2 h-2 rounded-full bg-neutral-300"></span>
+<span class="ml-2 font-mono text-[11px] text-neutral-500">syncflow.preview</span>
+</div>
+<span class="px-2 py-0.5 bg-neutral-200 text-neutral-700 font-mono text-[10px] font-semibold rounded-sm">CONCEPT</span>
+</div>
+<div class="relative w-full h-64 bg-neutral-100 overflow-hidden border-b border-neutral-200">
+<img class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-300" data-alt="High conversion SaaS marketing landing page preview with interactive workflow cards, animated sync nodes, electric lime accents, dark surface background, and clear subscription CTA blocks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB03OjE2oMtHYsR013UUXKG607Ej7D3oVdRhiltGHDIvz-29brbkjEsNfU9s_l2ott3ehDpVKzTOrBCg1o9_Bt2JhPtWQOOJ5NlAM3Vz_LnhbPWo0PqnMj-6tbAUSXy9MhyabFVz-SQygw-yAZy2imFRW4zvmFMCZj0QvhR36Pm9fTthJZW87GtxmaySXDXr573ngf1Xde9QD3UTzvxXPzsln3hQLl5ZukzGJUVEOLb0SPH7UP8ljH_Zw"/>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between text-xs font-mono text-neutral-400">
+<span>03 / SERVICE LANDING</span>
+<span>2024</span>
+</div>
+<h3 class="text-lg font-bold text-neutral-900">SYNCFLOW — 팀 협업 솔루션 랜딩페이지</h3>
+<p class="text-xs text-neutral-600 leading-relaxed">
+                  높은 문의 전환율을 목표로 인터랙티브 카드를 결합한 고효율 랜딩페이지. 핵심 가치를 즉각 전달합니다.
+                </p>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 pt-3 border-t border-neutral-100">
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">Next.js</span>
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">Framer Motion</span>
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">Tailwind</span>
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">SEO</span>
+</div>
+</div>
+</div>
+<!-- Project 04 -->
+<div class="bg-white border border-neutral-200 rounded overflow-hidden flex flex-col hover:border-neutral-400 transition-colors">
+<div class="h-9 bg-neutral-100 px-4 flex items-center justify-between border-b border-neutral-200">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-neutral-300"></span>
+<span class="w-2 h-2 rounded-full bg-neutral-300"></span>
+<span class="w-2 h-2 rounded-full bg-neutral-300"></span>
+<span class="ml-2 font-mono text-[11px] text-neutral-500">nexus-metrics.preview</span>
+</div>
+<span class="px-2 py-0.5 bg-neutral-200 text-neutral-700 font-mono text-[10px] font-semibold rounded-sm">CONCEPT</span>
+</div>
+<div class="relative w-full h-64 bg-neutral-100 overflow-hidden border-b border-neutral-200">
+<img class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-300" data-alt="Technical developer console user interface displaying machine learning inference latencies, server node status matrix, clean monospaced terminal logs, and sleek obsidian dark dashboard framing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdAYqAp9pkN_w8BmzqqDV943JZI8RXVUO0sBJeEozGnf9N_iiD_j1gV1fXyA_vFFosAwzcszG1Hxp3EPAfwajcNdb7IcxliyT8jPkEw1jWwl-VdDGppkq6e7gK0TCiA9uhMGaETAcWFYDl234I_IiHz60XMxQ9uuqUhgRR-cJydo0VaPJpcObolfmVnBYVwbVRAX6rW-j-0KyHQKCqbxXrYw0Ve3Gq8VZ9XatbOLgaAWxWiXJyn5Mb-A"/>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+<div class="space-y-2">
+<div class="flex items-center justify-between text-xs font-mono text-neutral-400">
+<span>04 / DATA &amp; CONSOLE</span>
+<span>2024</span>
+</div>
+<h3 class="text-lg font-bold text-neutral-900">NEXUS METRICS — 모니터링 콘솔</h3>
+<p class="text-xs text-neutral-600 leading-relaxed">
+                  FastAPI 연동을 전제로 설계된 데이터 분석 뷰어. 복잡한 시스템 지표를 한눈에 파악하도록 정렬했습니다.
+                </p>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 pt-3 border-t border-neutral-100">
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">Python</span>
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">FastAPI</span>
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">Streamlit</span>
+<span class="px-2 py-0.5 bg-neutral-100 text-[11px] font-mono text-neutral-600">TypeScript</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TECH STACK SECTION -->
+<section class="w-full bg-white py-20 lg:py-24 border-b border-outline-variant" id="tech-stack">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 space-y-14">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-neutral-200 pb-8">
+<div class="space-y-2">
+<span class="text-xs font-mono uppercase tracking-widest text-neutral-500">[ ENGINE &amp; TOOLING ]</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 tracking-tight">프로젝트에 맞는 기술을 선택합니다.</h2>
+</div>
+<p class="text-sm text-neutral-600 max-w-md leading-relaxed">
+            고정된 틀에 맞추지 않고 프로젝트의 목적과 규모, 운영 효율성에 가장 적합한 현대적 기술 스택을 유연하게 조합합니다.
+          </p>
+</div>
+<!-- 3 Category Clusters -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Cluster 1 -->
+<div class="bg-neutral-50/50 p-7 border border-neutral-200 rounded-sm space-y-6">
+<div class="border-b border-neutral-200 pb-3 flex items-center justify-between">
+<span class="text-xs font-mono font-semibold text-neutral-900">CLUSTER 01</span>
+<span class="text-[11px] font-mono text-neutral-500">CLIENT-SIDE</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-neutral-900">FRONTEND</h3>
+<p class="text-xs text-neutral-600 mt-1">빠른 초기 로딩과 검색엔진 최적화(SEO), 컴포넌트 재사용성을 보장합니다.</p>
+</div>
+<div class="space-y-2.5">
+<div class="p-3 bg-white border border-neutral-200 rounded-sm flex items-center justify-between text-xs">
+<div>
+<div class="font-semibold text-neutral-900">React &amp; Next.js</div>
+<div class="text-[11px] text-neutral-500">SSR / SSG 하이브리드 지원</div>
+</div>
+<span class="font-mono text-[10px] text-neutral-400">CORE</span>
+</div>
+<div class="p-3 bg-white border border-neutral-200 rounded-sm flex items-center justify-between text-xs">
+<div>
+<div class="font-semibold text-neutral-900">TypeScript</div>
+<div class="text-[11px] text-neutral-500">정적 타입 시스템 안정성</div>
+</div>
+<span class="font-mono text-[10px] text-neutral-400">ROBUST</span>
+</div>
+<div class="p-3 bg-white border border-neutral-200 rounded-sm flex items-center justify-between text-xs">
+<div>
+<div class="font-semibold text-neutral-900">Tailwind CSS</div>
+<div class="text-[11px] text-neutral-500">모듈식 시맨틱 스타일링</div>
+</div>
+<span class="font-mono text-[10px] text-neutral-400">SPEED</span>
+</div>
+</div>
+</div>
+<!-- Cluster 2 -->
+<div class="bg-neutral-50/50 p-7 border border-neutral-200 rounded-sm space-y-6">
+<div class="border-b border-neutral-200 pb-3 flex items-center justify-between">
+<span class="text-xs font-mono font-semibold text-neutral-900">CLUSTER 02</span>
+<span class="text-[11px] font-mono text-neutral-500">SERVER &amp; API</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-neutral-900">BACKEND &amp; API</h3>
+<p class="text-xs text-neutral-600 mt-1">가볍고 빠른 비동기 처리와 확장 가능한 API 설계로 데이터를 서빙합니다.</p>
+</div>
+<div class="space-y-2.5">
+<div class="p-3 bg-white border border-neutral-200 rounded-sm flex items-center justify-between text-xs">
+<div>
+<div class="font-semibold text-neutral-900">Python &amp; FastAPI</div>
+<div class="text-[11px] text-neutral-500">고성능 비동기 API 구축</div>
+</div>
+<span class="font-mono text-[10px] text-neutral-400">ASYNC</span>
+</div>
+<div class="p-3 bg-white border border-neutral-200 rounded-sm flex items-center justify-between text-xs">
+<div>
+<div class="font-semibold text-neutral-900">Node.js</div>
+<div class="text-[11px] text-neutral-500">실시간 이벤트 및 마이크로서비스</div>
+</div>
+<span class="font-mono text-[10px] text-neutral-400">EVENT</span>
+</div>
+<div class="p-3 bg-white border border-neutral-200 rounded-sm flex items-center justify-between text-xs">
+<div>
+<div class="font-semibold text-neutral-900">Database &amp; Supabase</div>
+<div class="text-[11px] text-neutral-500">데이터 영속성 및 관리</div>
+</div>
+<span class="font-mono text-[10px] text-neutral-400">SAFE</span>
+</div>
+</div>
+</div>
+<!-- Cluster 3 -->
+<div class="bg-neutral-50/50 p-7 border border-neutral-200 rounded-sm space-y-6">
+<div class="border-b border-neutral-200 pb-3 flex items-center justify-between">
+<span class="text-xs font-mono font-semibold text-neutral-900">CLUSTER 03</span>
+<span class="text-[11px] font-mono text-neutral-500">RAPID BUILD</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-neutral-900">WEB APPLICATION</h3>
+<p class="text-xs text-neutral-600 mt-1">사내 관리 도구 및 빠른 시장 검증을 위한 MVP 프로토타입 파이프라인.</p>
+</div>
+<div class="space-y-2.5">
+<div class="p-3 bg-white border border-neutral-200 rounded-sm flex items-center justify-between text-xs">
+<div>
+<div class="font-semibold text-neutral-900">Streamlit</div>
+<div class="text-[11px] text-neutral-500">대화형 데이터 앱 신속 배포</div>
+</div>
+<span class="font-mono text-[10px] text-neutral-400">RAPID</span>
+</div>
+<div class="p-3 bg-white border border-neutral-200 rounded-sm flex items-center justify-between text-xs">
+<div>
+<div class="font-semibold text-neutral-900">Vercel &amp; Cloud</div>
+<div class="text-[11px] text-neutral-500">무중단 CI/CD 안정적 배포</div>
+</div>
+<span class="font-mono text-[10px] text-neutral-400">STABLE</span>
+</div>
+<div class="p-3 bg-white border border-neutral-200 rounded-sm flex items-center justify-between text-xs">
+<div>
+<div class="font-semibold text-neutral-900">Form &amp; Notification</div>
+<div class="text-[11px] text-neutral-500">메일/메신저 자동 연동</div>
+</div>
+<span class="font-mono text-[10px] text-neutral-400">AUTO</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PROCESS SECTION -->
+<section class="w-full bg-neutral-50/60 py-20 lg:py-24 border-b border-outline-variant" id="process">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 space-y-14">
+<!-- Section Header -->
+<div class="space-y-2 border-b border-neutral-200 pb-8">
+<span class="text-xs font-mono uppercase tracking-widest text-neutral-500">[ WORKFLOW TIMELINE ]</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 tracking-tight">아이디어에서 실제 서비스까지.</h2>
+<p class="text-sm text-neutral-600 max-w-2xl leading-relaxed">
+            불필요한 지연 없이 모든 단계가 투명하게 공유되는 4단계 체계적 프로세스로 결과물을 인도합니다.
+          </p>
+</div>
+<!-- 4-Step Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white p-6 border border-neutral-200 rounded-sm flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 bg-neutral-900 text-white text-xs font-mono font-bold flex items-center justify-center rounded-sm">01</span>
+<span class="text-[11px] font-mono text-neutral-400">PHASE 01</span>
+</div>
+<h3 class="text-base font-bold text-neutral-900">상담 및 기획</h3>
+<p class="text-xs text-neutral-600 leading-relaxed">
+                프로젝트 목적, 타겟 고객, 필수 기능, 예산 및 출시 일정을 면밀히 상담하고 방향성을 확정합니다.
+              </p>
+</div>
+<div class="pt-4 border-t border-neutral-100 mt-4 text-[11px] font-mono text-neutral-500">
+              → 요구사항 정의서 도출
+            </div>
+</div>
+<div class="bg-white p-6 border border-neutral-200 rounded-sm flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 bg-neutral-100 text-neutral-900 border border-neutral-300 text-xs font-mono font-bold flex items-center justify-center rounded-sm">02</span>
+<span class="text-[11px] font-mono text-neutral-400">PHASE 02</span>
+</div>
+<h3 class="text-base font-bold text-neutral-900">구조 설계 및 디자인</h3>
+<p class="text-xs text-neutral-600 leading-relaxed">
+                페이지 구조(IA)와 동선을 정리하고 톤앤매너에 맞춘 UI 디자인 시안을 도출하여 검토합니다.
+              </p>
+</div>
+<div class="pt-4 border-t border-neutral-100 mt-4 text-[11px] font-mono text-neutral-500">
+              → 와이어프레임 &amp; 디자인 시안
+            </div>
+</div>
+<div class="bg-white p-6 border border-neutral-200 rounded-sm flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 bg-neutral-100 text-neutral-900 border border-neutral-300 text-xs font-mono font-bold flex items-center justify-center rounded-sm">03</span>
+<span class="text-[11px] font-mono text-neutral-400">PHASE 03</span>
+</div>
+<h3 class="text-base font-bold text-neutral-900">개발 및 구현</h3>
+<p class="text-xs text-neutral-600 leading-relaxed">
+                확정된 시안을 바탕으로 시맨틱 마크업, 반응형 웹 퍼블리싱, 백엔드 연동을 구현합니다.
+              </p>
+</div>
+<div class="pt-4 border-t border-neutral-100 mt-4 text-[11px] font-mono text-neutral-500">
+              → 테스트 환경 배포 &amp; 검증
+            </div>
+</div>
+<div class="bg-white p-6 border border-neutral-200 rounded-sm flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="w-7 h-7 bg-neutral-100 text-neutral-900 border border-neutral-300 text-xs font-mono font-bold flex items-center justify-center rounded-sm">04</span>
+<span class="text-[11px] font-mono text-neutral-400">PHASE 04</span>
+</div>
+<h3 class="text-base font-bold text-neutral-900">검수 및 전달</h3>
+<p class="text-xs text-neutral-600 leading-relaxed">
+                디바이스별 호환성 및 링크, 폼 동작을 철저히 검수한 후 도메인 연결과 소스코드를 인계합니다.
+              </p>
+</div>
+<div class="pt-4 border-t border-neutral-100 mt-4 text-[11px] font-mono text-neutral-900 font-semibold">
+              → 런칭 &amp; 인수인계 완료
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTACT INQUIRY SECTION -->
+<section class="w-full bg-white py-20 lg:py-24 border-b border-outline-variant" id="contact">
+<div class="max-w-7xl mx-auto px-6 sm:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+<!-- Left Info -->
+<div class="lg:col-span-6 space-y-6">
+<span class="text-xs font-mono uppercase tracking-widest text-neutral-500">[ START A PROJECT ]</span>
+<h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 tracking-tight leading-snug">
+              당신의 아이디어,<br/>
+              웹메이트와 현실로 만들어보세요.
+            </h2>
+<p class="text-sm text-neutral-600 leading-relaxed max-w-lg">
+              공식 홈페이지 제작부터 전환형 랜딩페이지, 풀스택 맞춤형 기능 개발까지. 만들고자 하는 사이트에 대해 편안하게 문의 남겨주시면 정성을 다해 함께 고민하겠습니다.
+            </p>
+<div class="space-y-3 pt-2">
+<div class="flex items-center gap-3 text-xs font-mono text-neutral-700 bg-neutral-50 border border-neutral-200 px-4 py-3 rounded-sm">
+<span class="font-semibold text-neutral-900 w-16">TEL</span>
+<a class="hover:text-neutral-900" href="tel:01059182043">010-5918-2043</a>
+</div>
+<div class="flex items-center gap-3 text-xs font-mono text-neutral-700 bg-neutral-50 border border-neutral-200 px-4 py-3 rounded-sm">
+<span class="font-semibold text-neutral-900 w-16">EMAIL</span>
+<a class="hover:text-neutral-900" href="mailto:01059182043k@gmail.com">01059182043k@gmail.com</a>
+</div>
+<div class="flex items-center gap-3 text-xs font-mono text-neutral-700 bg-neutral-50 border border-neutral-200 px-4 py-3 rounded-sm">
+<span class="font-semibold text-neutral-900 w-16">HOURS</span>
+<span>평일 11:00 ~ 22:00</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<a class="px-6 py-3.5 bg-neutral-900 text-white text-xs font-mono tracking-wider font-semibold hover:bg-neutral-800 transition-colors flex items-center gap-2 rounded-sm" href="mailto:01059182043k@gmail.com?subject=[프로젝트 문의] 웹사이트 제작 의뢰">
+<span>이메일로 문의하기</span>
+<span class="material-symbols-outlined text-[16px]">mail</span>
+</a>
+<a class="px-6 py-3.5 bg-white border border-neutral-300 text-neutral-800 text-xs font-mono tracking-wider font-semibold hover:bg-neutral-50 hover:border-neutral-400 transition-colors flex items-center gap-2 rounded-sm" href="tel:01059182043">
+<span>전화 상담하기</span>
+<span class="material-symbols-outlined text-[16px]">call</span>
+</a>
+</div>
+</div>
+<!-- Right Form -->
+<div class="lg:col-span-6 bg-neutral-50 p-8 border border-neutral-200 rounded-sm">
+<div class="border-b border-neutral-200 pb-3 mb-6 flex items-center justify-between">
+<span class="text-xs font-mono font-semibold text-neutral-900 uppercase">QUICK INQUIRY</span>
+<span class="text-[11px] font-mono text-neutral-400">ONLINE FORM</span>
+</div>
+<form class="space-y-4" onsubmit="event.preventDefault(); alert('소중한 문의가 접수되었습니다. 확인 후 빠른 시간 내 연락드리겠습니다.');">
+<div>
+<label class="block text-xs font-medium text-neutral-700 mb-1.5">성함 또는 기업명</label>
+<input class="w-full bg-white border border-neutral-300 rounded-sm px-3.5 py-2.5 text-xs text-neutral-900 focus:outline-none focus:border-neutral-900" placeholder="예: 홍길동 / (주)파트너스" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-neutral-700 mb-1.5">연락처 또는 이메일</label>
+<input class="w-full bg-white border border-neutral-300 rounded-sm px-3.5 py-2.5 text-xs text-neutral-900 focus:outline-none focus:border-neutral-900" placeholder="010-0000-0000 / name@company.com" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-medium text-neutral-700 mb-1.5">문의 유형</label>
+<select class="w-full bg-white border border-neutral-300 rounded-sm px-3.5 py-2.5 text-xs text-neutral-900 focus:outline-none focus:border-neutral-900">
+<option>브랜드 공식 홈페이지 제작</option>
+<option>반응형 원페이지 랜딩페이지</option>
+<option>웹 퍼블리싱 및 UI/UX 개선</option>
+<option>풀스택 맞춤형 웹 서비스 개발</option>
+<option>기타 웹 프로젝트 상담</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-medium text-neutral-700 mb-1.5">프로젝트 개요 및 요청 사항</label>
+<textarea class="w-full bg-white border border-neutral-300 rounded-sm px-3.5 py-2.5 text-xs text-neutral-900 focus:outline-none focus:border-neutral-900" placeholder="구상 중이신 사이트 목적이나 참고할 레퍼런스 사이트 링크를 편하게 적어주세요." rows="4"></textarea>
+</div>
+<button class="w-full py-3 bg-neutral-900 text-white text-xs font-mono uppercase tracking-wider font-semibold hover:bg-neutral-800 transition-colors flex items-center justify-center gap-2 rounded-sm" type="submit">
+<span>문의 내용 접수하기</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+<p class="text-[11px] text-center text-neutral-400 font-mono">
+                * 접수된 정보는 프로젝트 견적 및 상담 목적으로만 안전하게 활용됩니다.
+              </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="w-full bg-neutral-900 text-neutral-300 py-16">
+<div class="max-w-7xl mx-auto px-6 sm:px-8 space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-neutral-800">
+<div class="md:col-span-5 space-y-3">
+<div class="flex items-center gap-2">
+<span class="text-lg font-bold text-white tracking-tight">Webmate</span>
+<span class="text-[10px] font-mono text-neutral-400 border border-neutral-700 px-1.5 py-0.5 rounded-sm uppercase">STUDIO</span>
+</div>
+<p class="text-xs text-neutral-400 max-w-sm leading-relaxed">
+            웹메이트 Webmate — 기획과 디자인, 개발을 연결하는 미니멀 웹 제작 파트너.
+          </p>
+</div>
+<div class="md:col-span-4 space-y-2 text-xs">
+<span class="font-mono text-[11px] tracking-wider text-neutral-400 uppercase block mb-3">CONTACT</span>
+<p class="text-neutral-400"><strong class="text-neutral-200">전화번호:</strong> 010-5918-2043</p>
+<p class="text-neutral-400"><strong class="text-neutral-200">이메일:</strong> 01059182043k@gmail.com</p>
+<p class="text-neutral-400"><strong class="text-neutral-200">상담 가능 시간:</strong> 평일 11:00 ~ 22:00</p>
+</div>
+<div class="md:col-span-3 space-y-2 text-xs">
+<span class="font-mono text-[11px] tracking-wider text-neutral-400 uppercase block mb-3">NAVIGATION</span>
+<div class="flex flex-col space-y-1.5 text-neutral-400">
+<a class="hover:text-white transition-colors" href="#capabilities">핵심 역량 (Capabilities)</a>
+<a class="hover:text-white transition-colors" href="#services">서비스 (Services)</a>
+<a class="hover:text-white transition-colors" href="#portfolio">포트폴리오 (Portfolio)</a>
+<a class="hover:text-white transition-colors" href="#process">제작 과정 (Process)</a>
+<a class="hover:text-white transition-colors" href="#contact">문의하기 (Contact)</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-neutral-500">
+<p>© 2025 Webmate Studio. All rights reserved.</p>
+<div class="flex items-center gap-4">
+<span>SEOUL, REPUBLIC OF KOREA</span>
+<span>// STATUS: READY</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

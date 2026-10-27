@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200, initial-scale=1.0">
+  <title>KMONG DETAIL 03 — DESIGN SYSTEM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { margin: 0; padding: 0; background-color: #262521; font-family: 'Noto Sans KR', sans-serif; display: flex; justify-content: center; }
+    .card-canvas { width: 1200px; height: 1800px; background-color: #E8E5DF; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; }
+    .font-display { font-family: 'Space Grotesk', sans-serif; }
+  </style>
+</head>
+<body>
+  <div class="card-canvas p-20 text-[#262521]">
+    <!-- Top Meta -->
+    <div class="flex justify-between items-center border-b border-[#C2BEB5] pb-8">
+      <div class="flex items-center space-x-4">
+        <span class="font-display font-bold text-3xl tracking-[0.25em]">WEBMATE</span>
+        <span class="text-[#C44B32] text-2xl font-light">/</span>
+        <span class="font-display text-sm tracking-widest text-[#77736C]">PORTFOLIO PROJECT 02</span>
+      </div>
+      <div class="font-display text-sm tracking-widest text-[#77736C] uppercase font-semibold">
+        KMONG DETAIL 03 / 05
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="my-auto py-6">
+      <div class="font-display text-xs text-[#C44B32] tracking-widest mb-3 uppercase font-bold">
+        VISUAL IDENTITY SYSTEM
+      </div>
+      <h1 class="text-5xl font-extrabold leading-tight tracking-tight mb-4">
+        정밀하게 조율된<br>
+        <span class="text-[#C44B32] font-display">DESIGN FOUNDATION</span>
+      </h1>
+      <p class="text-lg text-[#5E5A53] max-w-2xl mb-12">
+        GREENFORM 친환경 패키징의 그린 톤을 전면 배제하고, 건축 소재(콘크리트, 돌, 테라코타)에서 영감을 얻은 고유한 팔레트와 타이포그래피 시스템을 새롭게 설계했습니다.
+      </p>
+
+      <!-- Color Palette Showcase -->
+      <div class="mb-10">
+        <div class="font-display text-xs text-[#77736C] uppercase tracking-widest mb-4 font-bold">COLOR SCHEME</div>
+        <div class="grid grid-cols-5 gap-4">
+          <div class="border border-[#C2BEB5] bg-[#E8E5DF] p-5">
+            <div class="h-20 bg-[#E8E5DF] border border-[#C2BEB5] mb-3"></div>
+            <div class="font-display font-bold text-sm">#E8E5DF</div>
+            <div class="text-[11px] text-[#77736C]">Main Background</div>
+          </div>
+          <div class="border border-[#C2BEB5] bg-[#D4D0C8] p-5">
+            <div class="h-20 bg-[#D4D0C8] border border-[#B5B0A6] mb-3"></div>
+            <div class="font-display font-bold text-sm">#D4D0C8</div>
+            <div class="text-[11px] text-[#77736C]">Pale Stone Sub</div>
+          </div>
+          <div class="border border-[#C2BEB5] bg-[#262521] text-white p-5">
+            <div class="h-20 bg-[#262521] mb-3"></div>
+            <div class="font-display font-bold text-sm">#262521</div>
+            <div class="text-[11px] text-[#A6A29A]">Soft Black Text</div>
+          </div>
+          <div class="border border-[#C2BEB5] bg-[#C44B32] text-white p-5">
+            <div class="h-20 bg-[#C44B32] mb-3"></div>
+            <div class="font-display font-bold text-sm">#C44B32</div>
+            <div class="text-[11px] text-[#F3C4BA]">Terracotta Accent</div>
+          </div>
+          <div class="border border-[#C2BEB5] bg-[#77736C] text-white p-5">
+            <div class="h-20 bg-[#77736C] mb-3"></div>
+            <div class="font-display font-bold text-sm">#77736C</div>
+            <div class="text-[11px] text-[#D8D5D0]">Warm Grey Meta</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typography & Grid Breakdown -->
+      <div class="grid grid-cols-2 gap-8">
+        <div class="bg-[#F2EFEA] border border-[#C2BEB5] p-8">
+          <div class="font-display text-xs text-[#C44B32] uppercase tracking-widest mb-3 font-bold">TYPOGRAPHY</div>
+          <h4 class="font-display text-3xl font-bold tracking-tight mb-2 text-[#262521]">Space Grotesk + KR Sans</h4>
+          <p class="text-xs text-[#5E5A53] leading-relaxed mb-6">
+            건축 전문 매거진의 감성을 살린 볼드 디스플레이 서체와 정제된 고딕 본문의 크기 대비를 극대화했습니다.
+          </p>
+          <div class="space-y-3 font-display border-t border-[#C2BEB5] pt-4">
+            <div class="flex justify-between text-xs">
+              <span class="text-[#77736C]">HERO HEADLINE</span>
+              <span class="font-bold">44px / Tight Leading</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-[#77736C]">SECTION TITLE</span>
+              <span class="font-bold">28px ~ 34px Bold</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-[#77736C]">METADATA / TAG</span>
+              <span class="font-bold">10px ~ 11px Monospace</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#F2EFEA] border border-[#C2BEB5] p-8">
+          <div class="font-display text-xs text-[#C44B32] uppercase tracking-widest mb-3 font-bold">GRID & GEOMETRY</div>
+          <h4 class="font-display text-3xl font-bold tracking-tight mb-2 text-[#262521]">Editorial Hairline</h4>
+          <p class="text-xs text-[#5E5A53] leading-relaxed mb-6">
+            모서리가 둥근 범용 템플릿 카드를 배제하고, 1px 헤어라인과 직사각형의 구조적 정렬로 건축 도면 같은 정밀도를 완성합니다.
+          </p>
+          <div class="space-y-3 font-display border-t border-[#C2BEB5] pt-4">
+            <div class="flex justify-between text-xs">
+              <span class="text-[#77736C]">BORDER WEIGHT</span>
+              <span class="font-bold">1px Solid (#C2BEB5)</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-[#77736C]">CORNER RADIUS</span>
+              <span class="font-bold">0px Sharp Geometry</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-[#77736C]">LAYOUT FLOW</span>
+              <span class="font-bold">Continuous 1:5 Vertical</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Meta -->
+    <div class="border-t border-[#C2BEB5] pt-8 flex justify-between items-center text-xs text-[#77736C] font-display">
+      <span>FORM / SPACE BRAND DESIGN SYSTEM SPECIFICATION</span>
+      <span>WEBMATE CREATIVE SUITE</span>
+    </div>
+  </div>
+</body>
+</html>

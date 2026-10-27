@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=600, initial-scale=1.0">
+  <title>[COMPANY NAME] - B2B Sustainable Packaging Solutions (600x3000)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              forest: '#183D32',
+              forestDark: '#102B23',
+              sage: '#A8B8A0',
+              ivory: '#FAF9F3',
+              cardIvory: '#F4F2EA',
+              charcoal: '#242824',
+              muted: '#687268',
+              border: '#E3DFD4'
+            }
+          },
+          fontFamily: {
+            serif: ['"Noto Serif KR"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* 엄격한 600px × 3000px 캔버스 규격 (1:5 비율) 고정 */
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #FAF9F3;
+      color: #242824;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .canvas-container {
+      width: 600px;
+      min-height: 3000px;
+      height: 3000px;
+      max-height: 3000px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      background-color: #FAF9F3;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+    .serif-title {
+      font-family: 'Noto Serif KR', Georgia, serif;
+    }
+  </style>
+</head>
+<body class="bg-[#FAF9F3] flex justify-center items-start">
+
+  <!-- MAIN 600px x 3000px VERTICAL CANVAS -->
+  <div class="canvas-container shadow-2xl flex flex-col justify-between">
+
+    <!-- 1. HEADER (Height ~64px) -->
+    <header class="w-full h-16 px-6 bg-[#FAF9F3]/95 backdrop-blur-sm border-b border-brand-border flex items-center justify-between z-30 shrink-0">
+      <div class="flex items-center space-x-2">
+        <div class="w-2.5 h-2.5 rounded-full bg-brand-forest"></div>
+        <span class="font-serif font-bold text-base tracking-wider text-brand-forest">[COMPANY NAME]</span>
+      </div>
+      <div class="flex items-center space-x-3 text-xs text-brand-charcoal font-medium">
+        <span class="hidden sm:inline-block text-brand-muted">B2B 친환경 솔루션</span>
+        <a href="#rfq" class="bg-brand-forest hover:bg-brand-forestDark text-white px-3.5 py-1.5 rounded text-xs font-semibold tracking-tight transition-colors">
+          견적 문의
+        </a>
+      </div>
+    </header>
+
+    <!-- 2. HERO SECTION (~460px) -->
+    <section class="px-6 pt-7 pb-6 flex flex-col shrink-0 border-b border-brand-border/60">
+      <div class="inline-flex items-center space-x-2 px-2.5 py-1 rounded bg-[#EAE8DD] text-brand-forest text-[11px] font-semibold w-fit mb-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-forest"></span>
+        <span>B2B Sustainable Packaging Engineering</span>
+      </div>
+
+      <h1 class="serif-title text-[28px] leading-[1.3] font-bold text-brand-forest mb-2.5">
+        Packaging for a<br>Better Tomorrow.
+      </h1>
+
+      <p class="text-[13px] leading-relaxed text-brand-charcoal/90 mb-4 font-normal">
+        [COMPANY NAME]은 단순한 상자가 아닌 제품의 가치와 생태계 순환을 설계하는 <strong>B2B 친환경 엔지니어링 파트너</strong>입니다.
+      </p>
+
+      <!-- Key Badge Chips -->
+      <div class="grid grid-cols-3 gap-2 mb-4">
+        <div class="bg-brand-cardIvory border border-brand-border p-2 rounded text-center">
+          <p class="text-[10px] text-brand-muted">지류 순환성</p>
+          <p class="text-xs font-bold text-brand-forest">100% 모노재질</p>
+        </div>
+        <div class="bg-brand-cardIvory border border-brand-border p-2 rounded text-center">
+          <p class="text-[10px] text-brand-muted">맞춤 완충 지기</p>
+          <p class="text-xs font-bold text-brand-forest">몰드 펄프 인서트</p>
+        </div>
+        <div class="bg-brand-cardIvory border border-brand-border p-2 rounded text-center">
+          <p class="text-[10px] text-brand-muted">신뢰 보장</p>
+          <p class="text-xs font-bold text-brand-forest">1차 기술검토 지원</p>
+        </div>
+      </div>
+
+      <!-- Hero Visual Asset -->
+      <div class="relative w-full h-[190px] rounded-lg overflow-hidden border border-brand-border bg-stone-200">
+        <img src="https://lh3.googleusercontent.com/aida/AEtjO1WcsqmdyAZcvsuVq7UPv62CB-iQkWT8kJ5xg1WyN7FX5na7DVR6aI2Qmj6yLRp5SU5XvjnjZ4wWDb4PyGM5iVovumzq00FXx1Hnk8BIcpSQNck8dBynvQyZWfMF-bQghco6NEhLwPnefJhD6WOcSvLtVObSFRE4wT6Pr1tukZ7oK4wN1Xc4T9oaPUs5Q5_c4zwgNuQmX4jBgaCtMw_xYon7R6wrpkIt2J4mtgtUy6qZbmFcFq5H46ykgr0" alt="Sustainable Packaging Studio Objects" class="w-full h-full object-cover">
+        <div class="absolute bottom-2 left-2 bg-brand-forest/90 text-white text-[10px] px-2 py-0.5 rounded backdrop-blur-xs">
+          STUDIO ARCHIVE • 친환경 패키지 스터디
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. BRAND CORE VALUES & PHILOSOPHY (~310px) -->
+    <section class="px-6 py-6 bg-[#F4F2EA] border-b border-brand-border shrink-0">
+      <div class="text-center mb-4">
+        <p class="text-[11px] font-bold text-brand-sage uppercase tracking-wider">Our Core Principle</p>
+        <h2 class="serif-title text-[19px] font-bold text-brand-forest mt-0.5">지속가능한 패키징 3대 설계 원칙</h2>
+      </div>
+
+      <div class="grid grid-cols-3 gap-2.5">
+        <div class="bg-white p-3 rounded-lg border border-brand-border/80 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-bold text-brand-forest">01. 소재 순수성</span>
+            <p class="text-[11px] text-brand-charcoal/80 mt-1 leading-snug">
+              비닐 코팅과 화학 접착제를 배제하고 단일 지류 중심 설계.
+            </p>
+          </div>
+          <span class="text-[9px] font-semibold text-brand-forest/70 mt-2">Mono-Material</span>
+        </div>
+
+        <div class="bg-white p-3 rounded-lg border border-brand-border/80 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-bold text-brand-forest">02. 맞춤 지기구조</span>
+            <p class="text-[11px] text-brand-charcoal/80 mt-1 leading-snug">
+              스티로폼을 대체하는 정밀 몰드 펄프 트레이와 락킹 결합.
+            </p>
+          </div>
+          <span class="text-[9px] font-semibold text-brand-forest/70 mt-2">Custom Fit</span>
+        </div>
+
+        <div class="bg-white p-3 rounded-lg border border-brand-border/80 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-bold text-brand-forest">03. 정직한 협력</span>
+            <p class="text-[11px] text-brand-charcoal/80 mt-1 leading-snug">
+              과장된 환경 마케팅 지양, 공장 양산성과 단가 고려 대안 제시.
+            </p>
+          </div>
+          <span class="text-[9px] font-semibold text-brand-forest/70 mt-2">Feasible B2B</span>
+        </div>
+      </div>
+
+      <div class="mt-3.5 bg-white/70 border border-brand-border rounded px-3 py-1.5 flex items-center justify-between text-[11px] text-brand-muted">
+        <span>※ 무분별한 과대포장을 지양하며, 본질에 집중하는 구조적 가치를 실현합니다.</span>
+      </div>
+    </section>
+
+    <!-- 4. CORE SOLUTIONS (4대 솔루션) (~560px) -->
+    <section class="px-6 py-6 border-b border-brand-border shrink-0">
+      <div class="flex items-end justify-between mb-3.5">
+        <div>
+          <p class="text-[11px] font-bold text-brand-forest/70 uppercase tracking-wider">Solutions & Services</p>
+          <h2 class="serif-title text-[20px] font-bold text-brand-forest">비즈니스 맞춤형 4대 솔루션</h2>
+        </div>
+        <span class="text-[11px] text-brand-muted">엔지니어링 제안</span>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3 mb-3">
+        <!-- Solution 1 -->
+        <div class="bg-brand-cardIvory p-3 rounded-lg border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[10px] font-bold bg-[#E6E2D4] text-brand-forest px-1.5 py-0.5 rounded">01. 지류</span>
+              <span class="text-[10px] text-brand-muted">Mono-Material</span>
+            </div>
+            <h3 class="font-bold text-xs text-brand-charcoal mb-1">친환경 종이 패키징</h3>
+            <p class="text-[11px] text-brand-charcoal/80 leading-tight">
+              분리배출이 용이한 무염소 표백(ECF) 크라프트지와 수성 배리어 코팅.
+            </p>
+          </div>
+          <div class="mt-2.5 pt-2 border-t border-brand-border/60 text-[10px] text-brand-muted flex justify-between">
+            <span>추천: 뷰티 세트, 건식 식품</span>
+          </div>
+        </div>
+
+        <!-- Solution 2 -->
+        <div class="bg-brand-cardIvory p-3 rounded-lg border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[10px] font-bold bg-[#E6E2D4] text-brand-forest px-1.5 py-0.5 rounded">02. 완충</span>
+              <span class="text-[10px] text-brand-muted">Molded Pulp</span>
+            </div>
+            <h3 class="font-bold text-xs text-brand-charcoal mb-1">맞춤 지기구조 & 완충</h3>
+            <p class="text-[11px] text-brand-charcoal/80 leading-tight">
+              EPS 스티로폼과 에어캡을 대체하는 정밀 몰드 펄프 & 셀프 락킹 지기구조.
+            </p>
+          </div>
+          <div class="mt-2.5 pt-2 border-t border-brand-border/60 text-[10px] text-brand-muted flex justify-between">
+            <span>오차범위: ±0.5mm 정밀</span>
+          </div>
+        </div>
+
+        <!-- Solution 3 -->
+        <div class="bg-brand-cardIvory p-3 rounded-lg border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[10px] font-bold bg-[#E6E2D4] text-brand-forest px-1.5 py-0.5 rounded">03. 브랜딩</span>
+              <span class="text-[10px] text-brand-muted">Soy Ink & Deboss</span>
+            </div>
+            <h3 class="font-bold text-xs text-brand-charcoal mb-1">브랜드 패키지 디자인</h3>
+            <p class="text-[11px] text-brand-charcoal/80 leading-tight">
+              형압과 무인쇄 음각, 콩기름 잉크로 환경 부하를 줄인 촉각적 아이덴티티.
+            </p>
+          </div>
+          <div class="mt-2.5 pt-2 border-t border-brand-border/60 text-[10px] text-brand-muted flex justify-between">
+            <span>촉각적 질감 극대화</span>
+          </div>
+        </div>
+
+        <!-- Solution 4 -->
+        <div class="bg-brand-cardIvory p-3 rounded-lg border border-brand-border flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[10px] font-bold bg-[#E6E2D4] text-brand-forest px-1.5 py-0.5 rounded">04. 물류</span>
+              <span class="text-[10px] text-brand-muted">Optimization</span>
+            </div>
+            <h3 class="font-bold text-xs text-brand-charcoal mb-1">패키징 SCM 컨설팅</h3>
+            <p class="text-[11px] text-brand-charcoal/80 leading-tight">
+              포장재 빈 공간(Void Space) 30% 이상 압축 및 팔레트 적재 모듈 최적화.
+            </p>
+          </div>
+          <div class="mt-2.5 pt-2 border-t border-brand-border/60 text-[10px] text-brand-muted flex justify-between">
+            <span>물류비·탄소 배출 동시 절감</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solutions Visual Strip -->
+      <div class="w-full h-[115px] rounded-lg overflow-hidden border border-brand-border">
+        <img src="https://lh3.googleusercontent.com/aida/AEtjO1X7m_9_FDkVCMqGHlk2RMcdKNgp8_TH9c6c34KlbYxJNqRCnR3A2BSVbcPpA9YgdY_EKzwAGEa5_cpJpMS2TImjLI2JVb64Y4iSyRJ9MiX0bCERij7kCPLVIlIl9kK7Hb6kFqKlVX_XyMGYBUl9fsXHXW7w_XtqJFdASnn1g0kq9QOU5lMDqcvjlKrczhU6vitExMgW0QszkQJ1JlLyAQHS-Wr7lvRqfyuD-Tx-sZ_DlDA-97zlO6O0LU0" alt="Packaging Solutions Collection" class="w-full h-full object-cover">
+      </div>
+    </section>
+
+    <!-- 5. 4-STEP ENGINEERING PROCESS (~320px) -->
+    <section class="px-6 py-5 bg-[#F4F2EA] border-b border-brand-border shrink-0">
+      <div class="flex items-center justify-between mb-3">
+        <div>
+          <p class="text-[11px] font-bold text-brand-forest/70 uppercase tracking-wider">Methodology</p>
+          <h2 class="serif-title text-[18px] font-bold text-brand-forest">정밀 4단계 개발 및 양산 프로세스</h2>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-4 gap-2">
+        <div class="bg-white p-2.5 rounded border border-brand-border/80 flex flex-col justify-between text-center">
+          <div class="w-5 h-5 rounded-full bg-brand-forest text-white text-[10px] font-bold flex items-center justify-center mx-auto mb-1">1</div>
+          <h4 class="text-[11px] font-bold text-brand-charcoal">요구사항 진단</h4>
+          <p class="text-[9px] text-brand-muted leading-tight mt-0.5">제품 스펙 및 유통 환경 분석</p>
+        </div>
+
+        <div class="bg-white p-2.5 rounded border border-brand-border/80 flex flex-col justify-between text-center">
+          <div class="w-5 h-5 rounded-full bg-brand-forest text-white text-[10px] font-bold flex items-center justify-center mx-auto mb-1">2</div>
+          <h4 class="text-[11px] font-bold text-brand-charcoal">지기구조 설계</h4>
+          <p class="text-[9px] text-brand-muted leading-tight mt-0.5">1:1 맞춤 전개도 CAD 모델링</p>
+        </div>
+
+        <div class="bg-white p-2.5 rounded border border-brand-border/80 flex flex-col justify-between text-center">
+          <div class="w-5 h-5 rounded-full bg-brand-forest text-white text-[10px] font-bold flex items-center justify-center mx-auto mb-1">3</div>
+          <h4 class="text-[11px] font-bold text-brand-charcoal">실물 목업 검증</h4>
+          <p class="text-[9px] text-brand-muted leading-tight mt-0.5">시제품 낙하 및 적재 하중 테스트</p>
+        </div>
+
+        <div class="bg-white p-2.5 rounded border border-brand-border/80 flex flex-col justify-between text-center">
+          <div class="w-5 h-5 rounded-full bg-brand-forest text-white text-[10px] font-bold flex items-center justify-center mx-auto mb-1">4</div>
+          <h4 class="text-[11px] font-bold text-brand-charcoal">표준 품질 양산</h4>
+          <p class="text-[9px] text-brand-muted leading-tight mt-0.5">수율 관리 및 납품 가이드 제공</p>
+        </div>
+      </div>
+
+      <div class="mt-3 w-full h-[88px] rounded overflow-hidden border border-brand-border">
+        <img src="https://lh3.googleusercontent.com/aida/AEtjO1WJmopv59EeL3pOTY1kWkzYjgjqf_HJ5vgTNmzp7x6hjoy6Redb3CxMvHikMFoeDsScMwAmZ85ceePvTDGj7vkgUcCrIq8UhQLoakqc4RkqVqkmATiE4lRULFDO0kWLFVtz3p6tucXzncp9yiUi70ElQ_HnCL5ZICoGZdc02EGCfdYyR-rRxL9id0SEuLVwPpcy_W2DtfNkGjX4C4cgzZjPWrrz1lQLbAKtE1qPYVlARq8l5ESyZuOB0hE" alt="Design Process Studio Desk" class="w-full h-full object-cover">
+      </div>
+    </section>
+
+    <!-- 6. CONCEPT PORTFOLIO (가상 프로젝트 3종) (~410px) -->
+    <section class="px-6 py-5 border-b border-brand-border shrink-0">
+      <div class="flex items-center justify-between mb-2">
+        <div>
+          <span class="text-[10px] font-bold bg-[#E6E2D4] text-brand-forest px-2 py-0.5 rounded">CONCEPT STUDY ONLY</span>
+          <h2 class="serif-title text-[18px] font-bold text-brand-forest mt-1">선행 지기구조 & 패키징 콘셉트</h2>
+        </div>
+        <span class="text-[10px] text-brand-muted text-right">※ 가상 콘셉트 스터디 모델</span>
+      </div>
+
+      <p class="text-[11px] text-brand-muted mb-3 leading-tight">
+        실제 고객사 프로젝트로 오인되지 않도록 안내합니다. [COMPANY NAME] 디자인 연구소의 가상 패키징 연구 사례입니다.
+      </p>
+
+      <div class="grid grid-cols-3 gap-2.5">
+        <!-- Project A -->
+        <div class="bg-brand-cardIvory border border-brand-border rounded-lg p-2.5 flex flex-col justify-between">
+          <div>
+            <div class="text-[9px] font-bold text-brand-forest uppercase mb-1">Study 01 • Beauty</div>
+            <h3 class="font-bold text-xs text-brand-charcoal leading-snug">스킨케어 브랜드 패키지</h3>
+            <p class="text-[10px] text-brand-muted mt-1 leading-tight">
+              비목재 사탕수수 종이 및 정교한 엠보스 레터프레스 적용.
+            </p>
+          </div>
+          <div class="mt-2 pt-1.5 border-t border-brand-border/60 text-[9px] font-semibold text-brand-forest">
+            사탕수수 지류 100%
+          </div>
+        </div>
+
+        <!-- Project B -->
+        <div class="bg-brand-cardIvory border border-brand-border rounded-lg p-2.5 flex flex-col justify-between">
+          <div>
+            <div class="text-[9px] font-bold text-brand-forest uppercase mb-1">Study 02 • Food</div>
+            <h3 class="font-bold text-xs text-brand-charcoal leading-snug">식품 브랜드 종이 패키지</h3>
+            <p class="text-[10px] text-brand-muted mt-1 leading-tight">
+              PE 화학 코팅을 천연 수성 분산 코팅 크라프트로 대체.
+            </p>
+          </div>
+          <div class="mt-2 pt-1.5 border-t border-brand-border/60 text-[9px] font-semibold text-brand-forest">
+            수성 배리어 코팅
+          </div>
+        </div>
+
+        <!-- Project C -->
+        <div class="bg-brand-cardIvory border border-brand-border rounded-lg p-2.5 flex flex-col justify-between">
+          <div>
+            <div class="text-[9px] font-bold text-brand-forest uppercase mb-1">Study 03 • Logistics</div>
+            <h3 class="font-bold text-xs text-brand-charcoal leading-snug">이커머스 배송 패키지</h3>
+            <p class="text-[10px] text-brand-muted mt-1 leading-tight">
+              테이프 없는 원터치 원터치 락킹 박스와 몰드 인서트.
+            </p>
+          </div>
+          <div class="mt-2 pt-1.5 border-t border-brand-border/60 text-[9px] font-semibold text-brand-forest">
+            테이프리스 구조
+          </div>
+        </div>
+      </div>
+
+      <!-- Compliance Notice Banner -->
+      <div class="mt-3 bg-[#EFECE3] border border-brand-border/80 rounded px-3 py-1.5 text-[10px] text-brand-charcoal/80">
+        🛡️ <strong>기업정보 마스킹 안내</strong>: 포트폴리오 목적의 가상 쇼케이스 사이트로, 임의의 고객사 실적이나 인증 수치를 일체 사용하지 않습니다.
+      </div>
+    </section>
+
+    <!-- 7. RFQ & INQUIRY FORM (~540px) -->
+    <section id="rfq" class="px-6 py-6 bg-white border-b border-brand-border shrink-0">
+      <div class="text-center mb-3.5">
+        <span class="text-[11px] font-bold text-brand-forest/70 uppercase tracking-wider">Request For Quotation</span>
+        <h2 class="serif-title text-[20px] font-bold text-brand-forest mt-0.5">프로젝트 문의 및 견적 의뢰 (RFQ)</h2>
+        <p class="text-[11px] text-brand-muted mt-1">
+          * 실제 개인정보는 수집·저장되지 않으며 B2B 포트폴리오용 데모 폼입니다.
+        </p>
+      </div>
+
+      <div class="bg-brand-cardIvory border border-brand-border rounded-xl p-4">
+        <!-- Input Row 1 -->
+        <div class="grid grid-cols-2 gap-2.5 mb-2.5">
+          <div>
+            <label class="block text-[10px] font-bold text-brand-charcoal mb-1">회사명 (선택)</label>
+            <input type="text" placeholder="[COMPANY NAME] 또는 귀사명" class="w-full bg-white border border-brand-border rounded px-2.5 py-1.5 text-xs text-brand-charcoal focus:outline-none focus:border-brand-forest" readonly value="[COMPANY NAME]">
+          </div>
+          <div>
+            <label class="block text-[10px] font-bold text-brand-charcoal mb-1">담당자명 / 직함 <span class="text-red-500">*</span></label>
+            <input type="text" placeholder="[CONTACT PERSON]" class="w-full bg-white border border-brand-border rounded px-2.5 py-1.5 text-xs text-brand-charcoal focus:outline-none focus:border-brand-forest" readonly value="[CONTACT PERSON]">
+          </div>
+        </div>
+
+        <!-- Input Row 2 -->
+        <div class="grid grid-cols-2 gap-2.5 mb-2.5">
+          <div>
+            <label class="block text-[10px] font-bold text-brand-charcoal mb-1">회사 이메일 <span class="text-red-500">*</span></label>
+            <input type="email" placeholder="[EMAIL ADDRESS]" class="w-full bg-white border border-brand-border rounded px-2.5 py-1.5 text-xs text-brand-charcoal focus:outline-none focus:border-brand-forest" readonly value="[EMAIL ADDRESS]">
+          </div>
+          <div>
+            <label class="block text-[10px] font-bold text-brand-charcoal mb-1">연락처 <span class="text-red-500">*</span></label>
+            <input type="tel" placeholder="[PHONE NUMBER]" class="w-full bg-white border border-brand-border rounded px-2.5 py-1.5 text-xs text-brand-charcoal focus:outline-none focus:border-brand-forest" readonly value="[PHONE NUMBER]">
+          </div>
+        </div>
+
+        <!-- Inquiry Type Selection Chips -->
+        <div class="mb-2.5">
+          <label class="block text-[10px] font-bold text-brand-charcoal mb-1">문의 유형 (복수 선택 가능)</label>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="px-2 py-1 rounded text-[10px] font-semibold bg-brand-forest text-white">친환경 종이 패키징</span>
+            <span class="px-2 py-1 rounded text-[10px] font-medium bg-white border border-brand-border text-brand-charcoal">맞춤형 지기구조 & 완충</span>
+            <span class="px-2 py-1 rounded text-[10px] font-medium bg-white border border-brand-border text-brand-charcoal">브랜드 패키지 디자인</span>
+            <span class="px-2 py-1 rounded text-[10px] font-medium bg-white border border-brand-border text-brand-charcoal">물류 최적화 컨설팅</span>
+            <span class="px-2 py-1 rounded text-[10px] font-medium bg-white border border-brand-border text-brand-charcoal">소재 샘플 키트 요청</span>
+          </div>
+        </div>
+
+        <!-- Project Details Textarea -->
+        <div class="mb-2.5">
+          <label class="block text-[10px] font-bold text-brand-charcoal mb-1">요청 규격 및 상세 사항</label>
+          <textarea rows="2" class="w-full bg-white border border-brand-border rounded px-2.5 py-1.5 text-xs text-brand-charcoal focus:outline-none" placeholder="포장할 제품의 규격(가로 x 세로 x 높이 mm), 무게, 요구사항 등을 자유롭게 기재해 주세요."></textarea>
+        </div>
+
+        <!-- Privacy checkbox & CTA button -->
+        <div class="flex items-center space-x-2 mb-3">
+          <input type="checkbox" id="agree" checked class="rounded border-brand-border text-brand-forest" disabled>
+          <label for="agree" class="text-[10px] text-brand-muted">포트폴리오 데모 사이트 이용에 따른 개인정보 가상 처리 기준에 동의합니다.</label>
+        </div>
+
+        <button class="w-full bg-brand-forest hover:bg-brand-forestDark text-white font-bold py-2.5 rounded text-xs tracking-wide shadow flex items-center justify-center space-x-1.5 transition-colors">
+          <span>견적 및 기술 검토 요청하기 (Submit RFQ)</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 8. FOOTER (COMPLIANCE MASKING) (~320px) -->
+    <footer class="w-full bg-brand-forestDark text-white px-6 py-6 shrink-0 flex flex-col justify-between">
+      <div class="border-b border-white/10 pb-4 mb-4">
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-serif font-bold text-base tracking-wider">[COMPANY NAME]</span>
+          <span class="text-[10px] text-brand-sage uppercase">Sustainable Packaging Solutions</span>
+        </div>
+        <p class="text-[11px] text-white/70 leading-relaxed">
+          지속가능한 소재와 정밀 지기구조 엔지니어링으로 기업의 브랜드 가치를 완성하는 B2B 맞춤형 친환경 패키징 파트너.
+        </p>
+      </div>
+
+      <!-- Masked Legal Corporate Info -->
+      <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-[10px] text-white/60 mb-4 leading-normal">
+        <div>상호명: <span class="text-white/80">[COMPANY NAME]</span></div>
+        <div>대표자: <span class="text-white/80">[REPRESENTATIVE NAME]</span></div>
+        <div>사업자등록번호: <span class="text-white/80">[BUSINESS REGISTRATION NUMBER]</span></div>
+        <div>대표전화: <span class="text-white/80">[PHONE NUMBER]</span></div>
+        <div>이메일: <span class="text-white/80">[EMAIL ADDRESS]</span></div>
+        <div>개인정보 책임자: <span class="text-white/80">[CONTACT PERSON]</span></div>
+        <div class="col-span-2">주소: <span class="text-white/80">[BUSINESS ADDRESS]</span></div>
+      </div>
+
+      <!-- Portfolio Disclaimer -->
+      <div class="pt-3 border-t border-white/10 flex flex-col space-y-1 text-[9px] text-white/40">
+        <p>© [COMPANY NAME]. All Rights Reserved. Designed for WEBMATE Portfolio Showcase.</p>
+        <p>※ 본 결과물은 정확히 600px × 3000px(1:5 비율)로 제작된 가상 B2B 기업용 세로형 싱글 랜딩페이지입니다.</p>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>

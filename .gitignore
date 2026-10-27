@@ -1,0 +1,7 @@
+menu-recommand/
+homepage/flown/
+homepage/my_randing/randing-page/
+CapCut Drafts/
+node_modules/
+.env*
+!.env.example

@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error": "#ba1a1a", "inverse-surface": "#2f312f", "tertiary-container": "#7e521c", "on-background": "#1a1c1a", "surface-bright": "#faf9f6", "surface-container-high": "#e9e8e5", "cobalt-electric": "#1d4ed8", "surface-dim": "#dbdad7", "on-primary": "#ffffff", "on-tertiary-fixed": "#2b1700", "tertiary-fixed": "#ffddbb", "accent-amber": "#92632b", "primary": "#0037b0", "tertiary": "#633b04", "navy-ink": "#0f172a", "warm-canvas": "#f8f7f4", "tertiary-fixed-dim": "#f7bb7a", "background": "#faf9f6", "on-secondary-container": "#5c647a", "on-tertiary": "#ffffff", "on-secondary-fixed": "#131b2e", "canvas-card": "#ffffff", "surface-variant": "#e3e2df", "primary-container": "#1d4ed8", "surface-tint": "#2151da", "surface-container-lowest": "#ffffff", "on-primary-container": "#cad3ff", "on-secondary": "#ffffff", "on-error-container": "#93000a", "on-primary-fixed": "#001551", "on-secondary-fixed-variant": "#3f465c", "outline-variant": "#c4c5d7", "surface": "#faf9f6", "line-neutral": "#e2ded6", "surface-container": "#efeeeb", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#663e06", "on-primary-fixed-variant": "#0039b5", "surface-container-low": "#f4f3f0", "on-surface-variant": "#434655", "inverse-on-surface": "#f2f1ee", "secondary": "#565e74", "secondary-fixed-dim": "#bec6e0", "on-error": "#ffffff", "primary-fixed-dim": "#b7c4ff", "inverse-primary": "#b7c4ff", "secondary-container": "#dae2fd", "on-tertiary-container": "#ffcb94", "outline": "#747686", "surface-container-highest": "#e3e2df", "secondary-fixed": "#dae2fd", "canvas-subtle": "#f1efe9", "primary-fixed": "#dce1ff" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-mobile": "1.25rem", "margin": "3rem", "space-xl": "2.5rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-md": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-lg": [ "Inter" ], "label-caps": [ "Inter" ], "body-lg": [ "Inter" ], "body-sm": [ "Inter" ], "headline-sm": [ "Inter" ], "spec-num": [ "Inter" ], "headline-lg-mobile": [ "Inter" ], "body-md": [ "Inter" ], "headline-md": [ "Inter" ], "display-mobile": [ "Inter" ], "display": [ "Inter" ] }, "fontSize": { "headline-lg": [ "36px", { "lineHeight": "42px", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "label-caps": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "spec-num": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "500" } ], "display-mobile": [ "38px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "display": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between"><a class="flex flex-col group" data-path="brand-and-story-home" href="#"><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface group-hover:text-primary transition-colors">Rhythm Coffee</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Roastery &amp; Lab</span></a><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-primary font-headline-sm font-semibold"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="brand-and-story-home" href="#">Brand &amp; Story</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="beans-shop" href="#">Beans Shop</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="wholesale-b2b-portal" href="#">B2B Wholesale</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="brewing-journal" href="#">Brewing Journal</a></nav><div class="flex items-center gap-space-md"><a class="hidden lg:inline-flex items-center px-space-md py-space-xs bg-primary-container text-on-primary rounded-lg font-label-caps text-label-caps uppercase tracking-wider hover:bg-primary transition-colors" data-path="wholesale-b2b-portal" href="#">B2B 샘플 신청</a><button aria-label="Cart" class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute -top-1 -right-1 w-4 h-4 bg-primary text-on-primary text-[10px] font-spec-num flex items-center justify-center rounded-full">2</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Lot Code Micro-Bar -->
+<section class="w-full bg-surface-container-low/60">
+<div class="max-w-7xl mx-auto px-margin py-space-sm flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs">
+<a class="hover:text-on-surface transition-colors" data-path="brand-and-story-home" href="#">홈</a>
+<span class="text-outline-variant font-spec-num text-spec-num">/</span>
+<a class="hover:text-on-surface transition-colors" data-path="beans-shop" href="#">원두 컬렉션</a>
+<span class="text-outline-variant font-spec-num text-spec-num">/</span>
+<span class="hover:text-on-surface transition-colors">싱글 오리진</span>
+<span class="text-outline-variant font-spec-num text-spec-num">/</span>
+<span class="text-on-surface font-headline-sm text-spec-num">에티오피아 첼베사 아리차 G1 (Morning Wave)</span>
+</nav>
+<div class="hidden lg:flex items-center gap-space-md">
+<span class="font-spec-num text-spec-num tracking-wider text-primary">LOT: ET-24-CH098</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">In Stock · Roasting Today</span>
+</div>
+</div>
+</section>
+<!-- Main 2-Column Split Dossier & Ordering Workspace -->
+<section class="w-full max-w-7xl mx-auto px-margin py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT COLUMN: Visual & Architectural Origin Dossier (~58% / 7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-xl min-w-0">
+<!-- Hero Package Presentation Area -->
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container-lowest shadow-md">
+<!-- Editorial Lot Callouts (Overlaid Badges) -->
+<div class="absolute top- space-md left-space-md z-10 flex flex-wrap items-center gap-space-xs pointer-events-none p-4">
+<span class="bg-surface/90 backdrop-blur-md px-3 py-1 rounded font-label-caps text-label-caps text-navy-ink shadow-sm uppercase tracking-wider">
+              LOT #24-CH • MICRO-LOT
+            </span>
+<span class="bg-primary px-3 py-1 rounded font-spec-num text-spec-num text-on-primary shadow-sm tracking-tight flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span>
+              91.5 SCA CUP
+            </span>
+</div>
+<div class="absolute top- space-md right-space-md z-10 p-4">
+<span class="bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded font-spec-num text-spec-num text-on-surface-variant shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-cobalt-electric"></span>
+              GRADE 1 SPECIALTY
+            </span>
+</div>
+<!-- Product Image Frame -->
+<div class="w-full aspect-[4/3] bg-surface-container flex items-center justify-center overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]" data-alt="Editorial close-up of a minimalist specialty coffee bag standing on textured pale stone surface, branded Rhythm Coffee Atelier in deep cobalt typography, soft morning studio light with dried coffee cherries and glass flask in background, calm architectural Swiss aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-2S35uEfAwTIBs1oGu2oyu_LZ98YmWNbqDTQL4AzflLRiqAGRnliL9hOsIpPSztnPO-xojmibiQNgcmkenUKSdawQyKYSmz2_UWw4ikCBeGObkuuktDGxb7DC5wbFmHb3NAgn05VeO6R0x7S2IXlMJCuGYOu7LilLIWLWEkU_CBTa2QqshHI7phHc50y6RloAjcLorg8AcXI9hsaa-lzbM-uGRCNyEEzxtjMICo4A5DxR-fznFPDe"/>
+</div>
+<!-- Quick Thumbnails & Origin Sensorium Snapshot -->
+<div class="grid grid-cols-3 gap-space-xs p-space-sm bg-surface-container-low">
+<div class="relative aspect-video rounded overflow-hidden cursor-pointer group">
+<img class="w-full h-full object-cover group-hover:opacity-90 transition-opacity" data-alt="Macro close-up view of roasted light-medium specialty coffee beans Ethiopia Yirgacheffe on a lab cupping tray under focused natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1k1CWCSW1lE3bXejk7gCA8ByyqxRJOSD5nvyBKMRj3KE5Jl-uklaOf-1JuKETGWz9YXpBad-Zv0Sv8t9JnAdZt89vfO-ZY2XN8rxjjdzNT6TkcU0R4VltpoHAdHfhOC9sZ0aCaSzRLvqgg-G2IuQ_A97PrSiav9aNH8OWshzQkvF87zr1npqY6dOV2XNA8arUl6GQn1Df70ZWOiLaN3p90pqRP12EQqg3Rq6yQosRYYKZX995blPP"/>
+<span class="absolute bottom-1 left-2 font-label-caps text-label-caps text-on-primary drop-shadow">BEANS 01</span>
+</div>
+<div class="relative aspect-video rounded overflow-hidden cursor-pointer group">
+<img class="w-full h-full object-cover group-hover:opacity-90 transition-opacity" data-alt="Scenic sun-drenched coffee drying raised beds in Chelbesa Yirgacheffe Ethiopia high altitude mist mountain valley" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD4d1oGH3DY5a9vEPjnfniouPSAZVhtsUB57myFsMM0bBXQzxjfh_DH14gbI0Hb8IYBsLdggj6RXs895f2GmB6V02ctLLj-vWsSp-9Fz9UIlG0kD9P_Gsu7nkVRLezOJ4ZhUyOM5JpsS0ErETj6rPIyeiXsYrX7TPoCaeCzN1aPHJjAZbhNhBFgyTfCXw7bJUzfSjubyBbZEQ0qZzGrSIekvgBn4MISyJsqk58mj52EGBl0WibzPxe"/>
+<span class="absolute bottom-1 left-2 font-label-caps text-label-caps text-on-primary drop-shadow">ESTATE 02</span>
+</div>
+<div class="relative aspect-video rounded overflow-hidden cursor-pointer group">
+<img class="w-full h-full object-cover group-hover:opacity-90 transition-opacity" data-alt="Clear glass server with delicate pale amber pour-over coffee resting beside Hario V60 dripper and timer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCWAJNirlf1GhU0YfoOrKMcMPbwnqF7CghdTMpVvGwLXw-KkhhK4EStjUfl9FZg3WqKL-qWR3YCShLS2Hd1DQom109ZEg3pefoc7qigDfyc1IYIxs-ru9QH7hy9r5NgZpRxBueelD8YAmEYjNLpu-S_qx9Y623QgTZJt1pXK0nKHsuRIaDHk1Eskp_fd61kmVB3X14eize2jk_XpfH1Kqv7KOr9ItXDvH-itlWZZt2zJMxAcBeLy1S"/>
+<span class="absolute bottom-1 left-2 font-label-caps text-label-caps text-on-primary drop-shadow">BREW 03</span>
+</div>
+</div>
+</div>
+<!-- Origin Key Specs Bar (4-Column Lab Block) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">analytics</span>
+              Origin Dossier &amp; Telemetry
+            </span>
+<span class="font-spec-num text-spec-num text-on-surface-variant">SCA 91.50 PTS</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="flex flex-col bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-caps text-label-caps uppercase text-secondary">Altitude</span>
+<span class="font-headline-sm text-headline-sm text-navy-ink mt-0.5">2,100m</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gedeo, Chelbesa</span>
+</div>
+<div class="flex flex-col bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-caps text-label-caps uppercase text-secondary">Process</span>
+<span class="font-headline-sm text-headline-sm text-navy-ink mt-0.5">Slow Natural</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Raised Beds (24 Days)</span>
+</div>
+<div class="flex flex-col bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-caps text-label-caps uppercase text-secondary">Varietal</span>
+<span class="font-headline-sm text-headline-sm text-navy-ink mt-0.5">Heirloom</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kurume &amp; Dega</span>
+</div>
+<div class="flex flex-col bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-caps text-label-caps uppercase text-secondary">Crop Year</span>
+<span class="font-headline-sm text-headline-sm text-navy-ink mt-0.5">2024 New</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Moisture 10.4%</span>
+</div>
+</div>
+</div>
+<!-- Roaster's Note & Flavor Profile Block -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-accent-amber"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Roaster's Cupping Note</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary bg-secondary-container/40 px-2 py-0.5 rounded">
+              Lead Roaster: Han S.J.
+            </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-navy-ink font-semibold">
+            “새벽 안개가 걷히는 첼베사 협곡의 찬란하고 투명한 산미”
+          </h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            에티오피아 남부 첼베사 협곡의 고지대에서 자란 체리를 24일간 아프리칸 베드에서 슬로우 내추럴로 정교하게 건조했습니다. 첫 모금에서 피어나는 화사한 자스민 꽃 향기와 함께 백도의 농밀한 과즙감이 혀 끝을 감쌉니다. 식어갈수록 얼그레이 베르가못과 꿀처럼 매끄러운 단맛이 긴 여운으로 이어집니다.
+          </p>
+<!-- Modern Flavor Note Chips -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="px-3 py-1.5 bg-surface-container-low rounded font-spec-num text-spec-num text-navy-ink">
+              # Jasmine Blossom
+            </span>
+<span class="px-3 py-1.5 bg-surface-container-low rounded font-spec-num text-spec-num text-navy-ink">
+              # Ripe White Peach
+            </span>
+<span class="px-3 py-1.5 bg-surface-container-low rounded font-spec-num text-spec-num text-navy-ink">
+              # Bergamot Earl Grey
+            </span>
+<span class="px-3 py-1.5 bg-surface-container-low rounded font-spec-num text-spec-num text-navy-ink">
+              # Honeycomb Sweet Finish
+            </span>
+</div>
+</div>
+<!-- Sensory Spectrum & Roasting Level -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-xs">
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Sensory Spectrum</span>
+<h4 class="font-headline-sm text-headline-sm text-navy-ink">관능 스펙트럼 지표</h4>
+</div>
+<!-- Roast Degree Badge -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-3 py-1.5 rounded-lg self-start sm:self-auto">
+<span class="w-2.5 h-2.5 rounded-full bg-accent-amber"></span>
+<span class="font-label-caps text-label-caps uppercase text-navy-ink">Roast Degree: Light-Medium (Agtron 68/82)</span>
+</div>
+</div>
+<!-- Gauge Bars -->
+<div class="flex flex-col gap-space-md">
+<div>
+<div class="flex justify-between items-center mb-1 text-body-sm font-body-sm">
+<span class="text-navy-ink font-semibold">Aroma (향미)</span>
+<span class="font-spec-num text-spec-num text-primary">5.0 / 5.0</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1 text-body-sm font-body-sm">
+<span class="text-navy-ink font-semibold">Sweetness (단맛)</span>
+<span class="font-spec-num text-spec-num text-primary">4.5 / 5.0</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 90%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1 text-body-sm font-body-sm">
+<span class="text-navy-ink font-semibold">Acidity (산미의 질)</span>
+<span class="font-spec-num text-spec-num text-primary">4.0 / 5.0</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 80%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1 text-body-sm font-body-sm">
+<span class="text-navy-ink font-semibold">Aftertaste (여운)</span>
+<span class="font-spec-num text-spec-num text-primary">4.5 / 5.0</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 90%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1 text-body-sm font-body-sm">
+<span class="text-navy-ink font-semibold">Body (마우스필)</span>
+<span class="font-spec-num text-spec-num text-primary">3.0 / 5.0</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 60%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Rhythm Atelier Extraction Recipe (Hario V60 Guide) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">science</span>
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary">Atelier Brewing Formula</span>
+<h4 class="font-headline-sm text-headline-sm text-navy-ink">Hario V60 추출 가이드</h4>
+</div>
+</div>
+<span class="font-label-caps text-label-caps bg-surface-container-low px-2.5 py-1 rounded text-on-surface">1:15.5 Ratio</span>
+</div>
+<!-- Recipe Spec Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs mb-space-lg">
+<div class="bg-surface-container-low p-space-sm rounded text-center">
+<span class="font-label-caps text-label-caps uppercase text-secondary">Dose</span>
+<p class="font-headline-sm text-headline-sm text-navy-ink font-semibold">18.0 g</p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded text-center">
+<span class="font-label-caps text-label-caps uppercase text-secondary">Water Volume</span>
+<p class="font-headline-sm text-headline-sm text-navy-ink font-semibold">280 ml</p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded text-center">
+<span class="font-label-caps text-label-caps uppercase text-secondary">Water Temp</span>
+<p class="font-headline-sm text-headline-sm text-navy-ink font-semibold">92 ℃</p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded text-center">
+<span class="font-label-caps text-label-caps uppercase text-secondary">Total Time</span>
+<p class="font-headline-sm text-headline-sm text-navy-ink font-semibold">2m 20s</p>
+</div>
+</div>
+<!-- Pouring Cadence Step Timeline -->
+<div class="relative pl-6 space-y-space-md">
+<!-- Timeline vertical connector -->
+<div class="absolute left-2.5 top-2 bottom-2 w-0.5 bg-surface-container-high"></div>
+<!-- Step 1 -->
+<div class="relative flex items-start gap-space-md">
+<div class="absolute -left-6 top-1 w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-low p-space-sm rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div>
+<span class="font-spec-num text-spec-num text-primary font-semibold">0:00 - 0:40</span>
+<p class="font-body-md text-body-md text-navy-ink font-medium">뜸 들이기 (Blooming)</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">원두 중심부부터 부드럽게 적시어 이산화탄소 가스 배출</span>
+</div>
+<span class="font-spec-num text-spec-num text-navy-ink bg-surface-container-lowest px-2 py-1 rounded self-start sm:self-center font-bold">45 ml</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex items-start gap-space-md">
+<div class="absolute -left-6 top-1 w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-low p-space-sm rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div>
+<span class="font-spec-num text-spec-num text-primary font-semibold">0:40 - 1:20</span>
+<p class="font-body-md text-body-md text-navy-ink font-medium">1차 푸어 (1st Pour)</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">일정한 유속의 나선형 푸어로 과즙미와 자스민 아로마 농축 추출</span>
+</div>
+<span class="font-spec-num text-spec-num text-navy-ink bg-surface-container-lowest px-2 py-1 rounded self-start sm:self-center font-bold">+115 ml (누적 160ml)</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex items-start gap-space-md">
+<div class="absolute -left-6 top-1 w-3.5 h-3.5 rounded-full bg-primary ring-4 ring-surface-container-lowest"></div>
+<div class="flex-1 bg-surface-container-low p-space-sm rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<div>
+<span class="font-spec-num text-spec-num text-primary font-semibold">1:30 - 2:20</span>
+<p class="font-body-md text-body-md text-navy-ink font-medium">2차 푸어 및 드리퍼 분리 (Final Pour)</p>
+<span class="font-body-sm text-body-sm text-on-surface-variant">중심부에 집중 주수하여 깔끔한 허니컴 여운 완성 후 2분 20초 드랍 차단</span>
+</div>
+<span class="font-spec-num text-spec-num text-navy-ink bg-surface-container-lowest px-2 py-1 rounded self-start sm:self-center font-bold">+120 ml (누적 280ml)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Sticky Purchase Control Matrix (~42% / 5 cols) -->
+<div class="lg:col-span-5 lg:sticky lg:top-24 flex flex-col gap-space-lg">
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-xl shadow-xl flex flex-col gap-space-lg">
+<!-- Header & Title Lockup -->
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-cobalt-electric font-semibold">
+                Rhythm Signature Series #04
+              </span>
+<span class="font-spec-num text-spec-num text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-accent-amber" style="font-variation-settings: 'FILL' 1;">star</span>
+                4.9 (128 Reviews)
+              </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-navy-ink font-semibold">
+              에티오피아 첼베사 아리차 G1
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+              Morning Wave · Ethiopia Yirgacheffe Chelbesa Natural
+            </p>
+<!-- Price & Free Shipping Micro Tag -->
+<div class="mt-space-md flex items-baseline justify-between pt-space-xs">
+<div class="flex items-baseline gap-2">
+<span class="font-display text-headline-lg text-navy-ink font-bold" id="display-price">₩18,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ 기본 200g</span>
+</div>
+<span class="font-label-caps text-label-caps bg-surface-container-low px-2 py-1 rounded text-primary">
+                30,000원 이상 무료배송
+              </span>
+</div>
+</div>
+<!-- OPTION GROUP 1: Weight (용량) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-label-caps text-label-caps uppercase tracking-wider text-navy-ink font-semibold">
+                용량 선택 (Weight)
+              </label>
+<span class="font-spec-num text-spec-num text-on-surface-variant">질소 플러시 포장</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs" id="weight-selector">
+<button class="weight-btn active-opt p-3 rounded-lg text-left bg-surface-container-low transition-all cursor-pointer" data-base="18000" data-weight="200" type="button">
+<span class="block font-headline-sm text-spec-num text-navy-ink">200g</span>
+<span class="block font-spec-num text-body-sm text-on-surface-variant mt-0.5">₩18,000</span>
+</button>
+<button class="weight-btn p-3 rounded-lg text-left bg-surface-container-low transition-all cursor-pointer opacity-85 hover:opacity-100" data-base="38000" data-weight="500" type="button">
+<span class="block font-headline-sm text-spec-num text-navy-ink">500g</span>
+<span class="block font-spec-num text-body-sm text-on-surface-variant mt-0.5">₩38,000</span>
+</button>
+<button class="weight-btn p-3 rounded-lg text-left bg-surface-container-low transition-all cursor-pointer opacity-85 hover:opacity-100" data-base="62000" data-weight="1000" type="button">
+<div class="flex items-center justify-between">
+<span class="block font-headline-sm text-spec-num text-navy-ink">1kg Cafe</span>
+</div>
+<span class="block font-spec-num text-body-sm text-on-surface-variant mt-0.5">₩62,000</span>
+</button>
+</div>
+</div>
+<!-- OPTION GROUP 2: Grind Size (분쇄도) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center">
+<label class="font-label-caps text-label-caps uppercase tracking-wider text-navy-ink font-semibold">
+                분쇄도 선택 (Grind Profile)
+              </label>
+<span class="font-body-sm text-body-sm text-secondary">EK43S Lab Calibrated</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs" id="grind-selector">
+<button class="grind-btn active-opt p-3 rounded-lg text-left bg-surface-container-low transition-all cursor-pointer" data-grind="whole" type="button">
+<span class="block font-headline-sm text-spec-num text-navy-ink">홀빈 (Whole)</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant mt-0.5">원두 그대로 (권장)</span>
+</button>
+<button class="grind-btn p-3 rounded-lg text-left bg-surface-container-low transition-all cursor-pointer opacity-85 hover:opacity-100" data-grind="filter" type="button">
+<span class="block font-headline-sm text-spec-num text-navy-ink">필터/드립</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant mt-0.5">V60 / 칼리타</span>
+</button>
+<button class="grind-btn p-3 rounded-lg text-left bg-surface-container-low transition-all cursor-pointer opacity-85 hover:opacity-100" data-grind="espresso" type="button">
+<span class="block font-headline-sm text-spec-num text-navy-ink">에스프레소</span>
+<span class="block font-body-sm text-body-sm text-on-surface-variant mt-0.5">파인 그라인드</span>
+</button>
+</div>
+</div>
+<!-- OPTION GROUP 3: Purchase Frequency Mode (1회 구매 vs 정기구독 15% DC) -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-caps text-label-caps uppercase tracking-wider text-navy-ink font-semibold">
+              구매 방식 (Delivery Model)
+            </label>
+<div class="grid grid-cols-2 gap-space-xs" id="order-type-selector">
+<div class="order-type-card active-opt p-3 rounded-lg bg-surface-container-low cursor-pointer flex flex-col justify-between" id="btn-single-order">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-spec-num text-navy-ink">일반 1회 구매</span>
+<span class="w-3 h-3 rounded-full bg-cobalt-electric check-indicator"></span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">당일 로스팅 즉시 출고</span>
+</div>
+<div class="order-type-card p-3 rounded-lg bg-surface-container-low cursor-pointer flex flex-col justify-between opacity-85 hover:opacity-100" id="btn-sub-order">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-spec-num text-navy-ink">정기구독 (15% DC)</span>
+<span class="w-3 h-3 rounded-full bg-transparent check-indicator"></span>
+</div>
+<span class="font-body-sm text-body-sm text-primary font-medium mt-1">2주 / 4주 선택 발송</span>
+</div>
+</div>
+<!-- Hidden/Slide Subscription Interval Toggle (Shown when sub active) -->
+<div class="hidden mt-2 p-3 bg-secondary-container/30 rounded-lg flex items-center justify-between" id="sub-cadence-box">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">배송 주기:</span>
+<div class="flex gap-2">
+<button class="sub-freq active-opt px-3 py-1 bg-surface rounded text-body-sm font-spec-num text-navy-ink" type="button">2주 주기</button>
+<button class="sub-freq px-3 py-1 bg-surface-container-low rounded text-body-sm font-spec-num text-navy-ink" type="button">4주 주기</button>
+</div>
+</div>
+</div>
+<!-- B2B Wholesale Callout Block -->
+<div class="p-space-md rounded-lg bg-surface-container flex items-start gap-space-md">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">storefront</span>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-spec-num text-navy-ink font-semibold">카페 및 사업자 도매 (B2B)</span>
+<span class="font-label-caps text-label-caps bg-primary text-on-primary px-1.5 py-0.5 rounded">최대 40% DC</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                월 5kg 이상 납품, 사업자 인증 즉시 도매 단가 및 테이스팅 샘플 신청 가능합니다.
+              </p>
+<a class="inline-flex items-center gap-1 font-label-caps text-label-caps text-primary uppercase tracking-wider font-semibold mt-2 hover:underline" data-path="wholesale-b2b-portal" href="#">
+                사업자 인증 및 도매 라인업 보기 →
+              </a>
+</div>
+</div>
+<!-- Quantity Stepper & Final Total Calculation -->
+<div class="pt-space-xs flex items-center justify-between bg-surface-container-low p-space-md rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-secondary">수량 (Quantity)</span>
+<div class="flex items-center gap-space-sm mt-1">
+<button aria-label="Decrease quantity" class="w-8 h-8 rounded bg-surface-container-lowest text-navy-ink flex items-center justify-center font-bold hover:bg-surface-container-high transition-colors" id="btn-qty-minus" type="button">
+                  -
+                </button>
+<span class="font-headline-sm text-headline-sm font-semibold w-8 text-center text-navy-ink" id="qty-value">1</span>
+<button aria-label="Increase quantity" class="w-8 h-8 rounded bg-surface-container-lowest text-navy-ink flex items-center justify-center font-bold hover:bg-surface-container-high transition-colors" id="btn-qty-plus" type="button">
+                  +
+                </button>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-caps text-label-caps uppercase text-secondary">총 결제 예정 금액</span>
+<span class="font-headline-lg text-headline-lg text-primary font-bold" id="total-price-text">₩18,000</span>
+</div>
+</div>
+<!-- Dual Main Actions -->
+<div class="flex flex-col sm:flex-row items-center gap-space-xs pt-space-xs">
+<button class="w-full sm:w-1/2 h-13 py-3.5 px-space-md rounded-lg font-headline-sm text-headline-sm font-medium bg-surface-container-high text-navy-ink hover:bg-surface-variant transition-colors flex items-center justify-center gap-2" id="btn-add-cart" type="button">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+              장바구니 담기
+            </button>
+<button class="w-full sm:w-1/2 h-13 py-3.5 px-space-md rounded-lg font-headline-sm text-headline-sm font-semibold bg-cobalt-electric text-on-primary hover:bg-primary transition-colors shadow-md flex items-center justify-center gap-2" id="btn-buy-now" type="button">
+<span>바로 구매하기</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Trust & Fulfillment Badges -->
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs text-center">
+<div class="flex flex-col items-center gap-1 p-2 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[20px]">local_fire_department</span>
+<span class="font-label-caps text-label-caps text-navy-ink">당일 로스팅 출고</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">오후 1시 이전 주문</span>
+</div>
+<div class="flex flex-col items-center gap-1 p-2 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[20px]">air</span>
+<span class="font-label-caps text-label-caps text-navy-ink">질소 충진 밸브 포장</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">산화 방지 극대화</span>
+</div>
+<div class="flex flex-col items-center gap-1 p-2 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[20px]">eco</span>
+<span class="font-label-caps text-label-caps text-navy-ink">FSC 친환경 패키지</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">생분해성 파우치</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section Divider with Subtle Architectural Mark -->
+<div class="w-full max-w-7xl mx-auto px-margin">
+<div class="w-full h-px bg-surface-container-highest"></div>
+</div>
+<!-- Bottom Section: Customer Reviews & Brewing Q&A -->
+<section class="w-full max-w-7xl mx-auto px-margin py-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-md">
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+          Cupper &amp; Customer Community
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-navy-ink font-semibold mt-1">
+          추출 저널 &amp; 테이스팅 리뷰
+        </h2>
+</div>
+<!-- Rating Summary Lockup -->
+<div class="flex items-center gap-space-lg bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-accent-amber">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-navy-ink font-bold mt-0.5">4.9 / 5.0</span>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-navy-ink font-semibold">실제 구매 고객 128건</span>
+<span class="text-on-surface-variant">재구매율 94.2%</span>
+</div>
+<button class="px-space-md py-space-xs bg-navy-ink text-on-primary rounded font-label-caps text-label-caps uppercase tracking-wider hover:bg-primary transition-colors" type="button">
+          리뷰 작성하기
+        </button>
+</div>
+</div>
+<!-- Review Grid Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Review Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1 text-accent-amber">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-spec-num text-spec-num text-on-surface-variant">2024.10.14</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-navy-ink font-semibold">
+            자스민과 복숭아 향이 드립하는 내내 거실 가득 퍼집니다
+          </h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+            리듬 아틀리에 레시피대로 92도 하리오 V60 뜸 40초 주고 추출했더니 정말 노트에 적힌 화사한 자스민 꽃 향이 폭발하네요. 식을수록 단맛이 더 좋아져서 주말 아침마다 매일 내리고 있습니다. 500g 재구매 예정입니다.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center font-spec-num text-body-sm text-navy-ink font-semibold">
+              K
+            </div>
+<span class="font-body-sm text-body-sm text-navy-ink font-medium">강*현 (홈바리스타)</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary bg-secondary-container/30 px-2 py-0.5 rounded">200g 홀빈 구매</span>
+</div>
+</div>
+<!-- Review Card 2 (With Photo) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1 text-accent-amber">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-spec-num text-spec-num text-on-surface-variant">2024.10.08</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-navy-ink font-semibold">
+            매장 필터 커피 라인업으로 손님들 반응이 폭발적입니다
+          </h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+            마포구 연남동에서 스페셜티 카페를 운영 중인데 이번 마이크로랏을 싱글 오리진 브루잉으로 세팅했습니다. 클린컵이 매우 우수하고 발효취 없이 아주 투명한 단맛입니다. B2B 1kg 벌크 주문으로 정기배송 전환했어요.
+          </p>
+<div class="mt-space-sm w-full h-28 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Café pour-over setup on wood bar counter with glass dripper brewing light roast Ethiopia coffee beans in a modern specialty cafe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgM5cQ86fdwR71YHARIbAzlj40FN-i4S8X0qPwF82cuIKHD1Wn6HxD0PaQaZ8tt0V4YfP94impI_Lf77wdO_E_fqHp0yxvdFhH-h9L71nxBkHPZIWfwWTPBj01erfI8FWks21ZSF9MifwpIiZ3Er1VP6QcHD9HyLXvfoPHTu6jqA2fA8Cm42Q181Kw-QI_kbg9NC5FczO9aTfmBCu4zohK2AkyotC4o1OpSXIN3Hp-JZKIR7hmfJE9"/>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center font-spec-num text-body-sm text-navy-ink font-semibold">
+              M
+            </div>
+<span class="font-body-sm text-body-sm text-navy-ink font-medium">문*호 (카페 오너)</span>
+</div>
+<span class="font-label-caps text-label-caps text-cobalt-electric bg-secondary-container/40 px-2 py-0.5 rounded">B2B 파트너 구매</span>
+</div>
+</div>
+<!-- Review Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1 text-accent-amber">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-spec-num text-spec-num text-on-surface-variant">2024.09.29</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-navy-ink font-semibold">
+            구독으로 받아보는데 디개싱 5일차에 포텐셜이 터집니다
+          </h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+            로스팅 날짜가 바로 어제 날짜로 적혀서 안전하게 배송되었고 질소 충진 패키징 덕분에 향미 손실이 전혀 없습니다. 로스팅 후 5일에서 10일 사이에 단맛과 복숭아 톤이 가장 선명해지네요. 강력 추천합니다.
+          </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center font-spec-num text-body-sm text-navy-ink font-semibold">
+              P
+            </div>
+<span class="font-body-sm text-body-sm text-navy-ink font-medium">박*우 (구독 회원)</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary bg-secondary-container/30 px-2 py-0.5 rounded">2주 정기구독 이용 중</span>
+</div>
+</div>
+</div>
+<!-- Brewing Q&A Minimalist Accordion/Bar -->
+<div class="mt-space-lg p-space-md bg-surface-container-low rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">contact_support</span>
+<span class="font-body-md text-body-md text-navy-ink">
+          이 원두에 대한 추출 프로파일이나 디개싱 문의가 필요하신가요?
+        </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<a class="font-label-caps text-label-caps uppercase tracking-wider text-navy-ink hover:text-primary transition-colors px-3 py-1.5 bg-surface-container-lowest rounded" data-path="brewing-journal" href="#">
+          브루잉 저널 아카이브
+        </a>
+<a class="font-label-caps text-label-caps uppercase tracking-wider bg-primary text-on-primary hover:bg-cobalt-electric transition-colors px-3 py-1.5 rounded" data-path="cupping-session-booking" href="#">
+          랩 바리스타 1:1 Q&amp;A
+        </a>
+</div>
+</div>
+</section>
+<!-- Interactive State Logic (Vanilla Script) -->
+<script>
+    (function initLotDetailInteractive() {
+      let currentBasePrice = 18000;
+      let isSubscription = false;
+      let quantity = 1;
+
+      const priceDisplay = document.getElementById('display-price');
+      const totalPriceText = document.getElementById('total-price-text');
+      const qtyValue = document.getElementById('qty-value');
+      const weightButtons = document.querySelectorAll('.weight-btn');
+      const grindButtons = document.querySelectorAll('.grind-btn');
+      const singleOrderCard = document.getElementById('btn-single-order');
+      const subOrderCard = document.getElementById('btn-sub-order');
+      const subCadenceBox = document.getElementById('sub-cadence-box');
+      const subFreqButtons = document.querySelectorAll('.sub-freq');
+      const btnMinus = document.getElementById('btn-qty-minus');
+      const btnPlus = document.getElementById('btn-qty-plus');
+      const btnAddCart = document.getElementById('btn-add-cart');
+      const btnBuyNow = document.getElementById('btn-buy-now');
+
+      function updatePricing() {
+        const unitPrice = isSubscription ? Math.round(currentBasePrice * 0.85) : currentBasePrice;
+        const total = unitPrice * quantity;
+
+        priceDisplay.textContent = '₩' + unitPrice.toLocaleString('ko-KR');
+        totalPriceText.textContent = '₩' + total.toLocaleString('ko-KR');
+      }
+
+      // Weight Selection
+      weightButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          weightButtons.forEach(b => {
+            b.classList.remove('bg-surface-container-highest', 'shadow-sm', 'border-primary');
+            b.classList.add('bg-surface-container-low', 'opacity-85');
+          });
+          btn.classList.add('bg-surface-container-highest', 'shadow-sm');
+          btn.classList.remove('opacity-85');
+
+          currentBasePrice = parseInt(btn.getAttribute('data-base'), 10);
+          updatePricing();
+        });
+      });
+
+      // Grind Selection
+      grindButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          grindButtons.forEach(b => {
+            b.classList.remove('bg-surface-container-highest', 'shadow-sm');
+            b.classList.add('bg-surface-container-low', 'opacity-85');
+          });
+          btn.classList.add('bg-surface-container-highest', 'shadow-sm');
+          btn.classList.remove('opacity-85');
+        });
+      });
+
+      // Order Type Selection
+      if (singleOrderCard && subOrderCard) {
+        singleOrderCard.addEventListener('click', () => {
+          isSubscription = false;
+          singleOrderCard.classList.add('bg-surface-container-highest', 'shadow-sm');
+          singleOrderCard.classList.remove('opacity-85');
+          singleOrderCard.querySelector('.check-indicator').classList.add('bg-cobalt-electric');
+          singleOrderCard.querySelector('.check-indicator').classList.remove('bg-transparent');
+
+          subOrderCard.classList.remove('bg-surface-container-highest', 'shadow-sm');
+          subOrderCard.classList.add('opacity-85');
+          subOrderCard.querySelector('.check-indicator').classList.remove('bg-cobalt-electric');
+          subOrderCard.querySelector('.check-indicator').classList.add('bg-transparent');
+
+          subCadenceBox.classList.add('hidden');
+          updatePricing();
+        });
+
+        subOrderCard.addEventListener('click', () => {
+          isSubscription = true;
+          subOrderCard.classList.add('bg-surface-container-highest', 'shadow-sm');
+          subOrderCard.classList.remove('opacity-85');
+          subOrderCard.querySelector('.check-indicator').classList.add('bg-cobalt-electric');
+          subOrderCard.querySelector('.check-indicator').classList.remove('bg-transparent');
+
+          singleOrderCard.classList.remove('bg-surface-container-highest', 'shadow-sm');
+          singleOrderCard.classList.add('opacity-85');
+          singleOrderCard.querySelector('.check-indicator').classList.remove('bg-cobalt-electric');
+          singleOrderCard.querySelector('.check-indicator').classList.add('bg-transparent');
+
+          subCadenceBox.classList.remove('hidden');
+          updatePricing();
+        });
+      }
+
+      // Cadence Toggles
+      subFreqButtons.forEach(b => {
+        b.addEventListener('click', () => {
+          subFreqButtons.forEach(x => {
+            x.classList.remove('bg-surface', 'font-semibold');
+            x.classList.add('bg-surface-container-low');
+          });
+          b.classList.add('bg-surface', 'font-semibold');
+          b.classList.remove('bg-surface-container-low');
+        });
+      });
+
+      // Quantity Logic
+      if (btnMinus && btnPlus) {
+        btnMinus.addEventListener('click', () => {
+          if (quantity > 1) {
+            quantity--;
+            qtyValue.textContent = quantity;
+            updatePricing();
+          }
+        });
+
+        btnPlus.addEventListener('click', () => {
+          if (quantity < 50) {
+            quantity++;
+            qtyValue.textContent = quantity;
+            updatePricing();
+          }
+        });
+      }
+
+      // Actions feedback
+      if (btnAddCart) {
+        btnAddCart.addEventListener('click', () => {
+          const original = btnAddCart.innerHTML;
+          btnAddCart.innerHTML = '<span class="material-symbols-outlined text-[20px] text-primary">check_circle</span> 담김 완료';
+          setTimeout(() => {
+            btnAddCart.innerHTML = original;
+          }, 1400);
+        });
+      }
+
+      if (btnBuyNow) {
+        btnBuyNow.addEventListener('click', () => {
+          btnBuyNow.classList.add('opacity-80');
+          setTimeout(() => {
+            btnBuyNow.classList.remove('opacity-80');
+          }, 300);
+        });
+      }
+
+      // Initialize
+      updatePricing();
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-low"><div class="max-w-7xl mx-auto px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg mb-space-xl"><div class="flex flex-col gap-space-xs"><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">Rhythm Coffee</span><p class="font-body-sm text-body-sm text-on-surface-variant">Specialty Coffee Atelier &amp; Wholesale Purveyor. Architectural roasting profiles curated for sensory clarity.</p><div class="mt-space-sm"><a class="font-label-caps text-label-caps uppercase tracking-wider text-primary hover:text-primary-container transition-colors inline-flex items-center gap-1" data-path="cupping-session-booking" href="#">커핑 세션 예약 바로가기 →</a></div></div><div class="flex flex-col gap-space-xs"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Roastery Lab</span><p class="font-body-sm text-body-sm text-on-surface">서울시 마포구 독막로 48 리듬 커피 아틀리에</p><p class="font-body-sm text-body-sm text-on-surface-variant">운영시간: 09:00 - 18:00 (월-금)<br/>문의: wholesale@rhythmcoffee.kr</p></div><div class="flex flex-col gap-space-xs"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Quick Navigation</span><div class="flex flex-col gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="beans-shop" href="#">시즌 싱글오리진 빈샵</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="wholesale-b2b-portal" href="#">사업자 원두 공급 문의</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="brewing-journal" href="#">추출 가이드 &amp; 저널</a></div></div><div class="flex flex-col gap-space-xs"><span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Lab Newsletter</span><p class="font-body-sm text-body-sm text-on-surface-variant">새로운 마이크로랏 입고 및 커핑 일정을 구독하세요.</p><form class="flex items-center gap-space-xs mt-space-xs"><input class="h-10 px-space-sm bg-surface text-on-surface font-body-sm text-body-sm rounded-lg outline-none focus:ring-1 focus:ring-primary w-full" placeholder="이메일 주소 입력" type="email"/><button class="h-10 px-space-md bg-navy-ink text-on-primary rounded-lg font-label-caps text-label-caps uppercase hover:bg-primary-container transition-colors whitespace-nowrap" type="button">구독</button></form></div></div><div class="pt-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><div class="flex flex-wrap gap-x-space-md gap-y-space-xs"><span>주식회사 리듬커피</span><span>대표자: 리듬랩</span><span>사업자등록번호: 214-88-02941</span><span>통신판매업신고: 제2024-서울마포-1092호</span></div><span class="font-spec-num text-spec-num">© 2024 RHYTHM COFFEE ATELIER. ALL RIGHTS RESERVED.</span></div></div></footer></body></html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed-dim": "#b0d500", "on-tertiary-fixed": "#1b1c18", "surface-container-highest": "#33353b", "surface-container": "#1d1f26", "on-error-container": "#ffdad6", "on-primary": "#00179b", "on-surface": "#e2e2ea", "primary-container": "#5265f5", "tertiary-fixed": "#e4e2dc", "on-tertiary-fixed-variant": "#474743", "inverse-primary": "#384cdd", "inverse-on-surface": "#2e3037", "secondary-container": "#b0d500", "tertiary": "#c8c6c1", "surface-dim": "#111319", "tertiary-fixed-dim": "#c8c6c1", "primary-fixed-dim": "#bcc2ff", "surface-container-low": "#191b21", "primary": "#bcc2ff", "on-secondary-container": "#485900", "primary-fixed": "#dfe0ff", "secondary-fixed": "#cbf230", "error": "#ffb4ab", "on-error": "#690005", "background": "#111319", "on-primary-fixed-variant": "#182ec6", "on-primary-fixed": "#000b62", "surface": "#111319", "surface-container-lowest": "#0c0e14", "secondary": "#cbf230", "on-secondary-fixed-variant": "#3e4c00", "surface-variant": "#33353b", "error-container": "#93000a", "inverse-surface": "#e2e2ea", "surface-tint": "#bcc2ff", "tertiary-container": "#757570", "outline": "#8f8fa1", "on-tertiary-container": "#fffdf7", "outline-variant": "#454655", "on-tertiary": "#30312d", "on-secondary-fixed": "#171e00", "on-background": "#e2e2ea", "on-secondary": "#2a3400", "on-surface-variant": "#c5c5d7", "on-primary-container": "#fffcff", "surface-bright": "#373940", "surface-container-high": "#282a30" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-md": "1rem", "gutter-lg": "2rem", "margin-sm": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin-lg": "3rem", "space-lg": "1.5rem", "margin": "1.5rem", "gutter-sm": "1rem", "space-xs": "0.25rem" }, fontFamily: { "headline-lg": ["Manrope"], "headline-sm": ["Manrope"], "label-numeric": ["Manrope"], "headline-xl": ["Manrope"], "body-lg": ["Inter"], "display-hero-mobile": ["Manrope"], "body-md": ["Inter"], "display-hero": ["Manrope"], "body-sm": ["Inter"], "label-caps": ["Inter"], "headline-md": ["Manrope"], "headline-xl-mobile": ["Manrope"] }, fontSize: { "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-numeric": ["14px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "display-hero-mobile": ["40px", { "lineHeight": "46px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "display-hero": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }], "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="h-16 px-margin-sm flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Menu" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-secondary active:scale-95 transition-all"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-tight leading-none">PULSE</span><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-widest">ATHLETIC CLUB</span></div></div><div class="flex items-center gap-space-sm"><a class="h-9 px-space-md bg-secondary text-on-secondary-fixed font-label-caps text-label-caps uppercase flex items-center justify-center rounded-lg hover:brightness-110 active:scale-95 transition-all shadow-[0_0_12px_rgba(203,242,48,0.3)]" data-path="trial-booking" href="#">체험 신청</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 flex flex-col pb-28"><div class="flex flex-col w-full text-on-surface overflow-x-hidden" style="word-break: keep-all;">
+<!-- SECTION B: MAIN HERO -->
+<section class="flex flex-col px-margin-sm pt-space-md pb-space-lg">
+<!-- Top Capsule Badge -->
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-1 bg-surface-container-high rounded-full shadow-sm mb-space-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">YOUR CITY · YOUR PACE · YOUR PULSE</span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-display-hero-mobile text-display-hero-mobile uppercase tracking-tight text-on-surface font-extrabold mb-space-xs leading-[1.15]">
+      더 강한 나를<br/>
+<span class="text-primary-fixed">만드는 시간</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+      나에게 맞는 체계적인 트레이닝으로 운동의 변화를 직접 경험하세요.
+    </p>
+<!-- Visual Hero Image Container -->
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container shadow-md mb-space-md">
+<img alt="Heavy Barbell Deadlift Training" class="w-full h-full object-cover grayscale contrast-125 object-center" src="https://lh3.googleusercontent.com/aida/AEtjO1WWhkVsXyKtLG9CaOOEzOtWRdqQi63lXmOyV-RKSYB2vWVAGwMFim_VxjgAipWvRn8fTUSaVGHJdsl-zywd-TopsMZFNC58H5RwfE4YWbLjLBJIUXH9yMH868xicrnNwv3l18ZCK_Ip4k2xBeKQv4BID_Izu-UxiYqX54fkl0vf0yhDtqNC5cjyuTntf_Ee74qqxgLE-8lzS8ZxHJ6aaVvReXmtBW1Xw0hCDThQfGhR4veh5hVYrPdHp6g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+<!-- Tech Overlay Indicator -->
+<div class="absolute bottom-3 left-3 flex items-center gap-2 bg-surface-container-lowest/80 backdrop-blur-md px-2.5 py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-numeric text-[11px] text-on-surface tracking-wider uppercase font-semibold">ZONE 01 · DEADLIFT PROTOCOL</span>
+</div>
+</div>
+<!-- Mobile CTA Button Group -->
+<div class="flex flex-col gap-space-xs mb-space-md">
+<a class="w-full h-12 bg-secondary text-on-secondary-fixed font-label-caps text-label-caps uppercase font-bold flex items-center justify-center rounded-lg shadow-[0_0_16px_rgba(203,242,48,0.25)] active:scale-[0.98] transition-all" href="#trial-section">
+        체험 수업 신청하기
+      </a>
+<a class="w-full h-12 bg-surface-container text-on-surface font-label-caps text-label-caps uppercase font-semibold flex items-center justify-center rounded-lg shadow-sm active:scale-[0.98] transition-all" href="#programs-section">
+        프로그램 살펴보기
+      </a>
+</div>
+<!-- Key Performance Metrics Bar -->
+<div class="grid grid-cols-3 gap-2 p-space-sm bg-surface-container rounded-xl shadow-sm">
+<div class="flex flex-col items-center text-center">
+<span class="font-headline-sm text-headline-sm text-secondary tracking-tight">1:1 / 4:1</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase mt-0.5">밀착 코칭</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight">100%</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase mt-0.5">코치 직강</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">45-60M</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase mt-0.5">고밀도 세션</span>
+</div>
+</div>
+</section>
+<!-- SECTION C: BRAND PHILOSOPHY (Electric Blue Block) -->
+<section class="w-full bg-primary-container text-on-primary-container px-margin-sm py-space-xl flex flex-col shadow-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-primary-container/80 font-bold">02 / OUR PHILOSOPHY</span>
+<span class="material-symbols-outlined text-on-primary-container/80 text-[20px]">bolt</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold uppercase tracking-tight text-on-primary-container mb-space-sm leading-tight">
+      운동은 나를 바꾸는<br/>가장 꾸준한 방법입니다.
+    </h2>
+<p class="font-body-md text-body-md text-on-primary-container/90 mb-space-lg leading-relaxed">
+      단순히 무게를 드는 행위를 넘어, 일상에 단단한 활력과 통제력을 되찾아주는 신체 메커니즘을 연구하고 지도합니다.
+    </p>
+<!-- 3 Pillars Compact Cards -->
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-md bg-on-primary-container/10 backdrop-blur-sm rounded-lg flex flex-col shadow-sm">
+<div class="flex items-center justify-between mb-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-primary-container">01. 분석 (ANALYZE)</span>
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container/80">관절 가동성과 근신경계 정렬을 객관적으로 측정하여 부상 위험 요소를 선제적으로 차단합니다.</p>
+</div>
+<div class="p-space-md bg-on-primary-container/10 backdrop-blur-sm rounded-lg flex flex-col shadow-sm">
+<div class="flex items-center justify-between mb-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-primary-container">02. 설계 (DESIGN)</span>
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container/80">개인의 라이프스타일과 회복 속도를 고려한 점진적 부하 트레이닝 블록을 구성합니다.</p>
+</div>
+<div class="p-space-md bg-on-primary-container/10 backdrop-blur-sm rounded-lg flex flex-col shadow-sm">
+<div class="flex items-center justify-between mb-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-primary-container">03. 체화 (INTERNALIZE)</span>
+<span class="material-symbols-outlined text-[18px]">fitness_center</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container/80">스스로 올바른 자극과 리듬을 이해하여 평생 유지할 수 있는 건강한 신체 자립을 구축합니다.</p>
+</div>
+</div>
+</section>
+<!-- SECTION D: TRAINING PROGRAMS -->
+<section class="flex flex-col px-margin-sm py-space-xl" id="programs-section">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold mb-space-xs">03 / TRAINING PROGRAM</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface uppercase tracking-tight mb-space-lg">
+      목표에 맞는 트레이닝
+    </h2>
+<!-- Program Cards Vertical Stack -->
+<div class="flex flex-col gap-space-lg">
+<!-- Card 1 -->
+<div class="flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<div class="relative w-full aspect-[16/9] bg-surface-container-high">
+<img alt="Personal Training Deadlift" class="w-full h-full object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/AEtjO1WWhkVsXyKtLG9CaOOEzOtWRdqQi63lXmOyV-RKSYB2vWVAGwMFim_VxjgAipWvRn8fTUSaVGHJdsl-zywd-TopsMZFNC58H5RwfE4YWbLjLBJIUXH9yMH868xicrnNwv3l18ZCK_Ip4k2xBeKQv4BID_Izu-UxiYqX54fkl0vf0yhDtqNC5cjyuTntf_Ee74qqxgLE-8lzS8ZxHJ6aaVvReXmtBW1Xw0hCDThQfGhR4veh5hVYrPdHp6g"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-label-caps text-secondary uppercase font-bold tracking-wider">
+            1:1 PRIVATE · 50 MIN
+          </div>
+<span class="absolute top-3 right-3 font-label-numeric text-[13px] text-outline font-bold">01</span>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">개인 맞춤 트레이닝</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            나의 목표와 운동 수준에 맞춰 진행하는 1:1 코칭. 자세 교정, 체형 평가, 개인별 최적화된 운동 강도를 세밀하게 다룹니다.
+          </p>
+<a class="inline-flex items-center justify-between pt-space-xs text-secondary font-label-caps text-label-caps uppercase font-bold group" href="#trial-section">
+<span>자세히 보기 및 체험</span>
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<div class="relative w-full aspect-[16/9] bg-surface-container-high">
+<img alt="Small Group Training Box Jump" class="w-full h-full object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/AEtjO1VQiQXHp1_zxbkzwQAnWPCZ42RyDMtyoa2hJsLQj3Lk5BZOiD42Z4TYLG9mpKtnRLZvCtU9IP2hkmibYTFiufcgL5SbNBzv20trnD1H0-6B22L8PslYJUpkwoWvrXOw9lu24jikCJpv2jjkaignCreKCQuNa54O_65wlNEUtKb2Au_b-iNk3S0iaQjO8_qQDv4x7kWPakahedSfmLtE5JGXms5mVdvE9lvmUR4mNU2NUl07ZqGIOHqEgyM"/>
+<div class="absolute top-3 left-3 bg-secondary text-on-secondary-fixed px-2 py-0.5 rounded text-[10px] font-label-caps uppercase font-bold tracking-wider">
+            MAX 4 MEMBERS · 55 MIN
+          </div>
+<span class="absolute top-3 right-3 font-label-numeric text-[13px] text-outline font-bold">02</span>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">소그룹 트레이닝</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            함께하는 에너지와 전문적인 지도를 동시에 경험하는 소수 정예 그룹 운동. 동기부여와 시너지를 바탕으로 몰입도 높은 세션을 진행합니다.
+          </p>
+<a class="inline-flex items-center justify-between pt-space-xs text-secondary font-label-caps text-label-caps uppercase font-bold group" href="#trial-section">
+<span>자세히 보기 및 체험</span>
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<div class="relative w-full aspect-[16/9] bg-surface-container-high">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Athletic strength and conditioning equipment with functional weights, kettlebells, and heavy resistance training gear in a sleek dark gym with cool neon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUbzRwIESlACrM-ZmSiveXasMkqUg59EDHN1Y8LMMUoaKQ9tFMadnXpLVHbfNdbORU46kaI--sRDIZTUwr_lgRhnQJT8i11nA47f8I-4zbGRFeW0112XyO0WEkZLkuOnnwGQjSbzcYy2GKQM_zec5ON9paZgr9vunEjP-sWa7MSyleR3TxZZIikFVixfl8GP5Ri5mcHTE_650NKFmBKjZsPq1UbwGumbmLGWGyu1wKZBZU1LBnoX5Y"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-label-caps text-primary uppercase font-bold tracking-wider">
+            STRENGTH &amp; CONDITION · 60 MIN
+          </div>
+<span class="absolute top-3 right-3 font-label-numeric text-[13px] text-outline font-bold">03</span>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">근력 및 컨디셔닝</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            기초 체력과 근력을 체계적으로 기르는 기능성 트레이닝. 모빌리티 강화와 코어 안정성을 확립해 다치지 않는 강한 신체를 완성합니다.
+          </p>
+<a class="inline-flex items-center justify-between pt-space-xs text-secondary font-label-caps text-label-caps uppercase font-bold group" href="#trial-section">
+<span>자세히 보기 및 체험</span>
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION E: STUDIO FACILITY -->
+<section class="flex flex-col px-margin-sm py-space-xl bg-surface-container-low">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold mb-space-xs">04 / OUR SPACE</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface uppercase tracking-tight mb-space-md">
+      운동에 집중할 수 있는 공간
+    </h2>
+<!-- Facility Wide Image -->
+<div class="relative w-full aspect-video rounded-xl overflow-hidden bg-surface-container shadow-md mb-space-md">
+<img alt="PULSE Studio Athletic Indoor Track and Racks" class="w-full h-full object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/AEtjO1WSyERyYC_VzuTbWKKUn1YVBLPIAjlcyqG7FZjblg28XYtRC0-9MDLClbEIwodEB7u9DO8UTsaN2U5QSECaHncM6sjvDPJHnh9q9iMDz3Jr7bzavPsP5I7NFCHgJcRDYEIFJYTq3i0YtjYHBxwSREydftGaT2LOo2uLJ7MFczUELXQsJvmqeyTybd67azvp9vkXJAGV5MbKhQGoT1sBzU3uvuQj5SGemfLM2KoDAu_ugf0nzr56YQz-SiM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent opacity-60"></div>
+</div>
+<!-- 3 Features List -->
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-md bg-surface-container rounded-xl flex items-start gap-space-md shadow-sm">
+<span class="font-headline-md text-headline-md text-primary font-bold leading-none">01</span>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-0.5">전문적인 코칭 환경</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">정원 제한으로 서로 방해받지 않는 독립형 플랫폼 동선과 안전 규격을 엄격히 준수합니다.</p>
+</div>
+</div>
+<div class="p-space-md bg-surface-container rounded-xl flex items-start gap-space-md shadow-sm">
+<span class="font-headline-md text-headline-md text-secondary font-bold leading-none">02</span>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-0.5">프리미엄 인증 장비</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">국제 공인 엘리코(Eleiko) 바벨, 파워랙, 케틀벨, 그리고 20m 실내 우레탄 슬레드 트랙을 완비했습니다.</p>
+</div>
+</div>
+<div class="p-space-md bg-surface-container rounded-xl flex items-start gap-space-md shadow-sm">
+<span class="font-headline-md text-headline-md text-primary-fixed-dim font-bold leading-none">03</span>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-0.5">온전한 몰입을 위한 설계</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">운동 집중에 최적화된 저조도 앰비언트 LED 조명과 미세먼지 제로 항온항습 공조 시스템이 가동됩니다.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION F: TRAINING PROCESS (Accordion Steps) -->
+<section class="flex flex-col px-margin-sm py-space-xl">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold mb-space-xs">05 / OUR APPROACH</span>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface uppercase tracking-tight mb-space-lg">
+      목표를 이해하고, 계획을 세우고, 꾸준히 성장합니다.
+    </h2>
+<!-- Interactive Mobile Steps -->
+<div class="flex flex-col gap-space-xs" id="process-accordion">
+<!-- Step 1 -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleStep(1)">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">01</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">현재 상태와 목표 파악</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="step-icon-1">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md pt-0 text-on-surface-variant font-body-sm text-body-sm" id="step-content-1">
+          정밀 체성분 및 모빌리티 평가(FMS)를 통해 관절 불균형과 심폐 지구력 기준점을 세밀하게 기록합니다.
+        </div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleStep(2)">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">02</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">맞춤형 계획 수립</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="step-icon-2">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md pt-0 text-on-surface-variant font-body-sm text-body-sm" id="step-content-2">
+          운동 빈도와 식습관, 직업적 자세 패턴에 맞추어 4주 단위의 점진적 과부하 트레이닝 플랜을 수립합니다.
+        </div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleStep(3)">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-primary-fixed-dim font-bold">03</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">진행 상황 점검 및 조정</span>
+</div>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="step-icon-3">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md pt-0 text-on-surface-variant font-body-sm text-body-sm" id="step-content-3">
+          매 세션 수행 기록을 전용 데이터베이스에 누적하고 매월 성취도를 재평가하여 최적의 페이스를 유지합니다.
+        </div>
+</div>
+</div>
+</section>
+<!-- SECTION G: MEMBERSHIP OPTIONS -->
+<section class="flex flex-col px-margin-sm py-space-xl bg-surface-container-low">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold mb-space-xs">06 / MEMBERSHIP</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface uppercase tracking-tight mb-space-lg">
+      나에게 맞는 운동 방식 찾기
+    </h2>
+<div class="flex flex-col gap-space-md">
+<!-- Option 1: Trial Pass -->
+<div class="p-space-lg bg-surface-container rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold tracking-wider">TRIAL SESSION</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-0.5">체험 수업 세션</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-label-caps text-on-surface tracking-wider uppercase font-bold">1회 체험</span>
+</div>
+<ul class="flex flex-col gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check</span>
+<span>전문 코치의 체형 분석 &amp; 1:1 상담</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check</span>
+<span>정규 트레이닝 50분 직접 참여</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check</span>
+<span>개인 락커 &amp; 샤워 시설 이용</span>
+</li>
+</ul>
+<a class="w-full h-11 bg-surface-container-highest text-on-surface font-label-caps text-label-caps uppercase font-bold flex items-center justify-center rounded-lg active:scale-95 transition-all" href="#trial-section">
+          체험 수업 신청
+        </a>
+</div>
+<!-- Option 2: Small Group (Featured) -->
+<div class="relative p-space-lg bg-surface-container-high rounded-xl shadow-md flex flex-col gap-space-md overflow-hidden">
+<div class="absolute top-0 right-0 bg-secondary text-on-secondary-fixed font-label-caps text-[10px] uppercase font-bold px-3 py-1 rounded-bl-lg">
+          POPULAR · 가장 추천
+        </div>
+<div class="flex justify-between items-start mt-2">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold tracking-wider">SEMI-PRIVATE</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-0.5">소그룹 트레이닝</h3>
+</div>
+</div>
+<ul class="flex flex-col gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check</span>
+<span>최대 4인 정원제 밀착 티칭</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check</span>
+<span>주 2회 / 3회 고정 루틴 예약제</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check</span>
+<span>팀 동기부여 및 퍼포먼스 기록 관리</span>
+</li>
+</ul>
+<a class="w-full h-11 bg-secondary text-on-secondary-fixed font-label-caps text-label-caps uppercase font-bold flex items-center justify-center rounded-lg shadow-[0_0_12px_rgba(203,242,48,0.3)] active:scale-95 transition-all" href="#trial-section">
+          소그룹 트레이닝 선택
+        </a>
+</div>
+<!-- Option 3: Private PT -->
+<div class="p-space-lg bg-surface-container rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold tracking-wider">FULL-CUSTOM</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-0.5">개인 맞춤 트레이닝</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-label-caps text-primary tracking-wider uppercase font-bold">1:1 집중</span>
+</div>
+<ul class="flex flex-col gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check</span>
+<span>100% 개인 목표 타겟팅 커스텀 세션</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check</span>
+<span>식단 및 컨디셔닝 24시간 실시간 피드백</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check</span>
+<span>자유로운 일정 스케줄링 조율</span>
+</li>
+</ul>
+<a class="w-full h-11 bg-surface-container-highest text-on-surface font-label-caps text-label-caps uppercase font-bold flex items-center justify-center rounded-lg active:scale-95 transition-all" href="#trial-section">
+          1:1 코칭 문의하기
+        </a>
+</div>
+</div>
+</section>
+<!-- SECTION H: FAQ ACCORDION -->
+<section class="flex flex-col px-margin-sm py-space-xl">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-bold mb-space-xs">07 / FAQ</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface uppercase tracking-tight mb-space-lg">
+      궁금한 점을 확인해 보세요
+    </h2>
+<div class="flex flex-col gap-space-xs" id="faq-list">
+<!-- FAQ 1 -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(1)">
+<span class="font-body-md text-body-md font-semibold text-on-surface pr-space-sm">운동 초보자도 참여할 수 있나요?</span>
+<span class="material-symbols-outlined text-outline text-[20px] transition-transform duration-200" id="faq-icon-1">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-sm text-body-sm leading-relaxed" id="faq-content-1">
+          네, 전혀 문제없습니다. 코치가 회원님의 신체 가동성과 근력을 개별 진단하여 맞춤형 강도로 단계별 운동을 지도해 드립니다.
+        </div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(2)">
+<span class="font-body-md text-body-md font-semibold text-on-surface pr-space-sm">첫 수업 준비물은 무엇이 있나요?</span>
+<span class="material-symbols-outlined text-outline text-[20px] transition-transform duration-200" id="faq-icon-2">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-sm text-body-sm leading-relaxed hidden" id="faq-content-2">
+          운동에 적합한 실내 전용 운동화와 편안한 트레이닝복, 개인 텀블러만 지참하시면 됩니다. 샴푸, 수건 등 샤워 어메니티는 최고급으로 구비되어 있습니다.
+        </div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(3)">
+<span class="font-body-md text-body-md font-semibold text-on-surface pr-space-sm">소그룹과 1:1 트레이닝 중 무엇을 추천하나요?</span>
+<span class="material-symbols-outlined text-outline text-[20px] transition-transform duration-200" id="faq-icon-3">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-sm text-body-sm leading-relaxed hidden" id="faq-content-3">
+          재활 및 특정 관절 이슈가 있다면 1:1 개인 맞춤을, 활력 있는 동기부여와 규칙적인 운동 루틴을 원하시면 소그룹(최대 4인) 프로그램을 추천합니다.
+        </div>
+</div>
+<!-- FAQ 4 -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<button class="w-full p-space-md flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(4)">
+<span class="font-body-md text-body-md font-semibold text-on-surface pr-space-sm">체험 수업 후 바로 등록해야 하나요?</span>
+<span class="material-symbols-outlined text-outline text-[20px] transition-transform duration-200" id="faq-icon-4">expand_more</span>
+</button>
+<div class="px-space-md pb-space-md text-on-surface-variant font-body-sm text-body-sm leading-relaxed hidden" id="faq-content-4">
+          전혀 그렇지 않습니다. 체험 수업을 통해 코칭 스타일과 시설 만족도를 충분히 검토하신 후 자율적으로 등록을 결정하실 수 있습니다.
+        </div>
+</div>
+</div>
+</section>
+<!-- SECTION I: FINAL CONVERSION CTA -->
+<section class="flex flex-col px-margin-sm py-space-xl bg-surface-container mb-space-lg" id="trial-section">
+<div class="p-space-lg bg-surface rounded-xl shadow-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold tracking-widest">START YOUR JOURNEY</span>
+<h2 class="font-display-hero-mobile text-display-hero-mobile font-bold text-on-surface uppercase tracking-tight leading-[1.15]">
+          오늘의 시작이<br/>변화를 만듭니다.
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          나에게 맞는 운동을 찾고, 새로운 루틴을 시작해 보세요. PULSE의 전문 코칭 팀이 최적화된 페이스를 찾아드립니다.
+        </p>
+</div>
+<!-- Interactive Form -->
+<form class="flex flex-col gap-space-sm" onsubmit="handleFormSubmit(event)">
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider font-semibold">이름</label>
+<input class="w-full h-12 px-space-md bg-surface-container text-on-surface rounded-lg focus:outline-none focus:ring-1 focus:ring-primary text-body-md placeholder:text-outline" placeholder="홍길동" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider font-semibold">연락처</label>
+<input class="w-full h-12 px-space-md bg-surface-container text-on-surface rounded-lg focus:outline-none focus:ring-1 focus:ring-primary text-body-md placeholder:text-outline" placeholder="010-1234-5678" required="" type="tel"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider font-semibold">희망 프로그램</label>
+<select class="w-full h-12 px-space-md bg-surface-container text-on-surface rounded-lg focus:outline-none focus:ring-1 focus:ring-primary text-body-md">
+<option value="group">소그룹 트레이닝 체험 (추천)</option>
+<option value="private">1:1 개인 맞춤 트레이닝 체험</option>
+<option value="conditioning">근력 및 컨디셔닝 세션</option>
+</select>
+</div>
+<button class="w-full h-12 mt-space-xs bg-secondary text-on-secondary-fixed font-label-caps text-label-caps uppercase font-bold flex items-center justify-center rounded-lg shadow-[0_0_16px_rgba(203,242,48,0.35)] active:scale-[0.98] transition-all" type="submit">
+          체험 수업 문의하기
+        </button>
+<div class="hidden text-center p-2 rounded bg-secondary/10 text-secondary font-label-caps text-label-caps uppercase tracking-wider font-bold" id="form-feedback">
+          신청이 접수되었습니다! 담당 코치가 곧 연락드립니다.
+        </div>
+</form>
+<div class="pt-space-xs text-center">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-wider">
+          CONCEPT PROJECT · 포트폴리오용 가상 브랜드
+        </span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  function toggleStep(index) {
+    const content = document.getElementById('step-content-' + index);
+    const icon = document.getElementById('step-icon-' + index);
+    if (!content || !icon) return;
+
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    } else {
+      content.classList.add('hidden');
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  function toggleFaq(index) {
+    const content = document.getElementById('faq-content-' + index);
+    const icon = document.getElementById('faq-icon-' + index);
+    if (!content || !icon) return;
+
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    } else {
+      content.classList.add('hidden');
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const feedback = document.getElementById('form-feedback');
+    if (feedback) {
+      feedback.classList.remove('hidden');
+      setTimeout(() => {
+        feedback.classList.add('hidden');
+        e.target.reset();
+      }, 3500);
+    }
+  }
+</script><footer class="w-full bg-surface-container-low px-margin-sm py-space-xl flex flex-col gap-space-lg"><div class="flex flex-col gap-space-xs"><span class="font-headline-md text-headline-md uppercase text-on-surface tracking-tight leading-none">PULSE</span><span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">HIGH PERFORMANCE FACILITY</span></div><div class="flex flex-wrap gap-x-space-md gap-y-space-xs"><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#">Overview</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors" data-path="programs" href="#">Programs</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors" data-path="coaches" href="#">Coaches</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors" data-path="facility-spec" href="#">Facility</a><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors" data-path="membership-plans" href="#">Pricing</a></div><div class="flex items-center gap-space-md text-on-surface-variant"><a aria-label="Instagram" class="w-11 h-11 flex items-center justify-center hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">camera</span></a><a aria-label="YouTube" class="w-11 h-11 flex items-center justify-center hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">smart_display</span></a><a aria-label="Contact" class="w-11 h-11 flex items-center justify-center hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">alternate_email</span></a></div><div class="flex flex-col gap-space-xs pt-space-xs"><p class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">CONCEPT PROJECT · 포트폴리오용 가상 브랜드</p><p class="font-body-sm text-body-sm text-outline">© 2025 PULSE ATHLETIC CLUB. ALL RIGHTS RESERVED.</p></div></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.4)]" data-active-classes="text-secondary border-t-2 border-secondary"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs h-full flex-1 transition-colors text-secondary border-t-2 border-secondary" data-path="overview" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-caps text-label-caps uppercase tracking-wider">PULSE</span></a><a class="flex flex-col items-center justify-center gap-space-xs h-full flex-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="programs" href="#"><span class="material-symbols-outlined text-[22px]">exercise</span><span class="font-label-caps text-label-caps uppercase tracking-wider">PROGRAMS</span></a><a class="flex flex-col items-center justify-center gap-space-xs h-full flex-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="coaches" href="#"><span class="material-symbols-outlined text-[22px]">groups</span><span class="font-label-caps text-label-caps uppercase tracking-wider">COACHES</span></a><a class="flex flex-col items-center justify-center gap-space-xs h-full flex-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="membership-plans" href="#"><span class="material-symbols-outlined text-[22px]">credit_card</span><span class="font-label-caps text-label-caps uppercase tracking-wider">PASS</span></a></div></nav></body></html>

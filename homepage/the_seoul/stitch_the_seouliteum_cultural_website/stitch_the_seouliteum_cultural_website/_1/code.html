@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Syne:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-tint": "#c8c6c5", "on-primary-fixed": "#1c1b1b", "outline-variant": "#444748", "on-tertiary": "#32302f", "error-container": "#93000a", "error": "#ffb4ab", "on-primary-fixed-variant": "#474646", "surface-container-highest": "#353535", "tertiary": "#cac6c3", "inverse-surface": "#e5e2e1", "tertiary-container": "#121110", "secondary": "#e0c298", "outline": "#8e9192", "on-surface": "#e5e2e1", "secondary-fixed": "#fedeb2", "on-secondary": "#402d0f", "on-tertiary-container": "#7f7c7a", "surface-container-low": "#1c1b1b", "tertiary-fixed-dim": "#cac6c3", "on-primary-container": "#7e7c7c", "on-error": "#690005", "surface": "#131313", "primary-fixed-dim": "#c8c6c5", "tertiary-fixed": "#e6e1df", "on-surface-variant": "#c4c7c7", "surface-container": "#20201f", "on-background": "#e5e2e1", "on-tertiary-fixed": "#1d1b1a", "on-error-container": "#ffdad6", "surface-container-lowest": "#0e0e0e", "on-secondary-fixed": "#281800", "on-secondary-fixed-variant": "#584323", "surface-bright": "#393939", "secondary-fixed-dim": "#e0c298", "surface-variant": "#353535", "background": "#131313", "surface-container-high": "#2a2a2a", "primary": "#c8c6c5", "primary-container": "#111111", "surface-dim": "#131313", "primary-fixed": "#e5e2e1", "inverse-primary": "#5f5e5e", "on-primary": "#313030", "on-secondary-container": "#ceb188", "on-tertiary-fixed-variant": "#484645", "inverse-on-surface": "#313030", "secondary-container": "#584323" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-md": "1.25rem", "gutter-mobile": "1rem", "space-xs": "0.375rem", "gutter": "1.5rem", "margin-mobile": "1.25rem", "margin-tablet": "2.5rem", "space-lg": "2.25rem", "space-sm": "0.75rem", "margin": "4rem", "space-xl": "4rem" }, fontFamily: { "body-md": ["Geist"], "headline-md": ["Syne"], "headline-xl": ["Syne"], "body-lg": ["Geist"], "label-sm": ["Geist"], "headline-lg-mobile": ["Syne"], "label-md": ["Geist"], "body-sm": ["Geist"], "headline-xl-mobile": ["Syne"], "headline-lg": ["Syne"] }, fontSize: { "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-xl": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-xl-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#131313;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:calc(env(safe-area-inset-bottom, 0px) + 5rem);}.pt-safe{padding-top:env(safe-area-inset-top, 0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col min-h-screen selection:bg-secondary/30 selection:text-secondary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="THE SEOULITEUM Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQC4qh0XImsf8-xwpf-0bzpWnYErN_G4korUYf9VlUxIKsrM5_vnYNfsnjFoJ0h4ge7j4vNjnP9ZfPxjHosUT6rPZ0eYCsVPzPcXhm2csTDWMuofUSIXkHG3t_mo1DmlpyaVon3hnUyYGcgTV0eUEFA2_guvghauS7TZouPrzCw312MLX64Fzj-7FsbTCbl5ZeOvaG5QgRK34fjEav9313BvfF8PGQIlLTtkW5_6Y"/><div class="flex flex-col"><span class="font-headline-md text-label-md tracking-wider text-on-surface uppercase">THE SEOULITEUM</span><span class="font-label-sm text-[9px] text-secondary tracking-widest uppercase">공간소개</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search Archive" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Curator Profile" class="w-11 h-11 flex items-center justify-center rounded-full transition-opacity hover:opacity-80"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEv8yDR5vXkWqRcd9XlNmib5yJHq2iUTG96894f4nV8FS4nTrgcWbjXix-9Vk6yCfL3j--iglYpqSg3elFs3vK4w4GZg-lk5rx-k2xRgEx7hBz5LFHCUtmjOgWkNSVTBbVjJ8wHQUjOCnQY0za2QQBz4ACy_HvRJZav-5rQ2pUMJTgaZmb-PKggH-WZIvEKWpjdBPN64_98yNqBensXzKJhPZ0m1EpoxfL7UyDiio"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full">
+<!-- Top Curatorial Micro-header & Philosophy Statement -->
+<section class="px-margin-mobile pt-space-md pb-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm tracking-widest text-secondary uppercase bg-surface-container-high px-3 py-1 rounded-full">Editorial Dossier</span>
+<span class="font-label-md text-label-md text-on-surface-variant tabular-nums">01 / ARCHITECTURAL SANCTUARY</span>
+</div>
+<div class="flex flex-col gap-1 mt-2">
+<span class="font-label-md text-label-md tracking-widest uppercase text-tertiary">About The Seouliteum</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">도심 속 침묵과<br/><span class="text-secondary italic">영감의 성소</span></h1>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mt-2">
+      더 서울라이티움은 물리적 시공간의 한계를 지우고, 빛의 결(Chiaroscuro)과 어둠의 깊이가 공명하도록 설계된 복합 예술 건축물입니다. 서울숲의 유기적 생명력을 수직적 미니멀리즘 구조로 재해석하여 관람자와 창작자 모두에게 완벽한 몰입을 헌사합니다.
+    </p>
+<!-- Visual Architectural Atmosphere -->
+<div class="relative w-full rounded-xl overflow-hidden mt-3 shadow-xl bg-surface-container-low">
+<div class="w-full h-72 bg-cover bg-center" data-alt="Dark, moody, minimalist architectural space with brutalist polished concrete textures, warm geometric spotlight casting champagne ambient glow on monolithic raw stone sculptures in an avant-garde nocturnal art gallery at night." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAaOF7RORkcmeIgU-66sEtNVoHavUPEH2kXW5hASO5BcRycCxA9fi9EwKAaoqeAADTaR9g42QV4od_nkJPelxPf0sCMROS4dGhB5K4PG5w6TQDHsKI9ANOS9QHqgY8DOEf7-LdbLUloSCWcqukUObT00dzSzJ5RAKSneYhq79ToyQVtZGQeVeMob_T0gu2n9VQWoKK0dBm91X96-75ztQKcQudPMXAbDcTDPSfk9LU')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">wb_twilight</span>
+<span class="font-label-sm text-label-sm text-on-surface tracking-wider uppercase">Light &amp; Void Staging</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-lowest/80 px-2.5 py-1 rounded-full backdrop-blur-md">Arch. Dir. 2024</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Curatorial Numbers & Highlights -->
+<section class="px-margin-mobile py-space-md">
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Gross Volume</span>
+<div class="mt-4">
+<div class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">4,800<span class="text-secondary text-body-md ml-1">㎡</span></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">4개 층 가변형 입체 공간</p>
+</div>
+</div>
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Ceiling Matrix</span>
+<div class="mt-4">
+<div class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">8.5<span class="text-secondary text-body-md ml-1">M</span></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">초고층 수직 음향 반향 설계</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Services Interactive Section -->
+<section class="px-margin-mobile py-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md tracking-widest uppercase text-secondary">Core Services</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">큐레이토리얼 및 비스포크 서비스</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">예술 기획부터 최첨단 공간 연출까지 맞춤형 솔루션을 전개합니다.</p>
+</div>
+<!-- Service Tabs Filter -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1" id="service-pill-tabs">
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-on-surface text-surface transition-all whitespace-nowrap" id="tab-btn-exhibit" onclick="switchService('exhibit')">기획전시</button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant transition-all whitespace-nowrap" id="tab-btn-rental" onclick="switchService('rental')">프리미엄 대관</button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant transition-all whitespace-nowrap" id="tab-btn-collab" onclick="switchService('collab')">문화예술 제휴</button>
+<button class="px-4 py-2 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant transition-all whitespace-nowrap" id="tab-btn-tech" onclick="switchService('tech')">미디어·테크</button>
+</div>
+<!-- Service Panel: 01 전시 및 큐레이션 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm shadow-md" id="service-panel-exhibit">
+<div class="w-full h-44 rounded-DEFAULT overflow-hidden relative bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Contemporary international art exhibition gallery inside a dark room with floating illuminated canvas artworks and visitors silhouetted against a subtle warm amber light beam, ultra high-end gallery aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGT_OQ1fzGft5sII0CHGYwAl4B05si5YVML9IzFGDcQXTdaIJJxGPQv8tHcaCg8L-Q0T-g3lRfCLu26cZ_3WUTWqfJ50JxTEHbnhW8xdfaQwzxWFb_ToD_h2SoyqO38YkW-DFSftBG-1mp3eO-7dpKgMRgTKRyYXj14guA8Jpggf0fY9w_vaqmP3H3vzwuBu9aGnAhd3Kth0CwYjZi0cUGskBxl-n1Qy3fYUflG2g"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1 rounded-full">
+<span class="font-label-sm text-label-sm text-secondary">DIRECTION 01</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 mt-1">
+<h3 class="font-headline-md text-[20px] leading-7 text-on-surface">기획전시 및 아트 디렉팅</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          국내외 유수 동시대 아티스트와의 독점적 협업, 파격적인 시선의 현대미술 및 미디어아트 큐레이션을 주관합니다. 공간의 서사를 극대화하는 맞춤형 전시 시나리오를 구성합니다.
+        </p>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="font-label-sm text-label-sm px-3 py-1 bg-surface-container-high text-tertiary rounded-full">글로벌 작가 레지던시</span>
+<span class="font-label-sm text-label-sm px-3 py-1 bg-surface-container-high text-tertiary rounded-full">비엔날레급 큐레이션</span>
+<span class="font-label-sm text-label-sm px-3 py-1 bg-surface-container-high text-tertiary rounded-full">도록 및 아카이빙</span>
+</div>
+</div>
+<!-- Service Panel: 02 프리미엄 대관 -->
+<div class="hidden bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm shadow-md" id="service-panel-rental">
+<div class="w-full h-44 rounded-DEFAULT overflow-hidden relative bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="High luxury fashion brand runway launch event inside an architectural minimalist concrete cathedral hall with razor sharp directional ceiling spotlights and refined black guest seating." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLuj8d_Tkq3MQrg_7QRSMgieaM5jK-N9OLWO20P6WKW4EEKpPriy9uyo3Oe0OQfXS1D9afI6pPnmtwbHeD7Wuchy56H7_IPA4L_9xWACDTzdHM7mQmOlEWYniD6HvA93uKhXLTJBtILkmQafjIuwBBld47QYWVNm1frScfbP_dfx8zUlMncOMtD3RqKSJZNDL4XCRFXGzRifmUKp5do56Pz4PC6T-yQuVFHWw8Ed8"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1 rounded-full">
+<span class="font-label-sm text-label-sm text-secondary">DIRECTION 02</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 mt-1">
+<h3 class="font-headline-md text-[20px] leading-7 text-on-surface">프리미엄 베뉴 대관</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          럭셔리 하우스 브랜드 런칭, 오트 쿠튀르 패션위크, 비공개 VIP 갈라 디너 및 프라이빗 쇼케이스에 최적화된 하이엔드 인프라와 보안 프로토콜을 보장합니다.
+        </p>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="font-label-sm text-label-sm px-3 py-1 bg-surface-container-high text-tertiary rounded-full">단독 프라이빗 동선</span>
+<span class="font-label-sm text-label-sm px-3 py-1 bg-surface-container-high text-tertiary rounded-full">최대 1,200명 수용</span>
+<span class="font-label-sm text-label-sm px-3 py-1 bg-surface-container-high text-tertiary rounded-full">풀 프로덕션 지원</span>
+</div>
+</div>
+<!-- Service Panel: 03 문화예술 제휴 -->
+<div class="hidden bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm shadow-md" id="service-panel-collab">
+<div class="w-full h-44 rounded-DEFAULT overflow-hidden relative bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Refined cultural partnership salon with luxury brand executives and curators gathered around a sleek glass monolithic table discussing architectural plans in a quiet charcoal ambient boardroom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb-V6YjjrW4R98P5JdK0ruQzuqx8OLRTzAysH9KZFazTUQOr1XbWkxgJwHpLybXcwVVKsEcDMmjvdNoP-JqPiwxoKGNg5hnUqJ-_N3AT2Pq2lawgOnhR6aGvo7FCZKE3XQrezai3drXTEmoDH-2rq1PpusFzlMu3PpIFVYFRZwJqB-vYMypbHzBF5Tm5k7uCNPlSnyZsCc3jXh4YaaPKP2u6PK7NLpHYTlqVRjD-g"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1 rounded-full">
+<span class="font-label-sm text-label-sm text-secondary">DIRECTION 03</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 mt-1">
+<h3 class="font-headline-md text-[20px] leading-7 text-on-surface">문화예술 제휴 및 협력</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          기업의 브랜드 철학을 예술적 언어로 전환하는 문화 마케팅 전략 수립 및 아트 프로젝트 공동 기획을 제안합니다. 메세나 활동을 위한 맞춤형 아트 파트너십을 수립합니다.
+        </p>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="font-label-sm text-label-sm px-3 py-1 bg-surface-container-high text-tertiary rounded-full">브랜드 아트 콜라보</span>
+<span class="font-label-sm text-label-sm px-3 py-1 bg-surface-container-high text-tertiary rounded-full">VIP 멤버십 제휴</span>
+<span class="font-label-sm text-label-sm px-3 py-1 bg-surface-container-high text-tertiary rounded-full">커스텀 아트 굿즈 기획</span>
+</div>
+</div>
+<!-- Service Panel: 04 미디어 테크 -->
+<div class="hidden bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm shadow-md" id="service-panel-tech">
+<div class="w-full h-44 rounded-DEFAULT overflow-hidden relative bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Immense ultra-high-definition panoramic media wall in a dark exhibition hall rendering dynamic fluid golden particles, interactive floor projection, avant-garde futuristic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABEK3qETpkvbJQYRxiDR1BbhBHaOCq4WTQro7bWOAoBGRfiP6vNFD75oHV5dLpdVFN51bH3SbdvLgP9MlQmEThXAgSMA-F_3W8OWfuZ1H62Fits23CdE8uziQ9yUaOROlPb0WLk_t6j_8weGk_fVXIIOblRv0QuJb8pjMG5bb2OuWyF-g7vJvqXZKwz9uTPIKK2T5OOuHwHOkbUOtOVTFUmPHvimkANe2TnVJrmH4"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1 rounded-full">
+<span class="font-label-sm text-label-sm text-secondary">DIRECTION 04</span>
+</div>
+</div>
+<div class="flex flex-col gap-1 mt-1">
+<h3 class="font-headline-md text-[20px] leading-7 text-on-surface">미디어·테크 프로덕션</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          초대형 8K LED 미디어월과 64채널 서라운드 이머시브 오디오 시스템을 탑재. 생성형 AI 비주얼 및 실시간 반응형 인터랙티브 미디어 테크를 지원합니다.
+        </p>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="font-label-sm text-label-sm px-3 py-1 bg-surface-container-high text-tertiary rounded-full">초대형 8K 미디어 큐브</span>
+<span class="font-label-sm text-label-sm px-3 py-1 bg-surface-container-high text-tertiary rounded-full">인터랙티브 센서 연동</span>
+<span class="font-label-sm text-label-sm px-3 py-1 bg-surface-container-high text-tertiary rounded-full">실감형 음향 디렉팅</span>
+</div>
+</div>
+</section>
+<!-- Architectural Floor Guide (Vertical Stacking) -->
+<section class="px-margin-mobile py-space-lg flex flex-col gap-space-md bg-surface-container-lowest">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md tracking-widest uppercase text-secondary">Spatial Cartography</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">B1F - 3F MATRIX</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">층별 건축 가이드</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">층마다 고유한 빛의 밀도와 공간 체적을 지닌 4개의 수직 챔버입니다.</p>
+</div>
+<!-- Floors Accordion/List -->
+<div class="flex flex-col gap-3">
+<!-- 3F -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2 transition-all" id="floor-card-3f">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-headline-md text-secondary font-bold">3F</span>
+<div class="flex flex-col">
+<span class="font-body-lg text-[17px] font-medium text-on-surface">Penthouse Sky Lounge &amp; Private Salon</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">VIP 네트워킹 &amp; 프라이빗 살롱</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface" onclick="toggleFloor('3f')">
+<span class="material-symbols-outlined text-[18px]" id="floor-icon-3f">expand_more</span>
+</button>
+</div>
+<div class="hidden pt-2 flex flex-col gap-2" id="floor-desc-3f">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            서울숲 파노라마 뷰가 한눈에 펼쳐지는 테라스와 VIP 라운지로 구성되어 있습니다. 최고급 다이닝 인프라와 컨시어지 룸이 완비되어 비공개 네트워킹과 프라이빗 옥션에 최적화되었습니다.
+          </p>
+<div class="flex items-center gap-4 text-tertiary font-label-sm text-label-sm pt-1">
+<span>면적: 480㎡</span>
+<span>천장고: 4.5m</span>
+<span>수용인원: 120 pax</span>
+</div>
+</div>
+</div>
+<!-- 2F -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2 transition-all" id="floor-card-2f">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-headline-md text-primary font-bold">2F</span>
+<div class="flex flex-col">
+<span class="font-body-lg text-[17px] font-medium text-on-surface">White Cube Hall &amp; Sculpture Garden</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">순수미술 및 조각 야외 정원 (A/B홀)</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface" onclick="toggleFloor('2f')">
+<span class="material-symbols-outlined text-[18px]" id="floor-icon-2f">expand_more</span>
+</button>
+</div>
+<div class="hidden pt-2 flex flex-col gap-2" id="floor-desc-2f">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            무결점 화이트 큐브 구조로, 가변식 무빙월 시스템을 통해 자유로운 동선 분할이 가능합니다. 자연 채광이 은은하게 유입되는 야외 조각 중정과 직결됩니다.
+          </p>
+<div class="flex items-center gap-4 text-tertiary font-label-sm text-label-sm pt-1">
+<span>면적: 1,320㎡</span>
+<span>천장고: 5.2m</span>
+<span>전시벽면: 총 380m</span>
+</div>
+</div>
+</div>
+<!-- 1F -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2 transition-all" id="floor-card-1f">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-headline-md text-secondary font-bold">1F</span>
+<div class="flex flex-col">
+<span class="font-body-lg text-[17px] font-medium text-on-surface">Grand Atrium &amp; Media Cube</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">초대형 런칭쇼, 몰입형 미디어 전시</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface" onclick="toggleFloor('1f')">
+<span class="material-symbols-outlined text-[18px]" id="floor-icon-1f">expand_more</span>
+</button>
+</div>
+<div class="pt-2 flex flex-col gap-2" id="floor-desc-1f">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            기둥이 없는 8.5m 층고의 웅장한 아뜨리움. 모터라이즈드 리깅 바텐 시스템 및 360도 초대형 LED 큐브가 구축되어 글로벌 패션위크 및 대형 신차 발표회에 이상적입니다.
+          </p>
+<div class="flex items-center gap-4 text-tertiary font-label-sm text-label-sm pt-1">
+<span>면적: 1,800㎡</span>
+<span>천장고: 8.5m</span>
+<span>수용인원: 800 pax</span>
+</div>
+</div>
+</div>
+<!-- B1 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col gap-2 transition-all" id="floor-card-b1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-headline-md text-tertiary font-bold">B1</span>
+<div class="flex flex-col">
+<span class="font-body-lg text-[17px] font-medium text-on-surface">Black Box &amp; Sound Lab</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">암전 미디어 &amp; 사운드 인스톨레이션</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface" onclick="toggleFloor('b1')">
+<span class="material-symbols-outlined text-[18px]" id="floor-icon-b1">expand_more</span>
+</button>
+</div>
+<div class="hidden pt-2 flex flex-col gap-2" id="floor-desc-b1">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            완벽한 차음과 빛의 완전 차단을 구현한 블랙박스 스튜디오. 공간 사운드 아티스트들의 입체 음향 퍼포먼스와 시청각 융합 미디어아트의 순수한 감흥을 이끌어냅니다.
+          </p>
+<div class="flex items-center gap-4 text-tertiary font-label-sm text-label-sm pt-1">
+<span>면적: 1,200㎡</span>
+<span>천장고: 6.0m</span>
+<span>차음등급: NC-20</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Venue Blueprint Map Placeholder -->
+<section class="px-margin-mobile py-space-md flex flex-col gap-space-sm">
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">layers</span>
+<span class="font-label-md text-label-md text-on-surface tracking-wider uppercase">Spatial Cross-Section</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary bg-surface-container-high px-2.5 py-0.5 rounded-full">Isometric</span>
+</div>
+<!-- Diagrammatic SVG Floor Section -->
+<div class="w-full bg-surface-container-lowest rounded-DEFAULT p-4 flex flex-col gap-2">
+<svg class="w-full h-32 text-outline-variant" fill="none" viewbox="0 0 320 120" xmlns="http://www.w3.org/2000/svg">
+<!-- 3F Layer -->
+<path d="M40 25 L160 5 L280 25 L160 45 Z" fill="#2a2a2a" stroke="#8e9192" stroke-width="1"></path>
+<text fill="#e0c298" font-family="Geist" font-size="9" font-weight="600" text-anchor="middle" x="160" y="27">3F PENTHOUSE SALON</text>
+<!-- 2F Layer -->
+<path d="M40 50 L160 30 L280 50 L160 70 Z" fill="#20201f" stroke="#8e9192" stroke-width="1"></path>
+<text fill="#cac6c3" font-family="Geist" font-size="9" font-weight="600" text-anchor="middle" x="160" y="52">2F WHITE CUBE HALL</text>
+<!-- 1F Layer -->
+<path d="M40 75 L160 55 L280 75 L160 95 Z" fill="#2a2a2a" stroke="#e0c298" stroke-width="1.2"></path>
+<text fill="#e5e2e1" font-family="Geist" font-size="9" font-weight="600" text-anchor="middle" x="160" y="77">1F GRAND ATRIUM &amp; MEDIA CUBE</text>
+<!-- B1 Layer -->
+<path d="M40 100 L160 80 L280 100 L160 120 Z" fill="#121110" stroke="#444748" stroke-width="1"></path>
+<text fill="#8e9192" font-family="Geist" font-size="9" text-anchor="middle" x="160" y="102">B1 BLACK BOX SOUND LAB</text>
+</svg>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center">터치하여 각 층별 상세 스펙 및 로드인(Load-in) 동선 확인 가능</span>
+</div>
+</div>
+</section>
+<!-- Location & Contact Info Section -->
+<section class="px-margin-mobile py-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md tracking-widest uppercase text-secondary">Location &amp; Access</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">오시는 길 및 안내</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">서울의 창조적 맥박이 숨 쉬는 성수·서울숲 문화특구에 위치합니다.</p>
+</div>
+<!-- Map Container -->
+<div class="w-full h-56 bg-surface-container-low rounded-xl overflow-hidden shadow-lg relative" data-location="Seoul Forest, Seongdong-gu, Seoul, Republic of Korea" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0PGOx-uFyMejABZLKdbAgWXWSan6MoX3SBvEBcakWfAiaDLvx8UhkgPDNTsNhcPnb23mnUOnGLw0FbDFhPfn1IvCOB8c5CUnZIEbb8SfiBrozRp4BNW4rDhjN6Vgb_RSZk7OuJEinBiEehureqMeVGDV9lcznMyv9TWO6azlkMlBJPLlNJyy2W3BH1wHXDDnnB6ONECaTVQHCRHM5UyHQVfruG_oI2qOeO5eSxmQ')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">pin_drop</span>
+<span class="font-label-sm text-label-sm text-on-surface">서울 성동구 서울숲길 32</span>
+</div>
+<div class="absolute bottom-3 right-3">
+<a class="px-3.5 py-1.5 rounded-full bg-on-surface text-surface font-label-sm text-label-sm flex items-center gap-1 shadow-md hover:bg-secondary transition-colors" href="https://maps.google.com" target="_blank">
+<span>지도 앱 열기</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Transportation Matrix Cards -->
+<div class="flex flex-col gap-3">
+<!-- Subway Access -->
+<div class="bg-surface-container p-space-md rounded-xl flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]">subway</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-[16px] leading-5 text-on-surface font-medium">대중교통 안내</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-secondary">도보 3분</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface">수인분당선 서울숲역</strong> 4번 출구에서 직진 후 도보 3분 거리 (약 210m)<br/>
+<strong class="text-on-surface">2호선 뚝섬역</strong> 8번 출구에서 서울숲 방면 도보 7분 거리
+          </p>
+</div>
+</div>
+<!-- Parking & Valet -->
+<div class="bg-surface-container p-space-md rounded-xl flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]">local_parking</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-[16px] leading-5 text-on-surface font-medium">주차 및 발렛 서비스</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-tertiary">VIP 전용 구역</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            지하 2-3층 전용 주차장(총 180대 수용 가능) 보유.<br/>
+            대관 행사 및 VIP 방문객 대상 <span class="text-secondary font-medium">프리미엄 발렛 파킹 데스크</span> 상시 운영.
+          </p>
+</div>
+</div>
+<!-- Operational Desk Hours -->
+<div class="bg-surface-container p-space-md rounded-xl flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-md text-[16px] leading-5 text-on-surface font-medium">운영 및 큐레이션 데스크</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            화요일 - 일요일 : 10:00 - 20:00 (월요일 휴관)<br/>
+            대관 행사 및 VIP 프라이빗 세션은 연중무휴 사전 예약제로 24시간 가동됩니다.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Inquiries CTA Banner -->
+<section class="px-margin-mobile pt-space-sm pb-space-xl">
+<div class="bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-lowest p-space-lg rounded-xl flex flex-col items-center text-center gap-space-sm shadow-xl relative overflow-hidden">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-1">
+<span class="material-symbols-outlined text-[24px]">architecture</span>
+</div>
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-secondary">Curatorial Partnership</span>
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">당신의 예술적 비전을<br/>서울라이티움에서 실현하세요</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mt-1">
+        독보적인 공간 미학 속에서 차별화된 전시 기획 및 럭셔리 브랜드 행사를 설계해 드립니다.
+      </p>
+<div class="flex flex-col w-full gap-2.5 mt-3">
+<a class="w-full py-3.5 px-6 rounded-full bg-on-surface text-surface font-label-md text-label-md tracking-wider uppercase text-center hover:bg-secondary transition-colors shadow-lg" href="#">
+          대관 제안서 및 기술자료 다운로드
+        </a>
+<a class="w-full py-3 px-6 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md tracking-wider uppercase text-center hover:bg-surface-bright transition-colors" href="#">
+          큐레이터 1:1 방문 상담 신청
+        </a>
+</div>
+<div class="flex items-center gap-6 mt-3 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">call</span> 02-540-8890</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">mail</span> curate@seouliteum.kr</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Micro-Interactions Script -->
+<script>
+  function switchService(serviceKey) {
+    const tabs = ['exhibit', 'rental', 'collab', 'tech'];
+    tabs.forEach(key => {
+      const panel = document.getElementById('service-panel-' + key);
+      const btn = document.getElementById('tab-btn-' + key);
+      if (key === serviceKey) {
+        panel.classList.remove('hidden');
+        btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        btn.classList.add('bg-on-surface', 'text-surface');
+      } else {
+        panel.classList.add('hidden');
+        btn.classList.add('bg-surface-container', 'text-on-surface-variant');
+        btn.classList.remove('bg-on-surface', 'text-surface');
+      }
+    });
+  }
+
+  function toggleFloor(floorKey) {
+    const desc = document.getElementById('floor-desc-' + floorKey);
+    const icon = document.getElementById('floor-icon-' + floorKey);
+    if (desc.classList.contains('hidden')) {
+      desc.classList.remove('hidden');
+      icon.textContent = 'expand_less';
+    } else {
+      desc.classList.add('hidden');
+      icon.textContent = 'expand_more';
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.6)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs max-w-lg mx-auto"><a class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="홈" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-sm text-[10px] tracking-tight">홈</span></a><a aria-current="page" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 transition-colors text-secondary" data-path="공간소개" href="#"><span class="material-symbols-outlined text-[20px]">museum</span><span class="font-label-sm text-[10px] tracking-tight">공간소개</span></a><a class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="대관안내" href="#"><span class="material-symbols-outlined text-[20px]">architecture</span><span class="font-label-sm text-[10px] tracking-tight">대관안내</span></a><a class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="대관신청·문의" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="font-label-sm text-[10px] tracking-tight">대관신청·문의</span></a></div></nav></body></html>

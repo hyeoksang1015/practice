@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Syne:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-tint": "#c8c6c5", "on-primary-fixed": "#1c1b1b", "outline-variant": "#444748", "on-tertiary": "#32302f", "error-container": "#93000a", "error": "#ffb4ab", "on-primary-fixed-variant": "#474646", "surface-container-highest": "#353535", "tertiary": "#cac6c3", "inverse-surface": "#e5e2e1", "tertiary-container": "#121110", "secondary": "#e0c298", "outline": "#8e9192", "on-surface": "#e5e2e1", "secondary-fixed": "#fedeb2", "on-secondary": "#402d0f", "on-tertiary-container": "#7f7c7a", "surface-container-low": "#1c1b1b", "tertiary-fixed-dim": "#cac6c3", "on-primary-container": "#7e7c7c", "on-error": "#690005", "surface": "#131313", "primary-fixed-dim": "#c8c6c5", "tertiary-fixed": "#e6e1df", "on-surface-variant": "#c4c7c7", "surface-container": "#20201f", "on-background": "#e5e2e1", "on-tertiary-fixed": "#1d1b1a", "on-error-container": "#ffdad6", "surface-container-lowest": "#0e0e0e", "on-secondary-fixed": "#281800", "on-secondary-fixed-variant": "#584323", "surface-bright": "#393939", "secondary-fixed-dim": "#e0c298", "surface-variant": "#353535", "background": "#131313", "surface-container-high": "#2a2a2a", "primary": "#c8c6c5", "primary-container": "#111111", "surface-dim": "#131313", "primary-fixed": "#e5e2e1", "inverse-primary": "#5f5e5e", "on-primary": "#313030", "on-secondary-container": "#ceb188", "on-tertiary-fixed-variant": "#484645", "inverse-on-surface": "#313030", "secondary-container": "#584323" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-md": "1.25rem", "gutter-mobile": "1rem", "space-xs": "0.375rem", "gutter": "1.5rem", "margin-mobile": "1.25rem", "margin-tablet": "2.5rem", "space-lg": "2.25rem", "space-sm": "0.75rem", "margin": "4rem", "space-xl": "4rem" }, fontFamily: { "body-md": ["Geist"], "headline-md": ["Syne"], "headline-xl": ["Syne"], "body-lg": ["Geist"], "label-sm": ["Geist"], "headline-lg-mobile": ["Syne"], "label-md": ["Geist"], "body-sm": ["Geist"], "headline-xl-mobile": ["Syne"], "headline-lg": ["Syne"] }, fontSize: { "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-xl": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-xl-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#131313;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:calc(env(safe-area-inset-bottom, 0px) + 5rem);}.pt-safe{padding-top:env(safe-area-inset-top, 0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col min-h-screen selection:bg-secondary/30 selection:text-secondary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="THE SEOULITEUM Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQC4qh0XImsf8-xwpf-0bzpWnYErN_G4korUYf9VlUxIKsrM5_vnYNfsnjFoJ0h4ge7j4vNjnP9ZfPxjHosUT6rPZ0eYCsVPzPcXhm2csTDWMuofUSIXkHG3t_mo1DmlpyaVon3hnUyYGcgTV0eUEFA2_guvghauS7TZouPrzCw312MLX64Fzj-7FsbTCbl5ZeOvaG5QgRK34fjEav9313BvfF8PGQIlLTtkW5_6Y"/><div class="flex flex-col"><span class="font-headline-md text-label-md tracking-wider text-on-surface uppercase">THE SEOULITEUM</span><span class="font-label-sm text-[9px] text-secondary tracking-widest uppercase">대관신청·문의</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search Archive" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Curator Profile" class="w-11 h-11 flex items-center justify-center rounded-full transition-opacity hover:opacity-80"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEv8yDR5vXkWqRcd9XlNmib5yJHq2iUTG96894f4nV8FS4nTrgcWbjXix-9Vk6yCfL3j--iglYpqSg3elFs3vK4w4GZg-lk5rx-k2xRgEx7hBz5LFHCUtmjOgWkNSVTBbVjJ8wHQUjOCnQY0za2QQBz4ACy_HvRJZav-5rQ2pUMJTgaZmb-PKggH-WZIvEKWpjdBPN64_98yNqBensXzKJhPZ0m1EpoxfL7UyDiio"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full">
+<!-- Minimalist Nocturnal Header / Mood Banner -->
+<div class="px-margin-mobile pt-space-md pb-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Curation &amp; Rental</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold tracking-tight">대관 신청 및 안내</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">서울숲의 조형적 어둠과 빛이 공존하는 공간, 서울라이티움에서 독창적인 공간 경험을 기획해 보세요.</p>
+</div>
+<!-- Segmented Tab Navigation -->
+<div class="px-margin-mobile pb-space-sm">
+<div class="grid grid-cols-3 p-1 rounded-full bg-surface-container-low shadow-sm">
+<button class="tab-trigger py-2.5 px-2 rounded-full font-label-md text-label-md text-center transition-all bg-secondary text-on-secondary font-medium shadow-sm" id="tab-btn-apply" onclick="switchTab('apply')">
+        신청서 작성
+      </button>
+<button class="tab-trigger py-2.5 px-2 rounded-full font-label-md text-label-md text-center text-on-surface-variant hover:text-on-surface transition-all" id="tab-btn-rules" onclick="switchTab('rules')">
+        규약 및 절차
+      </button>
+<button class="tab-trigger py-2.5 px-2 rounded-full font-label-md text-label-md text-center text-on-surface-variant hover:text-on-surface transition-all" id="tab-btn-inquiry" onclick="switchTab('inquiry')">
+        1:1 문의·FAQ
+      </button>
+</div>
+</div>
+<!-- TAB 1: 대관 신청서 작성 -->
+<div class="tab-content flex flex-col gap-space-md px-margin-mobile pb-space-lg" id="section-apply">
+<!-- Visual Ambient Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low shadow-md p-space-md">
+<div class="absolute -right-8 -top-8 w-36 h-36 rounded-full bg-secondary/10 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Pre-reservation Guide</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">정밀한 공간 배치를 위한 기초 서식</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">전문 큐레이터팀이 제출된 기획서를 면밀히 검토한 뒤 48시간 이내에 1차 가승인 일정을 안내해 드립니다.</p>
+</div>
+</div>
+<!-- Form Container -->
+<form class="flex flex-col gap-space-md" id="rentalForm" onsubmit="event.preventDefault(); submitRentalForm();">
+<!-- Section A: 신청 주체 정보 -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between pb-1">
+<span class="font-headline-md text-body-lg text-on-surface font-semibold">01. 신청자 및 주관사 정보</span>
+<span class="font-label-sm text-label-sm text-secondary">필수 항목</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">신청 기업 / 단체명</label>
+<input class="w-full px-4 py-3 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md focus:outline-none focus:ring-0 focus:bg-surface-container-high transition-colors" placeholder="예: (주)아틀리에 스튜디오" required="" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">담당자 성함</label>
+<input class="w-full px-4 py-3 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md focus:outline-none focus:ring-0 focus:bg-surface-container-high transition-colors" placeholder="홍길동 실장" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">직책 / 부서</label>
+<input class="w-full px-4 py-3 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md focus:outline-none focus:ring-0 focus:bg-surface-container-high transition-colors" placeholder="기획총괄팀" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">연락처 (휴대전화)</label>
+<input class="w-full px-4 py-3 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md focus:outline-none focus:ring-0 focus:bg-surface-container-high transition-colors" placeholder="010-0000-0000" required="" type="tel"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">이메일 (공식 회신용)</label>
+<input class="w-full px-4 py-3 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md focus:outline-none focus:ring-0 focus:bg-surface-container-high transition-colors" placeholder="curator@brand.com" required="" type="email"/>
+</div>
+</div>
+<!-- Section B: 대관 목적 및 유형 -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between pb-1">
+<span class="font-headline-md text-body-lg text-on-surface font-semibold">02. 행사 유형 및 목적</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container">단일 선택</span>
+</div>
+<div class="grid grid-cols-2 gap-2" id="event-type-selector">
+<button class="event-type-chip px-3 py-3 rounded-xl bg-surface-container-lowest text-left flex flex-col justify-between h-20 transition-all hover:bg-surface-container-high" onclick="selectEventType(this, '브랜드 팝업')" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">storefront</span>
+<span class="font-label-md text-label-md text-on-surface">브랜드 팝업스토어</span>
+</button>
+<button class="event-type-chip px-3 py-3 rounded-xl bg-surface-container-lowest text-left flex flex-col justify-between h-20 transition-all hover:bg-surface-container-high" onclick="selectEventType(this, '미술·전시')" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">palette</span>
+<span class="font-label-md text-label-md text-on-surface">기획전시 및 아트페어</span>
+</button>
+<button class="event-type-chip px-3 py-3 rounded-xl bg-surface-container-lowest text-left flex flex-col justify-between h-20 transition-all hover:bg-surface-container-high" onclick="selectEventType(this, '기업 컨퍼런스')" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">co_present</span>
+<span class="font-label-md text-label-md text-on-surface">기업 행사 / 세미나</span>
+</button>
+<button class="event-type-chip px-3 py-3 rounded-xl bg-surface-container-lowest text-left flex flex-col justify-between h-20 transition-all hover:bg-surface-container-high" onclick="selectEventType(this, '미디어·촬영')" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">videocam</span>
+<span class="font-label-md text-label-md text-on-surface">CF · 룩북 · 영상 촬영</span>
+</button>
+<button class="event-type-chip col-span-2 px-3 py-2.5 rounded-xl bg-surface-container-lowest text-left flex items-center justify-between transition-all hover:bg-surface-container-high" onclick="selectEventType(this, '공연 및 기타')" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">theater_comedy</span>
+<span class="font-label-md text-label-md text-on-surface">공연 쇼케이스 / VIP 프라이빗 갈라</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Section C: 희망 공간 다중 선택 -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between pb-1">
+<span class="font-headline-md text-body-lg text-on-surface font-semibold">03. 희망 대관 공간</span>
+<span class="font-label-sm text-label-sm text-secondary">중복 선택 가능</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Space 1 -->
+<label class="cursor-pointer relative flex items-center p-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<input class="peer sr-only" name="space" type="checkbox" value="grand_atrium"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-high peer-checked:bg-secondary flex items-center justify-center mr-3 transition-colors">
+<span class="material-symbols-outlined text-[14px] text-on-secondary hidden peer-checked:block">check</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-medium">그랜드 아트리움 (Grand Atrium)</span>
+<span class="font-label-sm text-label-sm text-secondary">720㎡ / 6.5m 층고</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">자연 채광 및 대형 인스톨레이션, 대규모 팝업 최적화</p>
+</div>
+</label>
+<!-- Space 2 -->
+<label class="cursor-pointer relative flex items-center p-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<input class="peer sr-only" name="space" type="checkbox" value="white_cube_a"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-high peer-checked:bg-secondary flex items-center justify-center mr-3 transition-colors">
+<span class="material-symbols-outlined text-[14px] text-on-secondary hidden peer-checked:block">check</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-medium">화이트 큐브 A (White Cube A)</span>
+<span class="font-label-sm text-label-sm text-secondary">380㎡ / 4.8m 층고</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">균일한 전시 조명과 정밀 레일 시스템이 구축된 순수 갤러리</p>
+</div>
+</label>
+<!-- Space 3 -->
+<label class="cursor-pointer relative flex items-center p-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<input class="peer sr-only" name="space" type="checkbox" value="black_box"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-high peer-checked:bg-secondary flex items-center justify-center mr-3 transition-colors">
+<span class="material-symbols-outlined text-[14px] text-on-secondary hidden peer-checked:block">check</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-medium">블랙박스 (Black Box)</span>
+<span class="font-label-sm text-label-sm text-secondary">260㎡ / 완전 암전</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">미디어아트 프로젝션 맵핑 및 몰입형 사운드 전용 극장형 공간</p>
+</div>
+</label>
+<!-- Space 4 -->
+<label class="cursor-pointer relative flex items-center p-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<input class="peer sr-only" name="space" type="checkbox" value="terrace_pavilion"/>
+<div class="w-5 h-5 rounded-full bg-surface-container-high peer-checked:bg-secondary flex items-center justify-center mr-3 transition-colors">
+<span class="material-symbols-outlined text-[14px] text-on-secondary hidden peer-checked:block">check</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface font-medium">루프 가든 &amp; 파빌리온</span>
+<span class="font-label-sm text-label-sm text-secondary">410㎡ / 야외 개방</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">서울숲 수목 전경을 조망하는 VIP 리셉션 및 프라이빗 칵테일존</p>
+</div>
+</label>
+</div>
+</div>
+<!-- Section D: 일정 및 예상 규모 -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col gap-space-sm shadow-sm">
+<span class="font-headline-md text-body-lg text-on-surface font-semibold">04. 일정 및 관람 인원 규모</span>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">희망 시작일</label>
+<input class="w-full px-4 py-3 rounded-full bg-surface-container-lowest text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-high" required="" type="date"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">희망 종료일</label>
+<input class="w-full px-4 py-3 rounded-full bg-surface-container-lowest text-on-surface text-body-sm focus:outline-none focus:bg-surface-container-high" required="" type="date"/>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">construction</span>
+<span class="font-body-sm text-body-sm text-on-surface">설치/철거 별도 협의 기간</span>
+</div>
+<select class="bg-surface-container text-on-surface text-label-md px-3 py-1.5 rounded-full focus:outline-none">
+<option>설치 1일 / 철거 1일 (표준)</option>
+<option>설치 2일 / 철거 1일</option>
+<option>당일 반입반출 (촬영용)</option>
+<option>별도 일정 큐레이터 협의</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">일일 예상 방문객 / 참가자 수</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="guest-scale-btn py-2 px-3 rounded-full bg-surface-container-lowest text-center font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" onclick="selectGuestScale(this)" type="button">100명 미만</button>
+<button class="guest-scale-btn py-2 px-3 rounded-full bg-surface-container-lowest text-center font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" onclick="selectGuestScale(this)" type="button">100 - 500명</button>
+<button class="guest-scale-btn py-2 px-3 rounded-full bg-surface-container-lowest text-center font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" onclick="selectGuestScale(this)" type="button">500명 이상</button>
+</div>
+</div>
+</div>
+<!-- Section E: 기획서 첨부 & 상세 메모 -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col gap-space-sm shadow-sm">
+<span class="font-headline-md text-body-lg text-on-surface font-semibold">05. 기획서 첨부 및 부대시설 요청</span>
+<!-- Drag & Drop / File Input Box -->
+<div class="relative rounded-xl p-5 bg-surface-container-lowest flex flex-col items-center justify-center text-center group cursor-pointer hover:bg-surface-container-high transition-colors">
+<input accept=".pdf,.zip,.hwp,.docx" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full" id="proposal-file" onchange="handleFileSelect(event)" type="file"/>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-secondary text-[22px]">upload_file</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface font-medium" id="file-label-name">행사 기획서 / 공간 연출안 첨부</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">PDF, ZIP (최대 50MB 한도)</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">추가 요청사항 (음향 장비, 특수 전력 30kW 이상, VIP 케이터링 등)</label>
+<textarea class="w-full p-4 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-sm focus:outline-none focus:bg-surface-container-high transition-colors resize-none" placeholder="추가 문의사항이나 특별한 시설물 요구조건이 있으시면 자유롭게 기재해 주세요." rows="3"></textarea>
+</div>
+<!-- Privacy & Terms Agreement -->
+<label class="flex items-start gap-2.5 cursor-pointer pt-2">
+<input class="peer sr-only" required="" type="checkbox"/>
+<div class="w-4 h-4 mt-0.5 rounded-full bg-surface-container-high peer-checked:bg-secondary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[12px] text-on-secondary hidden peer-checked:block">check</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            대관 심의를 위한 개인정보 수집 및 대관 규약 사전 안내 사항에 동의합니다.
+          </span>
+</label>
+</div>
+<!-- Submit Action -->
+<button class="w-full py-4 rounded-full bg-secondary text-on-secondary font-label-md text-label-md uppercase tracking-wider font-semibold shadow-lg hover:opacity-95 active:scale-[0.99] transition-all flex items-center justify-center gap-2" type="submit">
+<span>대관 신청서 공식 접수</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant">
+        접수 완료 시 등록하신 이메일로 고유 접수 번호(SE-REQ)가 즉시 발송됩니다.
+      </div>
+</form>
+</div>
+<!-- TAB 2: 대관 규약 & 절차 -->
+<div class="tab-content hidden flex flex-col gap-space-md px-margin-mobile pb-space-lg" id="section-rules">
+<!-- Step Process Pipeline -->
+<div class="rounded-xl bg-surface-container p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Workflow</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">대관 정규 승인 절차</h3>
+</div>
+<div class="flex flex-col gap-3 relative">
+<!-- Step 1 -->
+<div class="flex items-start gap-3.5 p-3 rounded-xl bg-surface-container-lowest">
+<div class="w-8 h-8 rounded-full bg-secondary/15 flex items-center justify-center shrink-0">
+<span class="font-headline-md text-label-md text-secondary font-bold">01</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">신청서 접수 및 기본 일정 검토</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">온라인 신청서 및 행사 기획안을 바탕으로 공간 캘린더 적합성을 즉시 대조합니다.</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-start gap-3.5 p-3 rounded-xl bg-surface-container-lowest">
+<div class="w-8 h-8 rounded-full bg-secondary/15 flex items-center justify-center shrink-0">
+<span class="font-headline-md text-label-md text-secondary font-bold">02</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">학예·기술 심의 (48시간)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">전시의 공공성, 구조 하중, 음향 및 전력 부하 적합성을 큐레이터 및 기술팀이 심의합니다.</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-start gap-3.5 p-3 rounded-xl bg-surface-container-lowest">
+<div class="w-8 h-8 rounded-full bg-secondary/15 flex items-center justify-center shrink-0">
+<span class="font-headline-md text-label-md text-secondary font-bold">03</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">대관 가승인 통보 및 현장 실측</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">가승인 안내 후 전담 큐레이터 동행 하에 현장 동선 및 시설 실측 미팅을 진행합니다.</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex items-start gap-3.5 p-3 rounded-xl bg-surface-container-lowest">
+<div class="w-8 h-8 rounded-full bg-secondary/15 flex items-center justify-center shrink-0">
+<span class="font-headline-md text-label-md text-secondary font-bold">04</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">계약 체결 및 계약금 납부</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">최종 계약서 날인 및 총 대관료의 30%를 납부함으로써 공식 일정이 확정됩니다.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Accordion Rules Section -->
+<div class="flex flex-col gap-2">
+<!-- Accordion 1: 취소 및 위약금 규약 -->
+<div class="rounded-xl bg-surface-container shadow-sm overflow-hidden">
+<button class="w-full p-space-md flex items-center justify-between text-left" onclick="toggleAccordion('rule-acc-1')">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">payments</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">대관 취소 및 위약금 반환 기준</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform" id="rule-acc-1-icon">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-space-md pt-0 text-on-surface-variant font-body-sm text-body-sm flex flex-col gap-2.5" id="rule-acc-1">
+<div class="p-3 rounded-lg bg-surface-container-lowest flex justify-between items-center">
+<span class="text-on-surface">행사 개시 30일 이전 취소</span>
+<span class="text-secondary font-medium">계약금의 80% 반환</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest flex justify-between items-center">
+<span class="text-on-surface">행사 개시 15일 이전 취소</span>
+<span class="text-secondary font-medium">계약금의 50% 반환</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest flex justify-between items-center">
+<span class="text-on-surface">행사 개시 7일 이내 취소</span>
+<span class="text-error font-medium">반환 불가 (전액 위약금 귀속)</span>
+</div>
+<p class="text-label-sm text-on-tertiary-container mt-1">
+            * 천재지변 및 불가항력에 의한 취소 시 상호 합의 하에 일정 변경 또는 100% 반환이 가능합니다.
+          </p>
+</div>
+</div>
+<!-- Accordion 2: 시설물 보호 및 안전관리 규약 -->
+<div class="rounded-xl bg-surface-container shadow-sm overflow-hidden">
+<button class="w-full p-space-md flex items-center justify-between text-left" onclick="toggleAccordion('rule-acc-2')">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified_user</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">시설물 보전 및 안전관리 의무</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform" id="rule-acc-2-icon">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-space-md pt-0 text-on-surface-variant font-body-sm text-body-sm flex flex-col gap-2" id="rule-acc-2">
+<p class="leading-relaxed">
+            1. <strong>화기 사용 절대 엄금:</strong> 전시장 전 구역은 불꽃 연출, 가스 조리 및 흡연이 엄격히 통제됩니다.<br/>
+            2. <strong>원상 복구 원칙:</strong> 벽체 타공 및 페인팅, 바닥재 부착 시 철거 당일 전문 복구 업체를 통해 시공 전 상태로 환원해야 합니다.<br/>
+            3. <strong>전기 용량 규정:</strong> 단상 220V 기본 제공 외 30kW 이상 동력 필요 시 사전에 전기 책임자의 승인을 득해야 합니다.
+          </p>
+</div>
+</div>
+<!-- Accordion 3: 음향 및 환경 기준 -->
+<div class="rounded-xl bg-surface-container shadow-sm overflow-hidden">
+<button class="w-full p-space-md flex items-center justify-between text-left" onclick="toggleAccordion('rule-acc-3')">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">volume_up</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">음향 기준 및 폐기물 배출 규정</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform" id="rule-acc-3-icon">expand_more</span>
+</button>
+<div class="hidden px-space-md pb-space-md pt-0 text-on-surface-variant font-body-sm text-body-sm flex flex-col gap-2" id="rule-acc-3">
+<p class="leading-relaxed">
+            • 주간 야외 파빌리온 음향은 법적 소음 규정(65dB)을 준수해야 하며, 야간 21:00 이후 외부 앰프 사용은 중단됩니다.<br/>
+            • 철거 시 발생한 산업 폐기물 및 목공 부자재는 행사 주최 측이 직접 전량 외부 반출 처리해야 합니다.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 3: 1:1 대관 문의 & FAQ -->
+<div class="tab-content hidden flex flex-col gap-space-md px-margin-mobile pb-space-lg" id="section-inquiry">
+<!-- Direct Hospitality Assistance Card -->
+<div class="rounded-xl bg-surface-container p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[24px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">VIP Desk &amp; Concierge</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">대관 전담 큐레이터 직통</h3>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        전시 연출, 공간 브랜딩에 필요한 기술 도면, 조명 스펙 및 사전 답사 일정은 전담 큐레이터팀이 빠르고 정중하게 지원합니다.
+      </p>
+<div class="grid grid-cols-1 gap-2 pt-1">
+<a class="flex items-center justify-between p-3.5 rounded-full bg-surface-container-lowest hover:bg-surface-container-high transition-colors" href="tel:02-1234-5678">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">call</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">02-1234-5678</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">평일 10:00 - 18:00</span>
+</a>
+<a class="flex items-center justify-between p-3.5 rounded-full bg-surface-container-lowest hover:bg-surface-container-high transition-colors" href="mailto:rental@seouliteum.com">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">mail</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">rental@seouliteum.com</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">공식 기획서 접수</span>
+</a>
+</div>
+</div>
+<!-- FAQ Accordion -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<h4 class="font-headline-md text-body-lg text-on-surface font-semibold">자주 묻는 질문 (FAQ)</h4>
+<span class="font-label-sm text-label-sm text-on-tertiary-container">Key Answers</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- FAQ 1 -->
+<div class="rounded-xl bg-surface-container shadow-sm overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left" onclick="toggleAccordion('faq-1')">
+<span class="font-body-md text-body-md text-on-surface font-medium">Q. 분장실 및 아티스트 대기실이 마련되어 있나요?</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform" id="faq-1-icon">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 pt-0 font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="faq-1">
+            네, 그랜드 아트리움과 화이트큐브 배면에 각각 2개실의 VIP 전용 대기실 및 독립 파우더룸, 샤워실이 완비되어 있습니다. 대관 시 무료로 제공됩니다.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="rounded-xl bg-surface-container shadow-sm overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left" onclick="toggleAccordion('faq-2')">
+<span class="font-body-md text-body-md text-on-surface font-medium">Q. 장비 반입 및 반출 가능한 시간대는 언제인가요?</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform" id="faq-2-icon">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 pt-0 font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="faq-2">
+            전용 하역장(지하 2층 화물 엘리베이터 직결, 적재하중 3톤)을 통해 24시간 언제든 반입이 가능합니다. 단, 야간 반입(22:00 ~ 익일 07:00)은 사전 방재실 등록이 필요합니다.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="rounded-xl bg-surface-container shadow-sm overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left" onclick="toggleAccordion('faq-3')">
+<span class="font-body-md text-body-md text-on-surface font-medium">Q. 주차 지원 대수 및 관람객 주차 요금은 어떻게 되나요?</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform" id="faq-3-icon">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 pt-0 font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="faq-3">
+            행사 주최사 스태프 차량은 공간별로 종일 무료 주차권(최대 5~10매)이 제공됩니다. 방문객은 2시간 무료 등록이 지원되며 이후 10분당 1,000원이 부과됩니다.
+          </div>
+</div>
+<!-- FAQ 4 -->
+<div class="rounded-xl bg-surface-container shadow-sm overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left" onclick="toggleAccordion('faq-4')">
+<span class="font-body-md text-body-md text-on-surface font-medium">Q. 케이터링 및 식음료 반입이 허용되나요?</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform" id="faq-3-icon">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 pt-0 font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="faq-4">
+            루프 가든 및 아트리움 지정 공간에서는 핑거푸드, 와인 케이터링이 가능합니다. 단, 카펫 보호 매트 설치가 의무화되며 화기 조리는 불가합니다.
+          </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Toast Notification Modal (Micro-interaction) -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 w-11/12 max-w-sm p-4 rounded-xl bg-surface-bright text-on-surface shadow-2xl transition-all duration-300 opacity-0 pointer-events-none translate-y-4 z-50 flex items-center gap-3" id="submit-toast">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary text-[20px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md font-semibold">대관 신청서가 접수되었습니다</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">담당 큐레이터가 기재하신 메일로 회신드립니다.</span>
+</div>
+</div>
+</div>
+<script>
+  function switchTab(tabId) {
+    const tabs = ['apply', 'rules', 'inquiry'];
+    tabs.forEach(t => {
+      const content = document.getElementById('section-' + t);
+      const btn = document.getElementById('tab-btn-' + t);
+      if (t === tabId) {
+        content.classList.remove('hidden');
+        btn.classList.add('bg-secondary', 'text-on-secondary', 'font-medium', 'shadow-sm');
+        btn.classList.remove('text-on-surface-variant');
+      } else {
+        content.classList.add('hidden');
+        btn.classList.remove('bg-secondary', 'text-on-secondary', 'font-medium', 'shadow-sm');
+        btn.classList.add('text-on-surface-variant');
+      }
+    });
+  }
+
+  function toggleAccordion(id) {
+    const body = document.getElementById(id);
+    const icon = document.getElementById(id + '-icon');
+    if (body.classList.contains('hidden')) {
+      body.classList.remove('hidden');
+      if (icon) icon.classList.add('rotate-180');
+    } else {
+      body.classList.add('hidden');
+      if (icon) icon.classList.remove('rotate-180');
+    }
+  }
+
+  function selectEventType(btn, typeName) {
+    const chips = document.querySelectorAll('.event-type-chip');
+    chips.forEach(c => {
+      c.classList.remove('bg-secondary/20', 'text-secondary');
+      c.classList.add('bg-surface-container-lowest');
+    });
+    btn.classList.remove('bg-surface-container-lowest');
+    btn.classList.add('bg-secondary/20', 'text-secondary');
+  }
+
+  function selectGuestScale(btn) {
+    const scaleBtns = document.querySelectorAll('.guest-scale-btn');
+    scaleBtns.forEach(b => {
+      b.classList.remove('bg-secondary', 'text-on-secondary', 'font-semibold');
+      b.classList.add('bg-surface-container-lowest', 'text-on-surface');
+    });
+    btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+    btn.classList.add('bg-secondary', 'text-on-secondary', 'font-semibold');
+  }
+
+  function handleFileSelect(e) {
+    const file = e.target.files[0];
+    const label = document.getElementById('file-label-name');
+    if (file) {
+      label.innerText = file.name + ' (' + (file.size / (1024 * 1024)).toFixed(1) + 'MB)';
+    }
+  }
+
+  function submitRentalForm() {
+    const toast = document.getElementById('submit-toast');
+    toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      document.getElementById('rentalForm').reset();
+      document.getElementById('file-label-name').innerText = '행사 기획서 / 공간 연출안 첨부';
+    }, 3500);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.6)]" data-active-classes="text-secondary"><div class="flex items-center justify-around h-16 px-space-xs max-w-lg mx-auto"><a class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="홈" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-sm text-[10px] tracking-tight">홈</span></a><a class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="공간소개" href="#"><span class="material-symbols-outlined text-[20px]">museum</span><span class="font-label-sm text-[10px] tracking-tight">공간소개</span></a><a class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="대관안내" href="#"><span class="material-symbols-outlined text-[20px]">architecture</span><span class="font-label-sm text-[10px] tracking-tight">대관안내</span></a><a aria-current="page" class="flex-1 h-full flex flex-col items-center justify-center gap-0.5 transition-colors text-secondary" data-path="대관신청·문의" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="font-label-sm text-[10px] tracking-tight">대관신청·문의</span></a></div></nav></body></html>

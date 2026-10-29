@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+/* 디자인 토큰. 시안(DESIGN.md "Nocturne Curatorial")의 이름을 그대로 써서 시안 HTML 의 클래스를 옮겨 올 수 있게 한다. */
+@theme {
+  --font-sans: var(--font-geist), "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --font-display: var(--font-syne), "Pretendard Variable", Pretendard, "Malgun Gothic", sans-serif;
+
+  --color-surface: #131313;
+  --color-background: #131313;
+  --color-surface-bright: #393939;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container: #20201f;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353535;
+  --color-on-surface: #e5e2e1;
+  --color-on-background: #e5e2e1;
+  --color-on-surface-variant: #c4c7c7;
+  --color-outline: #8e9192;
+  --color-outline-variant: #444748;
+  --color-primary: #c8c6c5;
+  --color-on-primary: #313030;
+  --color-secondary: #e0c298;
+  --color-on-secondary: #402d0f;
+  --color-secondary-container: #584323;
+  --color-on-secondary-container: #ceb188;
+  --color-secondary-fixed: #fedeb2;
+  --color-error: #ffb4ab;
+
+  --text-headline-xl: 64px;
+  --text-headline-xl--line-height: 72px;
+  --text-headline-xl--letter-spacing: -0.03em;
+  --text-headline-xl--font-weight: 700;
+  --text-headline-xl-mobile: 38px;
+  --text-headline-xl-mobile--line-height: 44px;
+  --text-headline-xl-mobile--letter-spacing: -0.02em;
+  --text-headline-xl-mobile--font-weight: 700;
+  --text-headline-lg: 44px;
+  --text-headline-lg--line-height: 52px;
+  --text-headline-lg--letter-spacing: -0.02em;
+  --text-headline-lg--font-weight: 600;
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-headline-lg-mobile--letter-spacing: -0.01em;
+  --text-headline-lg-mobile--font-weight: 600;
+  --text-headline-md: 28px;
+  --text-headline-md--line-height: 36px;
+  --text-headline-md--letter-spacing: -0.01em;
+  --text-headline-md--font-weight: 500;
+  --text-headline-sm: 20px;
+  --text-headline-sm--line-height: 28px;
+  --text-headline-sm--letter-spacing: -0.01em;
+  --text-headline-sm--font-weight: 500;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--letter-spacing: -0.01em;
+  --text-body-md: 15px;
+  --text-body-md--line-height: 24px;
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--letter-spacing: 0.01em;
+  --text-label-md: 12px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--letter-spacing: 0.08em;
+  --text-label-md--font-weight: 500;
+  --text-label-sm: 10px;
+  --text-label-sm--line-height: 14px;
+  --text-label-sm--letter-spacing: 0.12em;
+  --text-label-sm--font-weight: 600;
+
+  --spacing-gutter: 1.5rem;
+  --spacing-space-xs: 0.375rem;
+  --spacing-space-sm: 0.75rem;
+  --spacing-space-md: 1.25rem;
+  --spacing-space-lg: 2.25rem;
+  --spacing-space-xl: 4rem;
+
+  /* 알약 모양 버튼·입력칸, 큰 카드는 2–3rem 곡률 (DESIGN.md Shapes) */
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+/* 페이지 가로 여백: 모바일 1.25rem · 태블릿 2.5rem · 데스크톱 4rem (DESIGN.md Layout) */
+@utility wrap {
+  width: 100%;
+  max-width: 96rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 48rem) {
+    padding-inline: 2.5rem;
+  }
+  @media (width >= 64rem) {
+    padding-inline: 4rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+::selection {
+  background: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 0.7);
+  backdrop-filter: blur(4px);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.85);
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}

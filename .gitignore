@@ -6,3 +6,5 @@ node_modules/
 .env*
 !.env.example
 homepage/lowwave/coffee/
+date_app/date/
+jinsun_wedding/mobile_wedding/
